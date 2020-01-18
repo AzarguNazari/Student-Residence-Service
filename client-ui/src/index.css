@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f3f2f2;
+}
+
+
+@font-face {
+  font-family: 'IbarraRealNova';
+  src: local('IbarraRealNova'), url(./fonts/IbarraRealNova-Regular.ttf) format('truetype');
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+table {
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+table {
+	border-collapse: collapse;
+}
+table td {
+	padding: 15px;
+}
+
+table thead th {
+  margin: 10px;
+  padding: 10px;
+  font-weight: 600;
+  border: 1px solid;
+}
+
+table thead td {
+	background-color: #54585d;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 13px;
+	border: 1px solid #54585d;
+}
+table tbody td {
+	color: #636363;
+	border: 1px solid #dddfe1;
+}
+table tbody tr {
+	background-color: #f9fafb;
+}
+table tbody tr:nth-child(odd) {
+	background-color: #ffffff;
+}
+
+h2 {
+  font-family: IbarraRealNova;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.btn {
+  border: none;
+  font-family: inherit;
+  font-size: 14px;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  display: inline-block;
+  margin: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn-medium {
+	background: #0066cc;
+	color: #fff;
+	box-shadow: 0 6px #0099ff;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+}
+
+.btn-medium-a {
+	border-radius: 0 0 5px 5px;
+}
+
+.btn-medium-a:hover {
+	box-shadow: 0 4px #0099ff;
+	top: 2px;
+}
+
+.btn-medium-a:active {
+	box-shadow: 0 0 #0099ff;
+	top: 6px;
+}
+
+.btn-medium-a-red {
+  background: #cb4e4e;
+  box-shadow: 0 6px #ab3c3c;
+}
+
+.btn-medium-a-red:hover {
+	box-shadow: 0 4px #ab3c3c;
+}
+
+
+.btn-small {
+  border: none;
+  font-family: inherit;
+  font-size: 12px;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.btn-small:hover {
+  color: #ccc;
+}
+
+.btn-small-a-red {
+  color: #ab3c3c;
+}
+
+.btn-small-a-red:hover {
+  color: #cb4e4e;
+}
+
+.back {
+  display: flex;
+  margin: 0 auto;
+}

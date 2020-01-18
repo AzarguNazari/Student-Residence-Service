@@ -1,0 +1,334 @@
+#%RAML 1.0
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/941f6ce1-4c43-4d2a-9286-5d1394c6ea36/ 
+title: Student-Residence-Service-RAML
+##################################################
+# Developed by Sheetal Jeshwani and Neel Shah    #
+##################################################
+types:
+  Appliance-Details:
+    properties:
+      Model-Name: string
+      status: string
+      Appliance-Type: string
+      rent: number
+    example:
+      Model-Name: "Unknown"
+      status: "Unknown"
+      Appliance-Type: "Unknown"
+      rent: 0.0
+
+  Message-Posts:
+    properties:
+      Issuer: string
+      Post-Date: datetime-only
+      Category: string
+    example:
+      Issuer: "Unknown"
+      Post-Date: 1978-01-01T00:00:00 
+      Category: "Unknown"
+
+  Appliance-Rent:
+    properties:
+      Owner-Name: string
+      Renter-Name: string
+      Start-Date: date-only
+      End-Date: date-only
+    example:
+      Owner-Name: "Unknown"
+      Renter-Name: "Unknown" 
+      Start-Date: 2012-01-01
+      End-Date: 2013-02-02
+/appliances:
+  get:
+    queryParameters:
+      modelname:
+        type: string
+        description: Retriving appliances using modelname 
+        required: false 
+      type:
+        type: string
+        description: Retriving appliances using appliance type 
+        required: false 
+      status:
+        type: string
+        description: Retriving appliances using status 
+        required: false 
+    responses:
+      200:
+        body:
+          application/json:
+            type: Appliance-Details[]     
+      404:
+        body:
+          application/json:
+            example:
+              {
+                "Message": "Resource Not Found"
+              }
+  post:
+    body:
+      application/json:
+        type: Appliance-Details[]
+
+    description: add new appliances
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+              {
+                "Message": "Resource Added" 
+              }
+              
+      400:
+        body:
+          application/json:
+            example:
+              {
+                "Message": "Bad Request"
+              }
+  /{ID}:
+    get:
+      description: get the information about particular appliance by unique id
+      responses:                
+        404:
+          body:
+            application/json:
+              example:
+                {
+                  "Message" : "Resource not found"
+                }
+        200:
+          body:
+            application/json:
+              type:  Appliance-Details[]     
+    put:
+      body:
+        application/json:
+          type: Appliance-Details []
+      description: update an existing appliance
+      responses:
+        200:
+          body:
+            application/json:
+              example:
+                {
+                 "Message": "Resource Updated",
+                }
+        400:
+          body:
+            application/json:
+              example:
+               {
+                "Message" : "Bad request"
+               }    
+
+    delete:
+      description: remove particular appliance
+      responses:
+        200:
+          body:
+            application/json:
+              example:
+                {
+                  "Message": "Resource Deleted"
+                }  
+    /rent:
+       post:
+         body:
+            application/json:
+              type: Appliance-Rent []
+         description: add rent of particular appliance
+         responses:
+             201:
+              body:
+               application/json:
+                example:
+                   {
+                      "Message": "Resource Added",
+                   }
+             400:
+              body:
+               application/json:
+                 example:
+                  {
+                     "Message" : "Bad request"
+                  }
+
+    /rent-terminate:
+      description: terminate rent of particualr appliance
+      get:
+        responses:                
+          404:
+            body:
+              application/json:
+               example:
+                 {
+                   "message" : "Resource not found"
+                 }
+          200:
+            body:
+              application/json:
+                type:  Appliance-Rent[] 
+      put:
+        body:
+          application/json:
+            type: Appliance-Rent []
+        description: update the detail of particular terminated rent
+        responses:
+          200:
+            body:
+              application/json:
+                example:
+                  {
+                    Message: "Resource Updated"
+                  }   
+          400:
+            body:
+              application/json:
+                example:
+                  {
+                    Message: "Bad Request"
+                  }
+                  
+  /rent:
+    get:
+      queryParameters:
+        studentname:
+          type: string
+          description: Retriving appliance rent details by student name 
+          required: false 
+      responses:
+        200:
+          body:
+            application/json:
+              type: Appliance-Rent[]
+                  
+        404:
+          body:
+            application/json:
+                example:
+                   {
+                     "Message" : "Resource not found"
+                   }      
+/Annoucement:
+  get:
+    description: information about news and upcoming events
+    queryParameters:
+      Issuer:
+        type: string
+        description: Retriving information using Issuer name 
+        required: false 
+      creation-date:
+        type: datetime-only
+        description: Retriving information using creation date of particular event or news 
+        required: false 
+      id:
+        type: number
+        description: Retriving information using id of particular news or event 
+        required: false 
+    
+    responses:
+      200:
+        body:
+          application/json:
+            type: Message-Posts[]
+      404:
+        body:
+          application/json:
+            example:
+               {
+                 "Message" : "Resource not found"
+               }        
+  post:
+    body:
+      application/json:
+        type: Message-Posts []
+    description: add the information about latest events and news
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+               {
+                 "Message": "Resource added"        
+               }
+      400:
+        body:
+          application/json:
+            example:
+               {
+                 "Message" : "Bad request"
+               }
+  /{ID}:
+      get:
+        description: get the information about general information by perticular id
+        responses:
+          200:
+            body:
+              application/json:
+                type:  Message-Posts[]
+               
+          404:
+            body:
+              application/json:
+               example:
+                  {
+                    "Messgae": "Resource not found"
+                  }   
+      put:
+        body:
+          application/json:
+            type: Message-Posts []
+        description: add new information about particular information
+        responses:
+          200:
+            body:
+              application/json:
+                 example:
+                   {
+                     "Message" : "Resource updated"
+                   }
+          400:
+            body:
+              application/json:
+                  example:
+                    {
+                      "Message": "Bad request"
+                    }
+                  
+      /reply:
+          post:
+            body:
+              application/json:
+                type: Message-Posts []
+            description: reply on maintenance post
+            responses:
+             201:
+              body:
+                application/json:
+                  example:
+                   {
+                     "Message": "Resource added"        
+                   }
+             400:
+                body:
+                  application/json:
+                    example:
+                     {
+                       "Message" : "Bad request"
+                     }
+          get:
+            description: give the detail about reply
+            responses:
+             200:
+              body:
+                application/json:
+                  type: Message-Posts[]
+             404:
+              body:
+                application/json:
+                  example:
+                     {
+                       "Messgae": "Resource not found"
+                     }

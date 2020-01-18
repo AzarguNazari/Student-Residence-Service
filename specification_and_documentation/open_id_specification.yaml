@@ -1,0 +1,616 @@
+openapi: 3.0.0
+info:
+  version: "1.0.1"
+  title: 'Student Residence Service'
+  description: 'An API that allows management of rentals of home appliance and management of announcements'
+
+servers:
+  - url: http://dev.srs.com
+
+tags: 
+  - name: Home Appliance
+    description: manages rentals of home appliances
+    
+  - name: Bulletinboard
+    description: manages announcement board
+paths:
+  /v1/appliances: 
+    get:
+      description: Returns a list of all appliances
+      tags:
+        - Home Appliance  
+      parameters: 
+        - name: limit
+          in: query
+          description: Number of appliances returned
+          schema:
+            type: integer
+            maximum: 10
+            minimum: 0
+            example : 5
+        - name: model-name
+          in: query
+          description: Model Name of the HA
+          schema:
+            type: string
+            example: abcd
+        - name: type
+          in: query
+          description: Type of the HA
+          schema:
+            type: string
+            example: vacuum
+        - name: status
+          in: query
+          description: Status of the HA
+          schema: 
+            type: string
+            example: not-broken    
+      responses:
+        200:
+          description: List of home appliances
+          content:
+            application/json:
+              schema:
+                type: array
+                items: 
+                  $ref: '#/components/schemas/HA'
+        
+        400:
+          description: Bad Request. Please check the parameters
+    
+        401:
+          description: Unauthorized. Please check your credentials
+      
+        403:
+          description: Forbidden. Sorry, you can not access this resource.          
+    post:
+      description: Adds a new House appliance
+      tags:
+        - Home Appliance
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+                type: object
+                items: 
+                  $ref: '#/components/schemas/HA'
+      responses:
+        201:
+          description: Successfully created a new appliance 
+        400:
+          description: Bad Request. Please check the parameters
+    
+        401:
+          description: Unauthorized. Please check your credentials
+      
+        403:
+          description: Forbidden. Sorry, you can not access this resource.          
+          
+  '/v1/appliances/{id}' : 
+      get:
+        description: Returns a specific house appliance
+        tags:
+        - Home Appliance
+        parameters:
+          - name: id
+            in: path
+            required: true
+            description: id of the house appliance
+            schema:
+              type: integer
+              example : 1
+    
+        responses:
+          200:
+            description: Specific house appliance information
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/HA'   
+          
+          400:
+            description: Bad Request. Please check the parameters
+    
+          401:
+            description: Unauthorized. Please check your credentials
+      
+          403:
+            description: Forbidden. Sorry, you can not access this resource.                  
+      put:
+        description: Updates a specific House appliance
+        tags:
+        - Home Appliance
+        parameters:
+          - name: id
+            in: path
+            required: true
+            description: id of the house appliance
+            schema:
+              type: integer
+              example : 1
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                  type: object
+                  items: 
+                    $ref: '#/components/schemas/HA'
+        responses:
+          200:
+            description: Successfully updated the house appliance 
+          401:
+            $ref: '#/components/responses/401'
+          403:
+            $ref: '#/components/responses/403'
+            
+      delete:
+        description: Updates a specific House appliance
+        tags:
+        - Home Appliance
+        parameters:
+          - name: id
+            in: path
+            required: true
+            description: id of the house appliance
+            schema:
+              type: integer
+              example : 1
+        responses:
+          204:
+            description: Successfully deletion of the house appliance 
+          401:
+            $ref: '#/components/responses/401'
+          403:
+            $ref: '#/components/responses/403'
+            
+  '/v1/appliances/rent': 
+    get:
+      description: Retrieves all rented HAs
+      tags:
+        - Home Appliance
+      parameters:
+        - name: limit
+          in: query
+          description: Number of appliances returned
+          schema:
+            type: integer
+            maximum: 10
+            minimum: 0
+            example : 5
+        
+        - name: name
+          in: query
+          description: Name of the student
+          schema: 
+            type: string
+            example: abcd
+  
+      responses:
+        200:
+          description: Rented HA's information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HA'
+        
+        401:
+          $ref: '#/components/responses/401'
+        403:
+          $ref: '#/components/responses/403'
+            
+  '/v1/appliances/{id}/add-rent':
+      post:
+        description: Adds rent to a specific house appliance
+        tags:
+        - Home Appliance
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                  type: object
+                  items: 
+                    $ref: '#/components/schemas/Rent'
+        parameters:
+          - name: id
+            in: path
+            required: true
+            description: id of the house appliance
+            schema:
+              type: integer
+              example : 1
+        responses:
+          201:
+            description: Successfully addition of rent to the house appliance 
+          401:
+            $ref: '#/components/responses/401'
+          403:
+            $ref: '#/components/responses/403'
+            
+  /v1/appliances/{id}/rent-terminate:
+    put:
+      description: Terminates a rent on an House appliance
+      tags:
+        - Home Appliance
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: id of the house appliance
+          schema:
+            type: integer
+            example : 1
+      requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                  type: object
+                  items: 
+                    $ref: '#/components/schemas/HA'
+      responses:
+          200:
+            description: Successful deletion of rent on the house appliance 
+          401:
+            $ref: '#/components/responses/401'
+          403:
+            $ref: '#/components/responses/403'
+
+  /v1/bulletinboard:
+    get:
+      description: Returns a list of announcements as per filter
+      tags: 
+        - Bulletinboard
+      security: 
+        - oAuth2Password: []
+      parameters:
+        - name: limit
+          in: query
+          description: Number of appliances returned
+          schema:
+            type: integer
+            maximum: 10
+            minimum: 0
+            example : 5
+        
+        - name: page
+          in: query
+          description: Page number
+          schema: 
+            type: integer
+            maximum: 10
+            minimum: 1
+            example: 2
+        
+        - name: model-name
+          in: query
+          description: Model Name
+          schema:
+            type: string
+            example: abcd
+        
+        - name: type
+          in: query
+          description: Type of appliance
+          schema:
+            type: string
+            example: something
+        
+        - name: status
+          in: query
+          description: Status of appliance
+          schema:
+            type: string
+            example: broken
+        
+      responses:
+        200:
+          description: Successful pull of home appliance information
+          content:
+            application/json:
+              schema:
+                type: array
+                items: 
+                  $ref: '#/components/schemas/Announcement'
+        
+        400:
+          $ref: '#/components/responses/400'
+        
+        401:
+          $ref: '#/components/responses/401'
+          
+        403:
+          $ref: '#/components/responses/403'
+          
+    post:
+      description: Adds new announcement
+      tags: 
+        - Bulletinboard
+      security: 
+        - oAuth2Password: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+                type: object
+                items: 
+                  $ref: '#/components/schemas/Announcement'
+      responses:
+        201:
+          description: Successfully created a new announcement
+        
+        400:
+          $ref: '#/components/responses/400'
+        
+        401:
+          $ref: '#/components/responses/401'
+          
+        403:
+          $ref: '#/components/responses/403'  
+  
+  /v1/bulletinboard/{id}:
+    get:
+      description: Gets an announcement by its id
+      tags: 
+        - Bulletinboard
+      security: 
+        - oAuth2Password: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: External id of announcement
+          schema:
+            type: integer
+            example : 5
+    
+      responses:
+        200:
+          description: Successful pull of home appliance information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Announcement'
+                
+        400:
+          $ref: '#/components/responses/400'
+        
+        401:
+          $ref: '#/components/responses/401'
+          
+        403:
+          $ref: '#/components/responses/403'        
+  
+  /v1/bulletinboard/{id}/reply:
+    get:
+      description: Gets all replies for a specific announcement
+      tags: 
+        - Bulletinboard
+      security: 
+        - oAuth2Password: []
+      parameters:
+        - name: id
+          in: path
+          description: External id of announcement
+          required: true
+          schema:
+            type: integer
+            example : 5
+    
+      responses:
+        200:
+          description: Successful pull of all replies
+          content:
+            application/json:
+              schema:
+                type: array
+                items: 
+                  $ref: '#/components/schemas/Reply'
+        
+        400:
+          $ref: '#/components/responses/400'
+        
+        401:
+          $ref: '#/components/responses/401'
+          
+        403:
+          $ref: '#/components/responses/403'
+          
+    post:
+      description: Adds new reply
+      tags: 
+        - Bulletinboard
+      security: 
+        - oAuth2Password: []
+      parameters:
+        - name: id
+          in: path
+          description: External id of announcement
+          required: true
+          schema:
+            type: integer
+            example : 5
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Reply'
+      responses:
+        200:
+          description: Successfully added a new reply
+        
+        400:
+          $ref: '#/components/responses/400'
+        
+        401:
+          $ref: '#/components/responses/401'
+          
+        403:
+          $ref: '#/components/responses/403'  
+
+components:
+  schemas:
+    Role:
+      type: object
+      properties:
+        id:
+          type: integer
+          
+        name:
+          type: string
+          
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        
+        first_name:
+          type: string
+        
+        last_name:
+          type: string
+          
+        email_id:
+          type: string
+          format: email
+        
+        Role:
+          $ref: '#/components/schemas/Role'
+      
+    HA_Type:
+      type: object
+      properties:
+        id:
+          type: integer
+          
+        name:
+          type: string
+            
+    HA:
+      type: object
+      properties:
+        id:
+          type: integer
+          
+        sr_no: 
+          type: string
+          
+        model_name: 
+          type: string
+          
+        ha_type:
+          $ref: '#/components/schemas/HA_Type'
+          
+        state:
+          type: string
+            
+        price_per_day:
+          type: number
+        
+        max_time:
+          type: integer
+          
+    Ann_type:
+      type: object
+      properties:
+        id: 
+          type: integer
+        
+        name:
+          type: string
+    
+    Announcement:
+      type: object
+      properties: 
+        id:
+          type: string
+        
+        user:
+          $ref: '#/components/schemas/User'
+          
+        ann_type:
+          $ref: '#/components/schemas/Ann_type'
+          
+        description:
+          type: string
+          
+        priority:
+          type: string
+        
+        creation_date:
+          type: string
+          format: date-time
+        
+        ha:
+          $ref: '#/components/schemas/HA'
+          
+    Reply:
+      type: object
+      properties:
+        id:
+          type: integer
+        
+        user:
+          $ref: '#/components/schemas/User'
+          
+        announcement: 
+          $ref: '#/components/schemas/Announcement'
+        
+        creation_date:
+          type: string
+          format: date-time
+          
+        message_text: 
+          type: string
+          
+    Rent:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        room_number:
+          type: integer
+        HA:
+          $ref: '#/components/schemas/HA'  
+        rent_creation_date:
+          type: integer
+          format: date-time
+        rent_start_date:
+          type: string
+          format: date-time
+        rent_selected_end_date:
+          type: string
+          format: date-time   
+        rent_actual_end_date:
+          type: string
+          format: date-time             
+        price:
+          type: number
+  
+  responses:
+    400:
+      description: Bad Request. Please check the parameters
+    
+    401:
+      description: Unauthorized. Please check your credentials
+      
+    403:
+      description: Forbidden. Sorry, you can not access this resource.
+      
+          
+  securitySchemes:
+    oAuth2Password:
+      type: oauth2
+      description: OAuth 2.0 Security Scheme
+      flows: 
+        password: 
+          tokenUrl: /oauth/token
+          scopes: {}

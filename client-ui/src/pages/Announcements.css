@@ -1,0 +1,38 @@
+.announcement {
+    border: 1px solid;
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.priority {
+    padding: 5px;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    border: 1px solid;
+    background: transparent;
+}
+
+/* .priority-HIGH {
+    background-color: rgb(124, 9, 9);
+}
+
+.priority-medium {
+    background-color: rgb(182, 100, 7);
+}
+
+.priority-low {
+    background-color: rgb(9, 124, 53);
+} */
+.announced-on {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.announcement-type {
+    position: absolute;
+    right: 10px;
+}

@@ -1,0 +1,128 @@
+.form {
+    width: 325px;
+    height: 275px;
+    margin: 30px auto 0;
+    overflow: auto;
+    
+    box-shadow: 0px 0px 8px 1px rgba(0,0,0,.75);
+  }
+  
+  label {
+    position: relitive;
+    display: inline-block;
+    color: #004D40;
+    top: 100px;
+    font-size: 1.25em;
+    transition: all .2s ease;
+    z-index: 10;
+    position: relative;
+    top: -30px;
+  }
+  
+  .input-container {
+    width: 75%;
+    position: relative;
+    margin: 45px auto -25px;
+  }
+  
+  input[type="text"],input[type="password"],input[type="number"] {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    font-size: 1.25em;
+    padding: 0 0 5px 0;
+    color: #004D40;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 2px #4DB6AC;
+    outline: none;
+    z-index: 20;
+  }
+  
+  input[type="text"]:focus ~ label, input[type="text"]:valid ~ label,
+  input[type="password"]:focus ~ label, input[type="password"]:valid ~ label,
+  input[type="number"]:focus ~ label, input[type="number"]:valid ~ label {
+    top: -60px;
+  }
+  
+  .login {
+    cursor: pointer;
+    margin: auto;
+    width: 100%;
+    background-color: #4DB6AC;
+    color: #E0F2F1;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border: solid #009688;
+    border-width: 0 0 4px 0;
+    border-radius: 3px;
+    outline: none;
+    font-weight: bold;
+  }
+  
+  .login:hover {
+    background: #26A69A;
+    border: solid #00897B;
+    border-width: 0 0 4px 0;
+  }
+  
+  .login:active {
+    background: #009688;
+    border: solid transparent;
+    border-width: 0 0 0px 0;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #4DB6AC;
+    background-image: none;
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select */
+  .select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: #4DB6AC;
+    overflow: hidden;
+    border-radius: .25em;
+  }
+  select {
+    flex: 1;
+    padding: 0 .5em;
+    color: #fff;
+    cursor: pointer;
+  }
+  /* Arrow */
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #4DB6AC;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+  }
+
+  .select option,
+  .select option:disabled {
+      font-size: 1.25em;
+      color: #004D40;
+  }
