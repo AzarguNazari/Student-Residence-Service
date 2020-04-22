@@ -6,5 +6,5 @@ import de.srs.bulletinboard.model.User;
 
 public interface UserService {
 
-	public List<User> getAdmins();
+	List<User> getAdmins();
 }

@@ -2,6 +2,7 @@ package de.srs.appliance.resource.assembler;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.mvc.ControllerLinkBuilder;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -12,6 +13,7 @@ import de.srs.appliance.api.HomeApplianceApiController;
 import de.srs.appliance.model.Rent;
 import de.srs.appliance.resource.RentResource;
 
+@Configuration
 public class RentResourceAssembler {
 
 	public RentResource toResource(Rent rent){

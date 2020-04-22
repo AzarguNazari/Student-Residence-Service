@@ -61,7 +61,7 @@ public class HomeApplianceApiController implements HomeApplianceApi {
 
     @Override
 	@SuppressWarnings("rawtypes")
-	public ResponseEntity<?> v1AppliancesGet(@Min(0) @Max(10) @ApiParam(value = "Number of appliances returned", allowableValues = "") @Valid @RequestParam(value = "pageNumber", required = false) Integer pageNumber,@ApiParam(value = "Model Name of the HA") @Valid @RequestParam(value = "model-name", required = false) String modelName,@ApiParam(value = "Type of the HA") @Valid @RequestParam(value = "type", required = false) String type,@ApiParam(value = "Status of the HA") @Valid @RequestParam(value = "state", required = false) String status) {
+	public ResponseEntity<?> v1AppliancesGet(@Min(0) @Max(10) @ApiParam(value = "Number of appliances returned", allowableValues = "") @Valid @RequestParam(value = "pageNumber", required = false) Integer pageNumber,@ApiParam(value = "Model Name of the HA") @Valid @RequestParam(value = "model-name", required = false) String modelName,@ApiParam(value = "Type of the HA") @Valid @RequestParam(value = "type", required = false) Integer type,@ApiParam(value = "Status of the HA") @Valid @RequestParam(value = "state", required = false) String status) {
         String accept = request.getHeader("Accept");
         log.info("[START] : Get all appliances by filter ");
         if (accept != null && accept.contains("application/json")) {

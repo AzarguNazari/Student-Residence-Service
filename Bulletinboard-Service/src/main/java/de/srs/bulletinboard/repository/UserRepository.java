@@ -12,6 +12,6 @@ public interface UserRepository extends JpaRepository<User, Integer>{
 	@Query(value = "SELECT u.* FROM user_details u "
 			+ " JOIN"
 			+ " role r ON r.id = u.role_id "
-			+ " AND r.name = ?1")
-	public List<User> findByRoleId(String role);
+			+ " AND r.name = ?1", nativeQuery = true)
+	List<User> findByRoleId(String role);
 }
