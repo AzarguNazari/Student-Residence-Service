@@ -6,11 +6,14 @@ import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@Setter @Getter
 public class AuthUser extends User {
 
 	private static final long serialVersionUID = 1L;
@@ -27,20 +30,8 @@ public class AuthUser extends User {
   @JsonProperty("last_name")
   @Column(name="last_name")
   private String lastName = null;
-  
-  public Student getStudent() {
-	return student;
-}
-
-public void setStudent(Student student) {
-	this.student = student;
-}
 
 private Student student = null;
-  
-  
-  
-  
 
  
   public AuthUser(String username, String password, boolean enabled, boolean accountNonExpired,
@@ -61,42 +52,13 @@ private Student student = null;
     return this;
   }
 
-  
-    public Integer getId() {
-    return id;
-  }
-
-  public void setId(Integer id) {
-    this.id = id;
-  }
-
   public User firstName(String firstName) {
     this.firstName = firstName;
     return this;
-  }
-
-  
-    public String getFirstName() {
-    return firstName;
-  }
-
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
   }
 
   public User lastName(String lastName) {
     this.lastName = lastName;
     return this;
   }
-
-  
-    public String getLastName() {
-    return lastName;
-  }
-
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
-  }
-
-
 }

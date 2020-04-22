@@ -13,13 +13,15 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * User
  */
 @Entity
 @Table(name="user_details")
-
+@Setter @Getter
 public class User  implements Serializable  {
   private static final long serialVersionUID = 1L;
 
@@ -56,27 +58,9 @@ public class User  implements Serializable  {
     return this;
   }
 
-  
-    public Integer getId() {
-    return id;
-  }
-
-  public void setId(Integer id) {
-    this.id = id;
-  }
-
   public User firstName(String firstName) {
     this.firstName = firstName;
     return this;
-  }
-
-  
-    public String getFirstName() {
-    return firstName;
-  }
-
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
   }
 
   public User lastName(String lastName) {
@@ -84,61 +68,13 @@ public class User  implements Serializable  {
     return this;
   }
 
-  
-    public String getLastName() {
-    return lastName;
-  }
-
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
-  }
-
   public User username(String username) {
     this.username = username;
     return this;
-  }
-
-  public void setPassword(String password){
-	  this.password = password;
-  }
-  
-  public String getPassword(){
-	  return password;
-  }
-  
-    public String getUsername() {
-    return username;
-  }
-
-  public void setUsername(String username) {
-    this.username = username;
   }
 
   public User role(Role role) {
     this.role = role;
     return this;
   }
-
-
-  
-    public Role getRole() {
-    return role;
-  }
-
-  public void setRole(Role role) {
-    this.role = role;
-  }
-
-
-public Student getStudent() {
-	return student;
-}
-
-
-public void setStudent(Student student) {
-	this.student = student;
-}
-
-
-  
 }

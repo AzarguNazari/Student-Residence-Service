@@ -7,12 +7,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @SpringBootApplication
 @EnableWebMvc
 public class AuthorizationServerApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(AuthorizationServerApplication.class, args);
-		
-	}
-	
-	
-
+    public static void main(String[] args) {
+        SpringApplication.run(AuthorizationServerApplication.class, args);
+    }
 }
