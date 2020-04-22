@@ -1,0 +1,24 @@
+#%RAML 1.0 ResourceType
+
+    
+    usage: Use this resourceType to represent any collection of items
+    description: A collection of <<resourcePathName>>
+    
+    get?:
+      description: Returns a list of all <<resourcePathName>>
+       resource.
+      headers:
+        Accept:
+          description: Media type of the response to be returned 
+          type: string
+          example:
+            application/json
+          
+    post?:
+      description: Adds a new <<resourcePathName>>
+      responses:
+        '200':
+          description: Successfully created a new <<resourcePathName>>
+          
+
+          

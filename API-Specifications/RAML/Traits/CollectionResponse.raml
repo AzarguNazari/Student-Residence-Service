@@ -1,0 +1,14 @@
+#%RAML 1.0 Trait
+
+responses:
+  '200':
+    body:
+      application/json:
+        type: <<type-name>>
+  '400':
+          description: Bad Request. Please check the parameters
+  '401':
+    description: Unauthorized. Please check your credentials
+    
+  '403':
+    description: Forbidden. Sorry, you can not access this      

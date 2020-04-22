@@ -2,9 +2,9 @@ package de.srs.appliance.resource.assembler;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.springframework.context.annotation.Configuration;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.mvc.ControllerLinkBuilder;
+import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -13,7 +13,7 @@ import de.srs.appliance.api.HomeApplianceApiController;
 import de.srs.appliance.model.Rent;
 import de.srs.appliance.resource.RentResource;
 
-@Configuration
+@Component
 public class RentResourceAssembler {
 
 	public RentResource toResource(Rent rent){
@@ -26,7 +26,7 @@ public class RentResourceAssembler {
 	
 	private void buildUpdateLink(RentResource rentResource, HttpServletRequest request){
 		UriComponentsBuilder builder = ControllerLinkBuilder.linkTo(
-				ControllerLinkBuilder.methodOn(HomeApplianceApiController.class).v1AppliancesIdRentIdPut(null, rentResource.getRent().getAppliance().getId(), rentResource.getRent().getSerialNumber()))
+				ControllerLinkBuilder.methodOn(HomeApplianceApiController.class).v1AppliancesIdRentIdPut(null, rentResource.getRent().getAppliance().getSerialNumber(), rentResource.getRent().getSerialNumber()))
 				.toUriComponentsBuilder();
 		setGatewayHostAddress(builder, request);
 		rentResource.add(new Link(builder.toUriString()).withRel("Update"));

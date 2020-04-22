@@ -1,0 +1,19 @@
+#%RAML 1.0 DataType
+
+      properties: 
+        id:
+          type: integer
+        external_id:
+          type: integer
+        user: !include User.raml
+        announcement_type: !include AnnouncementType.raml
+        description:
+          type: string
+        priority:
+          type: 
+            enum: [LOW MEDIUM HIGH]
+              
+        creation_date:
+          type: datetime
+        appliance_serial_number:
+          type: integer

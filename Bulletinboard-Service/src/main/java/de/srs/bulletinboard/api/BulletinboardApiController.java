@@ -35,8 +35,6 @@ public class BulletinboardApiController implements BulletinboardApi {
 
     private static final Logger log = LoggerFactory.getLogger(BulletinboardApiController.class);
 
-    private final ObjectMapper objectMapper;
-
     private final HttpServletRequest request;
     
     @Autowired
@@ -46,8 +44,7 @@ public class BulletinboardApiController implements BulletinboardApi {
     private AnnouncementListResourceAssembler announcementListResourceAssembler;
 
     @Autowired
-    public BulletinboardApiController(ObjectMapper objectMapper, HttpServletRequest request) {
-        this.objectMapper = objectMapper;
+    public BulletinboardApiController(HttpServletRequest request) {
         this.request = request;
     }
 
@@ -120,7 +117,7 @@ public class BulletinboardApiController implements BulletinboardApi {
 
     public ResponseEntity<?> v1BulletinboardIdReplyPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody Reply body,@ApiParam(value = "External id of announcement",required=true) @PathVariable("announcement-id") Integer announcementId) {
         String accept = request.getHeader("Accept");
-        if(accept != null && accept.contains("application/json")){
+        
         	User loggedInUser = CommonUtil.getUserDetailsFromToken(request.getHeader("Authorization"));
             body.setUser(loggedInUser);
             if(validateReplyBody(body) && body.getAnnouncement().getExternalId().equals(announcementId)){
@@ -137,10 +134,7 @@ public class BulletinboardApiController implements BulletinboardApi {
             	log.warn("[WARN]: Invalid reply body");
         		return new ResponseEntity<ApiException>(new ApiException(400, "Invalid reply post"),HttpStatus.BAD_REQUEST);
             }
-        }else{
-        	log.warn("[WARN]: Unsupported format");
-        	return new ResponseEntity<>(new ApiException(400, "Unsupported format"),HttpStatus.BAD_REQUEST);
-        }
+        
         
     }
 

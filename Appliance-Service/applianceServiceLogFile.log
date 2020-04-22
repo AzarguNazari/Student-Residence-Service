@@ -1,0 +1,332 @@
+2020-01-16 23:08:44.744  INFO 13576 --- [main] de.srs.appliance.ApplianceApplication    : Starting ApplianceApplication on DESKTOP-TCLBBLO with PID 13576 (started by hp in E:\University of Bamberg\REST API Project\option-a2\Appliance-Service)
+2020-01-16 23:08:44.748  INFO 13576 --- [main] de.srs.appliance.ApplianceApplication    : No active profile set, falling back to default profiles: default
+2020-01-16 23:08:47.054  INFO 13576 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-16 23:08:47.059  INFO 13576 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-16 23:08:47.479  INFO 13576 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 384ms. Found 5 repository interfaces.
+2020-01-16 23:08:47.507  INFO 13576 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-16 23:08:47.507  INFO 13576 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-16 23:08:47.535  INFO 13576 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceRepository.
+2020-01-16 23:08:47.535  INFO 13576 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceTypeRepository.
+2020-01-16 23:08:47.539  INFO 13576 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.RentRepository.
+2020-01-16 23:08:47.539  INFO 13576 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.StudentRepository.
+2020-01-16 23:08:47.539  INFO 13576 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.UserRepository.
+2020-01-16 23:08:47.539  INFO 13576 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2020-01-16 23:08:48.258  INFO 13576 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cc2bf848] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-16 23:08:48.359  INFO 13576 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$4bac457a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-16 23:08:49.100  INFO 13576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9850 (http)
+2020-01-16 23:08:49.160  INFO 13576 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-16 23:08:49.164  INFO 13576 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-01-16 23:08:49.599  INFO 13576 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-01-16 23:08:49.613 DEBUG 13576 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-01-16 23:08:49.613  INFO 13576 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4775 ms
+2020-01-16 23:08:50.452  INFO 13576 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-16 23:08:50.664  INFO 13576 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-16 23:08:53.132  INFO 13576 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-16 23:08:53.172  WARN 13576 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/E:/University%20of%20Bamberg/REST%20API%20Project/option-a2/Appliance-Service/target/classes/data.sql]: DELETE from user_details; nested exception is org.postgresql.util.PSQLException: ERROR: update or delete on table "user_details" violates foreign key constraint "fkj2xqp1ukiu1cr0e5y0o49we6v" on table "announcement"
+  Detail: Key (id)=(1) is still referenced from table "announcement".
+2020-01-16 23:08:53.172  INFO 13576 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-01-16 23:08:53.180  INFO 13576 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-01-16 23:08:53.224  INFO 13576 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-01-16 23:08:53.260  INFO 13576 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-01-16 23:08:53.264 ERROR 13576 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/E:/University%20of%20Bamberg/REST%20API%20Project/option-a2/Appliance-Service/target/classes/data.sql]: DELETE from user_details; nested exception is org.postgresql.util.PSQLException: ERROR: update or delete on table "user_details" violates foreign key constraint "fkj2xqp1ukiu1cr0e5y0o49we6v" on table "announcement"
+  Detail: Key (id)=(1) is still referenced from table "announcement".
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:743) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:390) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at de.srs.appliance.ApplianceApplication.main(ApplianceApplication.java:26) [classes/:na]
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/E:/University%20of%20Bamberg/REST%20API%20Project/option-a2/Appliance-Service/target/classes/data.sql]: DELETE from user_details; nested exception is org.postgresql.util.PSQLException: ERROR: update or delete on table "user_details" violates foreign key constraint "fkj2xqp1ukiu1cr0e5y0o49we6v" on table "announcement"
+  Detail: Key (id)=(1) is still referenced from table "announcement".
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:509) ~[spring-jdbc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:238) ~[spring-jdbc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:48) ~[spring-jdbc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.runScripts(DataSourceInitializer.java:202) ~[spring-boot-autoconfigure-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.initSchema(DataSourceInitializer.java:119) ~[spring-boot-autoconfigure-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:89) ~[spring-boot-autoconfigure-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:37) ~[spring-boot-autoconfigure-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:94) ~[spring-boot-autoconfigure-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:85) ~[spring-boot-autoconfigure-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:429) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	... 13 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: update or delete on table "user_details" violates foreign key constraint "fkj2xqp1ukiu1cr0e5y0o49we6v" on table "announcement"
+  Detail: Key (id)=(1) is still referenced from table "announcement".
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2468) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2211) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:309) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:446) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:370) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:311) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:297) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:274) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:269) ~[postgresql-42.2.6.jar:42.2.6]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-3.2.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-3.2.0.jar:na]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:488) ~[spring-jdbc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	... 29 common frames omitted
+
+2020-01-16 23:11:03.767  INFO 11172 --- [main] de.srs.appliance.ApplianceApplication    : Starting ApplianceApplication on DESKTOP-TCLBBLO with PID 11172 (started by hp in E:\University of Bamberg\REST API Project\option-a2\Appliance-Service)
+2020-01-16 23:11:03.775  INFO 11172 --- [main] de.srs.appliance.ApplianceApplication    : No active profile set, falling back to default profiles: default
+2020-01-16 23:11:06.255  INFO 11172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-16 23:11:06.260  INFO 11172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-16 23:11:06.598  INFO 11172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 322ms. Found 5 repository interfaces.
+2020-01-16 23:11:06.618  INFO 11172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-16 23:11:06.618  INFO 11172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-16 23:11:06.642  INFO 11172 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceRepository.
+2020-01-16 23:11:06.642  INFO 11172 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceTypeRepository.
+2020-01-16 23:11:06.646  INFO 11172 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.RentRepository.
+2020-01-16 23:11:06.646  INFO 11172 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.StudentRepository.
+2020-01-16 23:11:06.646  INFO 11172 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.UserRepository.
+2020-01-16 23:11:06.646  INFO 11172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2020-01-16 23:11:07.871  INFO 11172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f98ac129] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-16 23:11:08.056  INFO 11172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$790b0e5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-16 23:11:08.821  INFO 11172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9850 (http)
+2020-01-16 23:11:08.867  INFO 11172 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-16 23:11:08.869  INFO 11172 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-01-16 23:11:09.104  INFO 11172 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-01-16 23:11:09.106 DEBUG 11172 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-01-16 23:11:09.107  INFO 11172 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5217 ms
+2020-01-16 23:11:09.955  INFO 11172 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-16 23:11:10.144  INFO 11172 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-16 23:11:13.042  INFO 11172 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-16 23:11:15.206  WARN 11172 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-16 23:11:15.403 DEBUG 11172 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2020-01-16 23:11:15.589  INFO 11172 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-01-16 23:11:15.706 DEBUG 11172 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2020-01-16 23:11:15.882  INFO 11172 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-16 23:11:15.973 DEBUG 11172 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-01-16 23:11:16.101 DEBUG 11172 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-01-16 23:11:16.119 DEBUG 11172 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-01-16 23:11:16.976  INFO 11172 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-16 23:11:17.066  INFO 11172 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-16 23:11:17.256  INFO 11172 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-16 23:11:18.110  INFO 11172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9850 (http) with context path '/api'
+2020-01-16 23:11:18.120  INFO 11172 --- [main] de.srs.appliance.ApplianceApplication    : Started ApplianceApplication in 15.009 seconds (JVM running for 15.592)
+2020-01-16 23:22:36.641  INFO 12948 --- [main] de.srs.appliance.ApplianceApplication    : Starting ApplianceApplication on DESKTOP-TCLBBLO with PID 12948 (started by hp in E:\University of Bamberg\REST API Project\option-a2\Appliance-Service)
+2020-01-16 23:22:36.645  INFO 12948 --- [main] de.srs.appliance.ApplianceApplication    : No active profile set, falling back to default profiles: default
+2020-01-16 23:22:39.263  INFO 12948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-16 23:22:39.265  INFO 12948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-16 23:22:39.599  INFO 12948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 314ms. Found 5 repository interfaces.
+2020-01-16 23:22:39.627  INFO 12948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-16 23:22:39.631  INFO 12948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-16 23:22:39.659  INFO 12948 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceRepository.
+2020-01-16 23:22:39.659  INFO 12948 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceTypeRepository.
+2020-01-16 23:22:39.663  INFO 12948 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.RentRepository.
+2020-01-16 23:22:39.663  INFO 12948 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.StudentRepository.
+2020-01-16 23:22:39.663  INFO 12948 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.UserRepository.
+2020-01-16 23:22:39.663  INFO 12948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2020-01-16 23:22:40.586  INFO 12948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7bbd328f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-16 23:22:40.722  INFO 12948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$fb3d7fc1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-16 23:22:41.590  INFO 12948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9850 (http)
+2020-01-16 23:22:41.645  INFO 12948 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-16 23:22:41.652  INFO 12948 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-01-16 23:22:42.028  INFO 12948 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-01-16 23:22:42.032 DEBUG 12948 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-01-16 23:22:42.032  INFO 12948 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5275 ms
+2020-01-16 23:22:42.855  INFO 12948 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-16 23:22:43.071  INFO 12948 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-16 23:22:46.253  INFO 12948 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-16 23:22:46.277  WARN 12948 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #3 of URL [file:/E:/University%20of%20Bamberg/REST%20API%20Project/option-a2/Appliance-Service/target/classes/data.sql]: INSERT INTO public.user_details( first_name, last_name, password, username, role_id) VALUES ( 'Adam', 'Smith', '$2y$10$sAZOCeiXfgn.WaPLBHMXmeQR2lMEHE0OR598qsjHPShpdS3ea6js2','adams@g.com', 1); nested exception is org.postgresql.util.PSQLException: ERROR: null value in column "id" violates not-null constraint
+  Detail: Failing row contains (null, Adam, Smith, $2y$10$sAZOCeiXfgn.WaPLBHMXmeQR2lMEHE0OR598qsjHPShpdS3ea6js2, adams@g.com, 1).
+2020-01-16 23:22:46.277  INFO 12948 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-01-16 23:22:46.284  INFO 12948 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-01-16 23:22:46.318  INFO 12948 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-01-16 23:22:46.349  INFO 12948 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-01-16 23:22:46.356 ERROR 12948 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #3 of URL [file:/E:/University%20of%20Bamberg/REST%20API%20Project/option-a2/Appliance-Service/target/classes/data.sql]: INSERT INTO public.user_details( first_name, last_name, password, username, role_id) VALUES ( 'Adam', 'Smith', '$2y$10$sAZOCeiXfgn.WaPLBHMXmeQR2lMEHE0OR598qsjHPShpdS3ea6js2','adams@g.com', 1); nested exception is org.postgresql.util.PSQLException: ERROR: null value in column "id" violates not-null constraint
+  Detail: Failing row contains (null, Adam, Smith, $2y$10$sAZOCeiXfgn.WaPLBHMXmeQR2lMEHE0OR598qsjHPShpdS3ea6js2, adams@g.com, 1).
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:743) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:390) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at de.srs.appliance.ApplianceApplication.main(ApplianceApplication.java:26) [classes/:na]
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #3 of URL [file:/E:/University%20of%20Bamberg/REST%20API%20Project/option-a2/Appliance-Service/target/classes/data.sql]: INSERT INTO public.user_details( first_name, last_name, password, username, role_id) VALUES ( 'Adam', 'Smith', '$2y$10$sAZOCeiXfgn.WaPLBHMXmeQR2lMEHE0OR598qsjHPShpdS3ea6js2','adams@g.com', 1); nested exception is org.postgresql.util.PSQLException: ERROR: null value in column "id" violates not-null constraint
+  Detail: Failing row contains (null, Adam, Smith, $2y$10$sAZOCeiXfgn.WaPLBHMXmeQR2lMEHE0OR598qsjHPShpdS3ea6js2, adams@g.com, 1).
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:509) ~[spring-jdbc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:238) ~[spring-jdbc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:48) ~[spring-jdbc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.runScripts(DataSourceInitializer.java:202) ~[spring-boot-autoconfigure-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.initSchema(DataSourceInitializer.java:119) ~[spring-boot-autoconfigure-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:89) ~[spring-boot-autoconfigure-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:37) ~[spring-boot-autoconfigure-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:94) ~[spring-boot-autoconfigure-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:85) ~[spring-boot-autoconfigure-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:429) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	... 13 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "id" violates not-null constraint
+  Detail: Failing row contains (null, Adam, Smith, $2y$10$sAZOCeiXfgn.WaPLBHMXmeQR2lMEHE0OR598qsjHPShpdS3ea6js2, adams@g.com, 1).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2468) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2211) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:309) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:446) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:370) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:311) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:297) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:274) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:269) ~[postgresql-42.2.6.jar:42.2.6]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-3.2.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-3.2.0.jar:na]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:488) ~[spring-jdbc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	... 29 common frames omitted
+
+2020-01-16 23:27:01.853  INFO 9084 --- [main] de.srs.appliance.ApplianceApplication    : Starting ApplianceApplication on DESKTOP-TCLBBLO with PID 9084 (started by hp in E:\University of Bamberg\REST API Project\option-a2\Appliance-Service)
+2020-01-16 23:27:01.858  INFO 9084 --- [main] de.srs.appliance.ApplianceApplication    : No active profile set, falling back to default profiles: default
+2020-01-16 23:27:04.259  INFO 9084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-16 23:27:04.263  INFO 9084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-16 23:27:04.885  INFO 9084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 583ms. Found 5 repository interfaces.
+2020-01-16 23:27:04.917  INFO 9084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-16 23:27:04.919  INFO 9084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-16 23:27:04.977  INFO 9084 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceRepository.
+2020-01-16 23:27:04.978  INFO 9084 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceTypeRepository.
+2020-01-16 23:27:04.980  INFO 9084 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.RentRepository.
+2020-01-16 23:27:04.981  INFO 9084 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.StudentRepository.
+2020-01-16 23:27:04.983  INFO 9084 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.UserRepository.
+2020-01-16 23:27:04.984  INFO 9084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2020-01-16 23:27:05.795  INFO 9084 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3fabf660] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-16 23:27:05.904  INFO 9084 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$bf2c4392] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-16 23:27:06.696  INFO 9084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9850 (http)
+2020-01-16 23:27:06.766  INFO 9084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-16 23:27:06.771  INFO 9084 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-01-16 23:27:07.054  INFO 9084 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-01-16 23:27:07.056 DEBUG 9084 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-01-16 23:27:07.058  INFO 9084 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5099 ms
+2020-01-16 23:27:08.603  INFO 9084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-16 23:27:08.777  INFO 9084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-16 23:27:11.709  INFO 9084 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-16 23:27:11.731  WARN 9084 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/E:/University%20of%20Bamberg/REST%20API%20Project/option-a2/Appliance-Service/target/classes/data.sql]: INSERT INTO public.role(id, name) values (1, 'ROLE_ADMIN'); nested exception is org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "role_pkey"
+  Detail: Key (id)=(1) already exists.
+2020-01-16 23:27:11.731  INFO 9084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-01-16 23:27:11.737  INFO 9084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-01-16 23:27:11.760  INFO 9084 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-01-16 23:27:11.783  INFO 9084 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-01-16 23:27:11.791 ERROR 9084 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/E:/University%20of%20Bamberg/REST%20API%20Project/option-a2/Appliance-Service/target/classes/data.sql]: INSERT INTO public.role(id, name) values (1, 'ROLE_ADMIN'); nested exception is org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "role_pkey"
+  Detail: Key (id)=(1) already exists.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:743) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:390) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at de.srs.appliance.ApplianceApplication.main(ApplianceApplication.java:26) [classes/:na]
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/E:/University%20of%20Bamberg/REST%20API%20Project/option-a2/Appliance-Service/target/classes/data.sql]: INSERT INTO public.role(id, name) values (1, 'ROLE_ADMIN'); nested exception is org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "role_pkey"
+  Detail: Key (id)=(1) already exists.
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:509) ~[spring-jdbc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:238) ~[spring-jdbc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:48) ~[spring-jdbc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.runScripts(DataSourceInitializer.java:202) ~[spring-boot-autoconfigure-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.initSchema(DataSourceInitializer.java:119) ~[spring-boot-autoconfigure-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:89) ~[spring-boot-autoconfigure-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:37) ~[spring-boot-autoconfigure-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:94) ~[spring-boot-autoconfigure-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:85) ~[spring-boot-autoconfigure-2.1.7.RELEASE.jar:2.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:429) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	... 13 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "role_pkey"
+  Detail: Key (id)=(1) already exists.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2468) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2211) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:309) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:446) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:370) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:311) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:297) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:274) ~[postgresql-42.2.6.jar:42.2.6]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:269) ~[postgresql-42.2.6.jar:42.2.6]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95) ~[HikariCP-3.2.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-3.2.0.jar:na]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:488) ~[spring-jdbc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	... 29 common frames omitted
+
+2020-01-16 23:29:54.695  INFO 12316 --- [main] de.srs.appliance.ApplianceApplication    : Starting ApplianceApplication on DESKTOP-TCLBBLO with PID 12316 (started by hp in E:\University of Bamberg\REST API Project\option-a2\Appliance-Service)
+2020-01-16 23:29:54.703  INFO 12316 --- [main] de.srs.appliance.ApplianceApplication    : No active profile set, falling back to default profiles: default
+2020-01-16 23:29:56.815  INFO 12316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-16 23:29:56.817  INFO 12316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-16 23:29:57.186  INFO 12316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 349ms. Found 5 repository interfaces.
+2020-01-16 23:29:57.225  INFO 12316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-16 23:29:57.227  INFO 12316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-16 23:29:57.254  INFO 12316 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceRepository.
+2020-01-16 23:29:57.255  INFO 12316 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceTypeRepository.
+2020-01-16 23:29:57.257  INFO 12316 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.RentRepository.
+2020-01-16 23:29:57.259  INFO 12316 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.StudentRepository.
+2020-01-16 23:29:57.260  INFO 12316 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.UserRepository.
+2020-01-16 23:29:57.261  INFO 12316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2020-01-16 23:29:57.957  INFO 12316 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8096de30] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-16 23:29:58.063  INFO 12316 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$172b62] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-16 23:29:58.787  INFO 12316 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9850 (http)
+2020-01-16 23:29:58.866  INFO 12316 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-16 23:29:58.871  INFO 12316 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-01-16 23:29:59.232  INFO 12316 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-01-16 23:29:59.232 DEBUG 12316 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-01-16 23:29:59.233  INFO 12316 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4444 ms
+2020-01-16 23:29:59.978  INFO 12316 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-16 23:30:00.179  INFO 12316 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-16 23:30:03.194  INFO 12316 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-01-16 23:30:05.191  WARN 12316 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-01-16 23:30:05.357 DEBUG 12316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2020-01-16 23:30:05.597  INFO 12316 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-01-16 23:30:05.834 DEBUG 12316 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2020-01-16 23:30:06.093  INFO 12316 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-16 23:30:06.134 DEBUG 12316 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-01-16 23:30:06.216 DEBUG 12316 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-01-16 23:30:06.246 DEBUG 12316 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-01-16 23:30:06.828  INFO 12316 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-01-16 23:30:06.870  INFO 12316 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-01-16 23:30:07.011  INFO 12316 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-01-16 23:30:07.534  INFO 12316 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9850 (http) with context path '/api'
+2020-01-16 23:30:07.542  INFO 12316 --- [main] de.srs.appliance.ApplianceApplication    : Started ApplianceApplication in 13.393 seconds (JVM running for 13.881)

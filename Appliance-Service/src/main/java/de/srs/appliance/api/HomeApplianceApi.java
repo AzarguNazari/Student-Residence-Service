@@ -39,7 +39,7 @@ public interface HomeApplianceApi {
     @RequestMapping(value = "/v1/appliances",
         produces = { "application/json" }, 
         method = RequestMethod.GET)
-    ResponseEntity<?> v1AppliancesGet(@Min(0) @Max(10) @ApiParam(value = "Number of appliances returned", allowableValues = "") @Valid @RequestParam(value = "pageNumber", required = true) Integer pageNumber,@ApiParam(value = "Model Name of the HA") @Valid @RequestParam(value = "model-name", required = false) String modelName,@ApiParam(value = "Type of the HA") @Valid @RequestParam(value = "type", required = false) Integer type,@ApiParam(value = "Status of the HA") @Valid @RequestParam(value = "status", required = false) String status);
+    ResponseEntity<?> v1AppliancesGet(@Min(0) @Max(10) @ApiParam(value = "Number of appliances returned", allowableValues = "") @Valid @RequestParam(value = "pageNumber", required = false) Integer pageNumber,@ApiParam(value = "Model Name of the HA") @Valid @RequestParam(value = "model-name", required = false) String modelName,@ApiParam(value = "Type of the HA") @Valid @RequestParam(value = "type", required = false) Integer type,@ApiParam(value = "Status of the HA") @Valid @RequestParam(value = "state", required = false) String status);
 
     @ApiOperation(value = "", nickname = "v1AppliancesTypesGet", notes = "Returns a list of all appliance types", response = ApplianceType.class, responseContainer = "List", tags={ "Home Appliance", })
     @ApiResponses(value = { 
@@ -139,6 +139,6 @@ public interface HomeApplianceApi {
     @RequestMapping(value = "/v1/appliances/rent",
         produces = { "application/json" }, 
         method = RequestMethod.GET)
-    ResponseEntity<?> v1AppliancesRentGet(@Min(0) @Max(10) @ApiParam(value = "Number of appliances returned", allowableValues = "") @Valid @RequestParam(value = "limit", required = false) Integer limit,@ApiParam(value = "Id of the Student") @Valid @RequestParam(value = "student-id", required = false) Integer studentId, @ApiParam(value = "Status of the Rent") @Valid @RequestParam(value = "status", required = false) String status);
+    ResponseEntity<?> v1AppliancesRentGet(@ApiParam(value = "Id of the Student") @Valid @RequestParam(value = "student-id", required = false) Integer studentId, @ApiParam(value = "Status of the Rent") @Valid @RequestParam(value = "status", required = false) String status);
 
 }

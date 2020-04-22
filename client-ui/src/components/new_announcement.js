@@ -34,7 +34,7 @@ const NewAnnouncement = ({ onAddAnnouncement }) => {
     const getAppliances = () => {
         api.get("http://localhost:9852/api/v1/appliances", { params: { pageNumber: 0 } })
             .then((data) => {
-                const applianceList = get(data, ["data", "_embedded", "applianceResourceList"], []);
+                const applianceList = get(data, ["data", "appliances"], []);
                 setAppliances(applianceList);
             });
     }
@@ -68,18 +68,18 @@ const NewAnnouncement = ({ onAddAnnouncement }) => {
             <div className="input-container select">
                 <select name="slct" id="slct" onChange={(e) => updateAnnouncement("priority", e.target.value)}>
                     <option selected disabled>Select a Priority</option>
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
+                    <option value="LOW">Low</option>
+                    <option value="MEDIUM">Medium</option>
+                    <option value="HIGH">High</option>
                 </select>
             </div>
 
             {announcement &&
                 announcement['announcement_type'] &&
                 announcement['announcement_type'].name === "New HA Available" &&
-                <div>
-                    <label id="type">Select Appliance: </label>
-                    <select onChange={(e) => updateAnnouncement("appliance_serial_number", parseInt(e.target.value))}>
+                <div className="input-container select">
+                    <select name="slct" id="slct" onChange={(e) => updateAnnouncement("appliance_serial_number", parseInt(e.target.value))}>
+                    <option selected disabled>Select an Appliance</option>
                         {appliances.map(({ appliance }) =>
                             <option value={appliance['serial_number']}>{appliance['model_name']}</option>
                         )}

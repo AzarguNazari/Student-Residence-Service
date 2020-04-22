@@ -53,9 +53,6 @@ public class CustomRentRepositoryImpl implements CustomRentRepository {
 		Query query = entityManager.createNativeQuery(getAllRentsQuery(studentId, status),Rent.class);
 		
 		List<Rent> rents = query.getResultList();
-		rents.forEach(rent->{
-			rent.setAppliance(new Appliance().serialNumber(rent.getAppliance().getSerialNumber()));
-		});
 		return rents;
 	}
 	

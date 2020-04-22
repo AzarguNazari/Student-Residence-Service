@@ -1,0 +1,26 @@
+#%RAML 1.0 DataType
+
+    properties:
+        id:
+          type: integer
+        serial_number: 
+          type: integer
+        model_name: 
+          type: string
+        appliance_type: !include ApplianceType.raml
+        state:
+          type: 
+            enum:
+              - AVAILABLE
+              - BROKEN
+        price_per_day:
+          type: number
+          format: float
+        max_time:
+          type: integer
+        available_appliances:
+          type: integer
+        creation_date:
+          type:  datetime
+        deleted_on:
+          type: datetime

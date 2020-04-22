@@ -12,6 +12,8 @@ import org.springframework.web.util.UriComponentsBuilder;
 import de.srs.appliance.api.HomeApplianceApiController;
 import de.srs.appliance.model.Appliance;
 import de.srs.appliance.resource.ApplianceResource;
+import de.srs.appliance.util.CommonUtil;
+import de.srs.appliance.util.Constants;
 
 @Component
 public class ApplianceResourceAssembler {
@@ -22,11 +24,17 @@ public class ApplianceResourceAssembler {
 		ApplianceResource applianceResource = new  ApplianceResource(appliance);
 		HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
 		
-		buildSelfLink(applianceResource, appliance, request);
-		buildAddLink(applianceResource, appliance, request);
-		buildDeleteLink(applianceResource, appliance, request);
-		buildUpdateLink(applianceResource, appliance, request);
-		buildGetRentsByApplianceIdLink(applianceResource, appliance, request);
+		String role = CommonUtil.getRoleFromToken(request.getHeader("Authorization"));
+		
+		if(role.equals(Constants.ADMIN)){
+			buildAddLink(applianceResource, appliance, request); //ADMIN
+			buildDeleteLink(applianceResource, appliance, request); //ADMIN
+			buildUpdateLink(applianceResource, appliance, request); // ADMIN
+			buildGetRentsByApplianceIdLink(applianceResource, appliance, request); // ADMIN
+		}
+		
+		buildSelfLink(applianceResource, appliance, request); //ALL
+		buildGetRentsLink(applianceResource, appliance, request); // ALL
 		
 		
 		return applianceResource;
@@ -69,7 +77,7 @@ public class ApplianceResourceAssembler {
 	
 	private void buildGetRentsLink(ApplianceResource applianceResource, Appliance appliance, HttpServletRequest request){
 		UriComponentsBuilder builder = ControllerLinkBuilder.linkTo(
-				ControllerLinkBuilder.methodOn(HomeApplianceApiController.class).v1AppliancesIdRentGet(appliance.getSerialNumber(), null, null)).toUriComponentsBuilder();
+				ControllerLinkBuilder.methodOn(HomeApplianceApiController.class).v1AppliancesRentGet(null, null)).toUriComponentsBuilder();
 		setGatewayHostAddress(builder, request);
 		applianceResource.add(new Link(builder.toUriString()).withRel("Rents"));
 	}

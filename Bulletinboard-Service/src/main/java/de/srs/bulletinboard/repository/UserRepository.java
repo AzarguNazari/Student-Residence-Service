@@ -13,5 +13,5 @@ public interface UserRepository extends JpaRepository<User, Integer>{
 			+ " JOIN"
 			+ " role r ON r.id = u.role_id "
 			+ " AND r.name = ?1", nativeQuery = true)
-	List<User> findByRoleId(String role);
+	public List<User> findByRoleId(String role);
 }

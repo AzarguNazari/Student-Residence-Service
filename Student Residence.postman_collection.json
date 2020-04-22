@@ -1,0 +1,937 @@
+{
+	"info": {
+		"_postman_id": "3815d8dd-a47c-48cd-b28b-72a0f2ac7d45",
+		"name": "Student Residence",
+		"description": "All the API's for the Appliance microservice.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authorization",
+			"item": [
+				{
+					"name": "http://localhost:9852/oauth/token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "34621b01-8515-482f-aef8-81f298f2605d",
+								"exec": [
+									"const json = JSON.parse(responseBody);",
+									"postman.setGlobalVariable(\"token\", \"Bearer \" + json['access_token']);",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "browser",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "browser",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "adams@g.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9852/oauth/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9852",
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": []
+		},
+		{
+			"name": "Appliances",
+			"item": [
+				{
+					"name": "Appliances Get",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e161c698-f792-45f6-8035-443319c1e19e",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9852/api/v1/appliances",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9852",
+							"path": [
+								"api",
+								"v1",
+								"appliances"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Appliances Get With Params",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0092faf7-f1d8-47ce-ae7f-51822b6561e2",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9852/api/v1/appliances?pageNumber=0&model-name=A1&type=1&state=AVAILABLE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9852",
+							"path": [
+								"api",
+								"v1",
+								"appliances"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "model-name",
+									"value": "A1"
+								},
+								{
+									"key": "type",
+									"value": "1"
+								},
+								{
+									"key": "state",
+									"value": "AVAILABLE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Appliance Post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a1ac58b0-cae5-48fc-b3a8-ce132c3e4b2c",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model_name\": \"A8\",\n    \"state\": \"AVAILABLE\",\n    \"price_per_day\": \"12\",\n    \"max_time\": \"12\",\n    \"available_appliances\": \"12\",\n    \"appliance_type\": {\n        \"id\": 2\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9852/api/v1/appliances",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9852",
+							"path": [
+								"api",
+								"v1",
+								"appliances"
+							]
+						},
+						"description": "Creates a new appliance."
+					},
+					"response": []
+				},
+				{
+					"name": "Appliance Put",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f757173a-93d9-47a3-bd68-0bb95a665b5e",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model_name\": \"New Appliance 2\",\n    \"state\": \"AVAILABLE\",\n    \"price_per_day\": \"12\",\n    \"max_time\": \"12\",\n    \"available_appliances\": \"12\",\n    \"appliance_type\": {\n        \"id\": 2\n    },\n    \"serial_number\":273,\n    \"created_on\":\"2020-01-22T15:11:26.252Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9852/api/v1/appliances/273",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9852",
+							"path": [
+								"api",
+								"v1",
+								"appliances",
+								"273"
+							]
+						},
+						"description": "Creates a new appliance."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "83438493-8240-455a-90ae-723dbedce21c",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9852/api/v1/appliances/359",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9852",
+							"path": [
+								"api",
+								"v1",
+								"appliances",
+								"359"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Appliance Get With Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c4eb24b7-eae1-425f-a3f6-808f7be2de68",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9852/api/v1/appliances/273",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9852",
+							"path": [
+								"api",
+								"v1",
+								"appliances",
+								"273"
+							]
+						},
+						"description": "Gets a specific appliance"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": []
+		},
+		{
+			"name": "Rent Appliance",
+			"item": [
+				{
+					"name": "Rent of a specific appliance",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c0c9e948-0c0f-47eb-b476-327868ef1417",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9852/api/v1/appliances/230/rent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9852",
+							"path": [
+								"api",
+								"v1",
+								"appliances",
+								"230",
+								"rent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All rents with filter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "db52cc13-0689-4698-aa68-3645678f0f75",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9852/api/v1/appliances/rent?status=RENTED",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9852",
+							"path": [
+								"api",
+								"v1",
+								"appliances",
+								"rent"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "RENTED"
+								}
+							]
+						},
+						"description": "Gets all the rented appliances"
+					},
+					"response": []
+				},
+				{
+					"name": "Updation of rent on an appliance",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7654820b-8f49-4b61-a675-b14ce64f19ea",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"serial_number\": 746,\n    \"student\": {\n        \n        \"id\": 1\n        \n    },\n    \"appliance\": {\n        \"serial_number\": 230\n    },\n    \"creation_date\": \"2020-01-22T21:20:26.769Z\",\n    \"selected_end_date\": \"2020-01-27T23:59:59.999Z\",\n    \"actual_end_date\": null,\n    \"rent_amount\": 13,\n    \"number_of_appliances\": 5,\n    \"status\": \"TERMINATED\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9852/api/v1/appliances/230/rent/746",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9852",
+							"path": [
+								"api",
+								"v1",
+								"appliances",
+								"230",
+								"rent",
+								"746"
+							]
+						},
+						"description": "Can also be used to terminate rent"
+					},
+					"response": []
+				},
+				{
+					"name": "Create rent on an appliance",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7b0c0e25-1abf-4886-93eb-c8dbf49a5298",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"student\": {\n        \"id\": 1\n    },\n    \"appliance\": {\n        \"serial_number\": 273\n    },\n    \"selected_end_date\": \"2020-01-25T00:00:00.000Z\",\n    \"number_of_appliances\": 1,\n    \"status\": \"RENTED\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9852/api/v1/appliances/273/rent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9852",
+							"path": [
+								"api",
+								"v1",
+								"appliances",
+								"273",
+								"rent"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": []
+		},
+		{
+			"name": "Bulletinboard",
+			"item": [
+				{
+					"name": "Announcements Get With Filters",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e545f7ca-f9c8-4363-9699-dc7601b4f2c8",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9852/api/v1/bulletinboard?pageNumber=0&issuer-id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9852",
+							"path": [
+								"api",
+								"v1",
+								"bulletinboard"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "issuer-id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Gets a list of announcements"
+					},
+					"response": []
+				},
+				{
+					"name": "Announcement Get with ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "933874a6-1475-4ea9-8e44-fae5fc47bf62",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9852/api/v1/bulletinboard/488",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9852",
+							"path": [
+								"api",
+								"v1",
+								"bulletinboard",
+								"488"
+							]
+						},
+						"description": "Gets a specific announcement"
+					},
+					"response": []
+				},
+				{
+					"name": "Create new announcement",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f6440f02-6fb8-44e1-8d25-a401bd429d03",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"id\": 1\n    },\n    \"description\": \"New announcement\",\n    \"announcement_type\": {\n        \"id\": 2\n    },\n    \"priority\": \"HIGH\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9852/api/v1/bulletinboard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9852",
+							"path": [
+								"api",
+								"v1",
+								"bulletinboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reply Get for an announcement",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "25d1c59e-342b-428b-afe6-f67040de8575",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9852/api/v1/bulletinboard/488/reply",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9852",
+							"path": [
+								"api",
+								"v1",
+								"bulletinboard",
+								"488",
+								"reply"
+							]
+						},
+						"description": "Gets replies for a specific announcement"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a reply for an announcement",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4ed47075-3f55-4da8-ae6c-930df423ef84",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"id\": 2\n    },\n    \"announcement\": {\n        \"external_id\": 488\n    },\n    \"message_text\": \"Adding a reply\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9852/api/v1/bulletinboard/488/reply",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9852",
+							"path": [
+								"api",
+								"v1",
+								"bulletinboard",
+								"488",
+								"reply"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": []
+		}
+	],
+	"protocolProfileBehavior": []
+}

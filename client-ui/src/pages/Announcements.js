@@ -10,6 +10,7 @@ import LOCAL_STORAGE from "../local-storage";
 import Reply from "../components/reply";
 import history from "../context/history";
 import AnnouncementFilters from "../components/AnnouncementFilters";
+import ReactPaginate from "react-paginate";
 
 const Announcements = () => {
 
@@ -19,11 +20,18 @@ const Announcements = () => {
     const [reply, setReply] = useState({ "user": { "id": 2 } });
     const [selectedAnnouncement, setSelectedAnnouncement] = useState();
     const [replies, setReplies] = useState([]);
+    const [pagination, setPagination] = useState({});
 
     const getAnnouncements = () => {
-        api.get("http://localhost:9852/api/v1/bulletinboard")
+        api.get("http://localhost:9852/api/v1/bulletinboard", { params: { pageNumber: 0 } })
             .then(({ data }) => {
-                setAnnouncements(data);
+                const paginationObj = {
+                    pageNumber: data['pageNumber'],
+                    totalPages: data['totalPages'],
+                    totalElements: data['totalElements']
+                }
+                setPagination(paginationObj);
+                setAnnouncements(data['announcements']);
             });
     }
 
@@ -107,8 +115,27 @@ const Announcements = () => {
     const applyFilter = (filter) => {
         api.get("http://localhost:9852/api/v1/bulletinboard", { params: filter })
             .then(({ data }) => {
-                setAnnouncements(data);
-            });        
+                const paginationObj = {
+                    pageNumber: data['pageNumber'],
+                    totalPages: data['totalPages'],
+                    totalElements: data['totalElements']
+                }
+                setPagination(paginationObj);
+                setAnnouncements(data['announcements']);
+            });
+    }
+
+    const onPageChange = ({ selected: pageNumber }) => {
+        api.get("http://localhost:9852/api/v1/bulletinboard", { params: { pageNumber } })
+            .then(({ data }) => {
+                const paginationObj = {
+                    pageNumber: data['pageNumber'],
+                    totalPages: data['totalPages'],
+                    totalElements: data['totalElements']
+                }
+                setPagination(paginationObj);
+                setAnnouncements(data['announcements']);
+            });
     }
 
     return (
@@ -117,7 +144,7 @@ const Announcements = () => {
 
             <button className="btn btn-medium btn-medium-a" onClick={selectFilters}>Filters</button>
 
-            {announcements.map((announcement) =>
+            {announcements.map(({ announcement }) =>
                 <div className="announcement">
                     <h2>{announcement && announcement['description']}</h2>
                     <span className="announced-by">Announcement by: {announcement && announcement['user']['first_name'] + " " + announcement['user']['last_name']}</span>
@@ -128,25 +155,31 @@ const Announcements = () => {
                     {replies.length > 0 && <div className="replies">
                         {replies.map((replyItem) => {
                             return announcement['external_id'] === replyItem['announcement']['external_id'] && (
-                                <div>
-                                    <p>{replyItem && replyItem['user']['first_name']} Replied:</p>
-                                    <p>{replyItem && replyItem['message_text']}</p>
-                                    <p>Replied at : {replyItem && getDate(replyItem['creation_date'])}</p>
+                                <div className="reply">
+                                    <span className="reply-person">{replyItem && replyItem['user']['first_name']} Replied:</span>
+                                    <span className="reply-message">{replyItem && replyItem['message_text']}</span>
+                                    <span className="reply-date">Replied at : {replyItem && getDate(replyItem['creation_date'])}</span>
                                 </div>
                             )
                         })}
                     </div>}
+
                     <div>
                         <button className="btn btn-medium btn-medium-a" onClick={() => replyAction(announcement)}>Reply</button>
-                        {replies.length === 0 && <button className="btn btn-medium btn-medium-a" onClick={() => getReplies(announcement)}>Get Replies</button>}
+                        <button className="btn btn-medium btn-medium-a" onClick={() => getReplies(announcement)}>Get Replies</button>
                     </div>
-
-
-
                 </div>
             )}
-
-            {LOCAL_STORAGE.getRole() === "ROLE_ADMIN" && <button onClick={addAnnouncementAction}>Add an announcement</button>}
+            <ReactPaginate
+                previousLabel="<<"
+                nextLabel=">>"
+                containerClassName="pagination"
+                pageCount={pagination['totalPages']}
+                pageRangeDisplayed={2}
+                marginPagesDisplayed={1}
+                onPageChange={onPageChange}
+            />
+            {LOCAL_STORAGE.getRole() === "ROLE_ADMIN" && <button className="btn btn-medium btn-medium-a" onClick={addAnnouncementAction}>Add an announcement</button>}
 
             <Rodal visible={isVisible} onClose={hideDialog} closeOnEsc={true} width={500} height={400}>
                 {type === "new" && <NewAnnouncement onAddAnnouncement={addAnnouncement} />}

@@ -20,9 +20,9 @@ const StudentRental = () => {
                 "status": "RENTED"
             }
         })
-        .then(({ data }) => {
-            setRents(data);
-        });
+            .then(({ data }) => {
+                setRents(data['rents']);
+            });
     }
 
     useEffect(() => {
@@ -88,7 +88,7 @@ const StudentRental = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {rents.map((rent) =>
+                    {rents.map(({ rent }) =>
                         <tr>
                             <td>{rent && rent['appliance']['model_name']}</td>
                             <td>{rent && getDate(rent['creation_date'])}</td>

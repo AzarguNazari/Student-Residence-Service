@@ -47,7 +47,7 @@ public class Permissions extends Constants {
 						new Pair(new UriTemplate(Endpoint_Appliance_Id_Rent_Template),
 								new Pair[]{
 										new Pair(Method_Get,false),
-										new Pair(Method_Post,false)
+										new Pair(Method_Post,true)
 										
 								}
 						),

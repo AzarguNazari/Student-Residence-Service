@@ -14,7 +14,7 @@ public interface RentService {
 	
 	public void addRent(Rent rent, Appliance appliance);
 	
-	public void updateRent(Rent rent, Appliance appliance);
+	public void updateRent(Rent newRent, Rent previousRent, Appliance appliance);
 	
 	public List<Rent> getAllRentsByStudentIdAndStatus(Integer studentId, StatusEnum status);
 }

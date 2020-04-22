@@ -6,6 +6,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
@@ -13,9 +16,12 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 import de.srs.bulletinboard.model.User;
 
 public class CommonUtil {
+	
+	private static final Logger log = LoggerFactory.getLogger(CommonUtil.class);
 
 	@SuppressWarnings("rawtypes")
 	public static User getUserDetailsFromToken(String jwtToken){
+		
 		DecodedJWT jwt = JWT.decode(jwtToken.split("Bearer")[1].trim());
 		Map<String, Claim> claims = jwt.getClaims();
 		User user = new User();
@@ -42,11 +48,28 @@ public class CommonUtil {
     				
     			}
     		} catch (IntrospectionException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-    			// TODO Auto-generated catch block
+
+    			log.error("[ERROR]: Error while extracting user details from token", e);
     			e.printStackTrace();
     		}
         }
 		 
         return  user;
+	}
+	
+	public static String getRoleFromToken(String jwtToken){
+		try{
+			if(jwtToken!= null){
+				DecodedJWT jwt = JWT.decode(jwtToken.split("Bearer")[1].trim());
+		        Claim claim = jwt.getClaim("authorities");
+		        String[] authorities = claim.asArray(String.class);
+		        return authorities[0];
+			}
+		}catch(Exception e){
+			log.error("[ERROR]: Error while extracting role from token", e);
+		}
+		
+		return null;
+		
 	}
 }

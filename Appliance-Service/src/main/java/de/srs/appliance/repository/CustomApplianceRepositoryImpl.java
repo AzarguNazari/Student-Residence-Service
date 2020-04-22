@@ -22,7 +22,7 @@ public class CustomApplianceRepositoryImpl implements CustomApplianceRepository{
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public Page<Appliance> findAllActiveAppliances(String modelName, Integer applianceTypeId, String status, Integer page) {
+	public Page<Appliance> findAllActiveAppliances(String modelName, Integer applianceTypeId, Integer status, Integer page) {
 		List<Appliance> appliances = new ArrayList<>();
 		
 		Query countQuery = entityManager.createNativeQuery(buildFindAllAppliancesQuery(true, modelName, applianceTypeId, status));
@@ -41,7 +41,7 @@ public class CustomApplianceRepositoryImpl implements CustomApplianceRepository{
 		
 	}
 	
-	private String buildFindAllAppliancesQuery(boolean countOnly, String modelName, Integer applianceTypeId, String status){
+	private String buildFindAllAppliancesQuery(boolean countOnly, String modelName, Integer applianceTypeId, Integer status){
 		
 		StringBuilder query = new StringBuilder();
 		
@@ -55,17 +55,17 @@ public class CustomApplianceRepositoryImpl implements CustomApplianceRepository{
 			query.append(" AND model_name = :modelName");
 		}
 		if(applianceTypeId != null){
-			query.append(" AND appliance_id = :applianceTypeId");
+			query.append(" AND appliance_type = :applianceTypeId");
 		}
 		
 		if(status != null){
-			query.append(" AND status = :status");
+			query.append(" AND state = :state");
 		}
 		
 		return query.toString();
 	}
 	
-	private void setParametersInQuery(Query query, String modelName, Integer applianceTypeId, String status){
+	private void setParametersInQuery(Query query, String modelName, Integer applianceTypeId, Integer status){
 		
 		if(modelName != null){
 			query.setParameter("modelName", modelName);
@@ -76,7 +76,7 @@ public class CustomApplianceRepositoryImpl implements CustomApplianceRepository{
 		}
 		
 		if(status != null){
-			query.setParameter("status", status);
+			query.setParameter("state", status);
 		}
 	}
 

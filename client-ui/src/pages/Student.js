@@ -17,10 +17,10 @@ const Student = () => {
 
 
     const getAppliances = () => {
-        api.get("http://localhost:9852/api/v1/appliances", { params: { pageNumber: 0 } })
+        api.get("http://localhost:9852/api/v1/appliances")
             .then((data) => {
-                let applianceList = get(data, ["data", "_embedded", "applianceResourceList"], []);
-                applianceList = applianceList.filter(({ appliance }) => appliance['available_appliances'] > 0);
+                let applianceList = get(data, ["data", "appliances"], []);
+                applianceList = applianceList.filter(({ appliance }) => appliance['available_appliances'] > 0 && appliance['state'] !== "BROKEN");
                 setAppliances(applianceList);
             });
     }

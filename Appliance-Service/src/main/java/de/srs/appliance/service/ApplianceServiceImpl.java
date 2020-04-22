@@ -6,11 +6,8 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 
@@ -29,8 +26,8 @@ public class ApplianceServiceImpl implements ApplianceService {
 	ApplianceTypeRepository applianceTypeRepository;
 	
 	@Override
-	public Page<Appliance> getAllAppliances(String modelName, Integer applianceTypeId, String status, Integer page) { 
-		return applianceRepository.findAllActiveAppliances(modelName, applianceTypeId, status, page);
+	public Page<Appliance> getAllAppliances(String modelName, Integer applianceTypeId, Integer state, Integer page) { 
+		return applianceRepository.findAllActiveAppliances(modelName, applianceTypeId, state, page);
 	}
 	
 	@Override
@@ -64,7 +61,7 @@ public class ApplianceServiceImpl implements ApplianceService {
 	}
 	
 	@Transactional
-	@Cacheable("applianceTypes")
+	
 	public List<ApplianceType> getAllApplianceTypes() {
 		return applianceTypeRepository.findAll();
 	}

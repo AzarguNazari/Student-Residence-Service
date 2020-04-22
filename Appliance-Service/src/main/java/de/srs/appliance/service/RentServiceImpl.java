@@ -42,6 +42,7 @@ public class RentServiceImpl implements RentService{
 		 
 		rent.setCreationDate(new Date());
 		rent.setAppliance(appliance);
+		rent.setStatus(StatusEnum.RENTED);
 		
 		Long rentDurationInMillis = Math.abs(rent.getSelectedEndDate().getTime() - rent.getCreationDate().getTime());
 		Long rentDuration = TimeUnit.DAYS.convert(rentDurationInMillis, TimeUnit.MILLISECONDS);
@@ -62,32 +63,33 @@ public class RentServiceImpl implements RentService{
 		
 	}
 	
-	public void updateRent(Rent rent, Appliance appliance){
+	public void updateRent(Rent newRent, Rent previousRent, Appliance appliance){
 		
 		Long rentDurationInMillis = null;
+		Integer updatedAvailableAppliances = null;
 		
-		if(rent.getStudent() != null){
-			Student student = studentRepository.findById(rent.getStudent().getId()).get();
-			rent.setStudent(student);
+		if(newRent.getStudent() != null){
+			Student student = studentRepository.findById(newRent.getStudent().getId()).get();
+			newRent.setStudent(student);
 		}
 		
-		rent.setAppliance(appliance);
+		newRent.setAppliance(appliance);
 		
-		if(rent.getStatus().equals(StatusEnum.TERMINATED)){
-			rent.setActualEndDate(new Date());
-			rentDurationInMillis = Math.abs(rent.getActualEndDate().getTime() - rent.getCreationDate().getTime());
-			 
+		if(newRent.getStatus().equals(StatusEnum.TERMINATED)){
+			newRent.setActualEndDate(new Date());
+			rentDurationInMillis = Math.abs(newRent.getActualEndDate().getTime() - newRent.getCreationDate().getTime());
+			updatedAvailableAppliances = appliance.getAvailableAppliances() + newRent.getNumberOfAppliances();
 		} else{
-			rentDurationInMillis = Math.abs(rent.getSelectedEndDate().getTime() - rent.getCreationDate().getTime());
+			rentDurationInMillis = Math.abs(newRent.getSelectedEndDate().getTime() - newRent.getCreationDate().getTime());
+			updatedAvailableAppliances = appliance.getAvailableAppliances() + previousRent.getNumberOfAppliances() - newRent.getNumberOfAppliances();
 		}
 		
 		Long rentDuration = TimeUnit.DAYS.convert(rentDurationInMillis, TimeUnit.MILLISECONDS);
 		Double rentAmount = (double) (rentDuration * appliance.getPricePerDay());
-		rent.setRentAmount(rentAmount);
+		newRent.setRentAmount(rentAmount);
 		
-		rentRepository.save(rent);
+		rentRepository.save(newRent);
 		
-		Integer updatedAvailableAppliances = appliance.getAvailableAppliances() + rent.getNumberOfAppliances();
 		appliance.setAvailableAppliances(updatedAvailableAppliances);
 		applianceRepository.save(appliance);
 	}

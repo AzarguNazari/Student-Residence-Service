@@ -6,11 +6,13 @@ import "./RentHistory.css";
 
 const RentHistory = ({ rentHistory }) => {
 
-    const terminatedRents = rentHistory.filter(rent => rent.status === "TERMINATED");
+    const terminatedRents = rentHistory.filter(({ rent }) => rent.status === "TERMINATED");
     const activeRents = rentHistory.filter(rent => rent.status === "RENTED");
 
-    const getDate = (timestamp) =>
+    const getDate = (timestamp) => {
+        console.log('timestamp---', timestamp);
         format(new Date(Date.parse(timestamp)), "dd/MM/yyyy");
+    }
 
     const getName = (rent) => {
         const { "first_name": firstName, "last_name": lastName } = get(rent, ["student", "User"], {});
@@ -23,7 +25,7 @@ const RentHistory = ({ rentHistory }) => {
 
             <div className="active-rents">
                 <h3>Active Rents</h3>
-                {activeRents.map(rent => {
+                {activeRents.map(({ rent }) => {
                     return (<ul>
                         <li>Rented by: {getName(rent)}</li>
                         <li>Rent Cost: {rent["rent_amount"]}</li>
@@ -35,7 +37,7 @@ const RentHistory = ({ rentHistory }) => {
 
             <div className="terminated-rents">
                 <h3>Terminated Rents</h3>
-                {terminatedRents.map(rent => {
+                {terminatedRents.map(({ rent }) => {
                     return (<ul>
                         <li>Rented by: {getName(rent)}</li>
                         <li>Rent Cost: {rent["rent_amount"]}</li>

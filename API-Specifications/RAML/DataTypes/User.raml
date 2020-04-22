@@ -1,0 +1,14 @@
+#%RAML 1.0 DataType
+
+
+      properties:
+        id:
+          type: integer
+        first_name:
+          type: string
+        last_name:
+          type: string
+        username:
+          type: string
+          pattern: ^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$
+        role: !include Role.raml

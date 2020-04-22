@@ -1,0 +1,26 @@
+#%RAML 1.0 ResourceType
+
+  usage: Use this resourceType to represent any single item
+  description: A single item of <<resourcePathName>>
+  
+  get:
+      description: Returns a single <<resourcePathName>>
+      headers:
+        Accept:
+          description: Media type of the response to be returned 
+          type: string
+          example:
+            application/json      
+
+  put?:
+    description: Updates a specific <<type-name>>
+    responses:
+      '200':
+        description: Successfully updated the <<type-name>>
+      
+
+  delete?:
+    description: Updates a specific House appliance
+    responses:
+      '204':
+          description: Successfully deletion of the <<resourcePathName>>                

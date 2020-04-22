@@ -19,15 +19,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import de.srs.appliance.model.Appliance;
+import de.srs.appliance.model.Appliance.StateEnum;
 import de.srs.appliance.model.ApplianceType;
 import de.srs.appliance.model.Rent;
 import de.srs.appliance.model.Rent.StatusEnum;
 import de.srs.appliance.resource.ApplianceListResource;
 import de.srs.appliance.resource.ApplianceResource;
 import de.srs.appliance.resource.RentListResource;
+import de.srs.appliance.resource.RentResource;
 import de.srs.appliance.resource.assembler.ApplianceListResourceAssembler;
 import de.srs.appliance.resource.assembler.ApplianceResourceAssembler;
 import de.srs.appliance.resource.assembler.RentListResourceAssembler;
+import de.srs.appliance.resource.assembler.RentResourceAssembler;
 import de.srs.appliance.service.ApplianceService;
 import de.srs.appliance.service.RentService;
 import io.swagger.annotations.ApiParam;
@@ -54,6 +57,7 @@ public class HomeApplianceApiController implements HomeApplianceApi {
     @Autowired
     private RentListResourceAssembler rentListResourceAssembler;
 
+
     @Autowired
     public HomeApplianceApiController(HttpServletRequest request) {
         this.request = request;
@@ -61,13 +65,15 @@ public class HomeApplianceApiController implements HomeApplianceApi {
 
     @Override
 	@SuppressWarnings("rawtypes")
-	public ResponseEntity<?> v1AppliancesGet(@Min(0) @Max(10) @ApiParam(value = "Number of appliances returned", allowableValues = "") @Valid @RequestParam(value = "pageNumber", required = false) Integer pageNumber,@ApiParam(value = "Model Name of the HA") @Valid @RequestParam(value = "model-name", required = false) String modelName,@ApiParam(value = "Type of the HA") @Valid @RequestParam(value = "type", required = false) Integer type,@ApiParam(value = "Status of the HA") @Valid @RequestParam(value = "state", required = false) String status) {
+	public ResponseEntity<?> v1AppliancesGet(@Min(0) @Max(10) @ApiParam(value = "Number of appliances returned", allowableValues = "") @Valid @RequestParam(value = "pageNumber", required = false) Integer pageNumber,@ApiParam(value = "Model Name of the HA") @Valid @RequestParam(value = "model-name", required = false) String modelName,@ApiParam(value = "Type of the HA") @Valid @RequestParam(value = "type", required = false) Integer type,@ApiParam(value = "State of the HA") @Valid @RequestParam(value = "state", required = false) String state) {
+
         String accept = request.getHeader("Accept");
         log.info("[START] : Get all appliances by filter ");
         if (accept != null && accept.contains("application/json")) {
             try {
-            	log.debug("[DEBUG]: Filters :[modelName : "+modelName+" applianceTypeId : "+type+"  status : "+status+"] ");
-            	Page<Appliance> appliances = applianceService.getAllAppliances(modelName, type, status, pageNumber);
+            	log.debug("[DEBUG]: Filters :[modelName : "+modelName+" applianceTypeId : "+type+"  status : "+state+"] ");
+            	Page<Appliance> appliances = applianceService.getAllAppliances(modelName, type, state != null ? StateEnum.fromValue(state).ordinal() : null, pageNumber);
+
             	ApplianceListResource applianceListResource = applianceListResourceAssembler.build(appliances);
                 return new ResponseEntity<>(applianceListResource,HttpStatus.OK);
             } catch (Exception e) {
@@ -81,6 +87,7 @@ public class HomeApplianceApiController implements HomeApplianceApi {
     }
 
 	@Override
+	
     public ResponseEntity<?> v1AppliancesIdDelete(@ApiParam(value = "id of the house appliance",required=true) @PathVariable("appliance-id") Integer applianceId) {
         
 		log.info("[START] : Delete an appliance ");
@@ -169,7 +176,7 @@ public class HomeApplianceApiController implements HomeApplianceApi {
     @Override
     public ResponseEntity<?> v1AppliancesIdRentGet(@ApiParam(value = "external id of appliance",required=true) @PathVariable("appliance-id") Integer applianceId, @ApiParam(value = "External Id of Rent") @Valid @RequestParam(value = "rent-id", required = false) Integer rentId, @ApiParam(value = "Student Id") @Valid @RequestParam(value = "student-id", required = false) Integer studentId){
     	
-    	String accept = request.getHeader("application/json");
+    	String accept = request.getHeader("Accept");
     	log.info("[START]: Get rents by appliance id");
     	if(accept != null && accept.contains("application/json")){
     		if(applianceId != 0 && applianceId != null){
@@ -232,7 +239,8 @@ public class HomeApplianceApiController implements HomeApplianceApi {
         		
         		if(appliance != null && rent != null && appliance.getSerialNumber().equals(body.getAppliance().getSerialNumber()) && validateRentBody(body)){
         			body.setId(rent.getId());
-        			rentService.updateRent(body, appliance);
+
+        			rentService.updateRent(body,rent, appliance);
 					return new ResponseEntity<Void>(HttpStatus.OK);
         		} else{
         			log.warn("[WARN]: Invalid Parameters");
@@ -295,17 +303,18 @@ public class HomeApplianceApiController implements HomeApplianceApi {
     }
     
     @Override
-	public ResponseEntity<?> v1AppliancesRentGet(@Min(0) @Max(10) @Valid Integer limit, @ApiParam(value = "Id of the Student",required=false) @PathVariable("student-id") Integer studentId, @ApiParam(value = "status of the rent",required=false) @PathVariable("status") String status) {
+	public ResponseEntity<?> v1AppliancesRentGet(@ApiParam(value = "Id of the Student",required=false) @PathVariable("student-id") Integer studentId, @ApiParam(value = "status of the rent",required=false) @PathVariable("status") String status) {
     	String accept = request.getHeader("Accept");
 
     	try{
-			if(accept != null && accept.contains("application/json")){
-				List<Rent> rents =  rentService.getAllRentsByStudentIdAndStatus(studentId, StatusEnum.fromValue(status));
-				return new ResponseEntity<List<Rent>>(rents,HttpStatus.OK);
-			} else{
-				log.warn("Unsupported format");
-				return new ResponseEntity<ApiException>(new ApiException(400, "Unsupported format"),HttpStatus.BAD_REQUEST);
-			}
+    		if(accept != null && accept.contains("application/json")){
+        		List<Rent> rents =  rentService.getAllRentsByStudentIdAndStatus(studentId, StatusEnum.fromValue(status));
+                RentListResource rentListResource = rentListResourceAssembler.build(rents);
+        		return new ResponseEntity<>(rentListResource,HttpStatus.OK);
+        	} else{
+        		log.warn("Unsupported format");
+            	return new ResponseEntity<ApiException>(new ApiException(400, "Unsupported format"),HttpStatus.BAD_REQUEST);
+        	}
 		}
     	catch(Exception ex){
 			log.warn("[WARN]: Invalid Parameters");
@@ -332,7 +341,6 @@ public class HomeApplianceApiController implements HomeApplianceApi {
     		if(rent.getAppliance() != null && 
     				rent.getNumberOfAppliances() != null &&
     				rent.getSelectedEndDate() != null &&
-    				rent.getSerialNumber() != null &&
     				rent.getStatus() != null && 
     				rent.getStudent() != null){
     			return true;

@@ -1,0 +1,991 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "Student Residence Service",
+    "description" : "An API that allows management of rentals of home appliance and management of announcements",
+    "version" : "1.0.1"
+  },
+  "servers" : [ {
+    "url" : "http://localhost:9852"
+  } ],
+  "tags" : [ {
+    "name" : "Home Appliance",
+    "description" : "manages rentals of home appliances"
+  }, {
+    "name" : "Bulletinboard",
+    "description" : "manages announcement board"
+  } ],
+  "paths" : {
+    "/v1/appliances" : {
+      "get" : {
+        "tags" : [ "Home Appliance" ],
+        "description" : "Returns a list of all appliances",
+        "operationId" : "getAppliances",
+        "parameters" : [ {
+          "name" : "pageNumber",
+          "in" : "query",
+          "description" : "Number of appliances returned",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "maximum" : 10,
+            "minimum" : 0,
+            "type" : "integer",
+            "example" : 5
+          }
+        }, {
+          "name" : "model-name",
+          "in" : "query",
+          "description" : "Model Name of the HA",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string",
+            "example" : "abcd"
+          }
+        }, {
+          "name" : "type",
+          "in" : "query",
+          "description" : "Type of the HA",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "integer",
+            "example" : 1
+          }
+        }, {
+          "name" : "status",
+          "in" : "query",
+          "description" : "Status of the HA",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string",
+            "example" : "AVAILABLE"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "List of home appliances",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/Appliance"
+                  }
+                }
+              }
+            },
+            "links" : {
+              "GetApplianceByApplianceId" : {
+                "$ref" : "#/components/links/GetApplianceByApplianceId"
+              },
+              "GetApplianceNextPage" : {
+                "$ref" : "#/components/links/GetApplianceNextPage"
+              },
+              "GetAppliancePreviousPage" : {
+                "$ref" : "#/components/links/GetApplianceNextPage"
+              }
+            }
+          },
+          "400" : {
+            "description" : "Bad Request. Please check the parameters"
+          },
+          "401" : {
+            "description" : "Unauthorized. Please check your credentials"
+          },
+          "403" : {
+            "description" : "Forbidden. Sorry, you can not access this resource."
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "Home Appliance" ],
+        "description" : "Adds a new House appliance",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Appliance"
+                }
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "Successfully created a new appliance"
+          },
+          "400" : {
+            "description" : "Bad Request. Please check the parameters"
+          },
+          "401" : {
+            "description" : "Unauthorized. Please check your credentials"
+          },
+          "403" : {
+            "description" : "Forbidden. Sorry, you can not access this resource."
+          }
+        }
+      }
+    },
+    "/v1/appliances/{appliance-id}" : {
+      "get" : {
+        "tags" : [ "Home Appliance" ],
+        "description" : "Returns a specific house appliance",
+        "operationId" : "getAppliance",
+        "parameters" : [ {
+          "name" : "appliance-id",
+          "in" : "path",
+          "description" : "id of the house appliance",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer",
+            "example" : 1
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Specific house appliance information",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Appliance"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Bad Request. Please check the parameters"
+          },
+          "401" : {
+            "description" : "Unauthorized. Please check your credentials"
+          },
+          "403" : {
+            "description" : "Forbidden. Sorry, you can not access this resource."
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "Home Appliance" ],
+        "description" : "Updates a specific House appliance",
+        "parameters" : [ {
+          "name" : "appliance-id",
+          "in" : "path",
+          "description" : "id of the house appliance",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer",
+            "example" : 1
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Appliance"
+                }
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Successfully updated the house appliance"
+          },
+          "401" : {
+            "description" : "Unauthorized. Please check your credentials"
+          },
+          "403" : {
+            "description" : "Forbidden. Sorry, you can not access this resource."
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "Home Appliance" ],
+        "description" : "Updates a specific House appliance",
+        "parameters" : [ {
+          "name" : "appliance-id",
+          "in" : "path",
+          "description" : "id of the house appliance",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer",
+            "example" : 1
+          }
+        } ],
+        "responses" : {
+          "204" : {
+            "description" : "Successfully deletion of the house appliances"
+          },
+          "401" : {
+            "description" : "Unauthorized. Please check your credentials"
+          },
+          "403" : {
+            "description" : "Forbidden. Sorry, you can not access this resource."
+          }
+        }
+      }
+    },
+    "/v1/appliances/rent" : {
+      "get" : {
+        "tags" : [ "Home Appliance" ],
+        "description" : "Retrieves rents of all HAs",
+        "parameters" : [ {
+          "name" : "status",
+          "in" : "query",
+          "description" : "Rental status",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string",
+            "example" : "RENTED"
+          }
+        }, {
+          "name" : "name",
+          "in" : "query",
+          "description" : "Id of the student",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "integer",
+            "example" : 1
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Rented HA's information",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/Rent"
+                  }
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized. Please check your credentials"
+          },
+          "403" : {
+            "description" : "Forbidden. Sorry, you can not access this resource."
+          }
+        }
+      }
+    },
+    "/v1/appliances/{appliance-id}/rent" : {
+      "post" : {
+        "tags" : [ "Home Appliance" ],
+        "description" : "Adds rent to a specific house appliance",
+        "parameters" : [ {
+          "name" : "appliance-id",
+          "in" : "path",
+          "description" : "id of the house appliance",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer",
+            "example" : 1
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Rent"
+                }
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "Successfully addition of rent to the house appliance"
+          },
+          "401" : {
+            "description" : "Unauthorized. Please check your credentials"
+          },
+          "403" : {
+            "description" : "Forbidden. Sorry, you can not access this resource."
+          }
+        }
+      }
+    },
+    "/v1/appliances/{appliance-id}/rent/{rent-id}" : {
+      "get" : {
+        "tags" : [ "Home Appliance" ],
+        "description" : "Retrieves a specific rent",
+        "parameters" : [ {
+          "name" : "appliance-id",
+          "in" : "path",
+          "description" : "external id of appliance",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        }, {
+          "name" : "rent-id",
+          "in" : "path",
+          "description" : "external id of rent",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "A specific rent",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Rent"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized. Please check your credentials"
+          },
+          "403" : {
+            "description" : "Forbidden. Sorry, you can not access this resource."
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "Home Appliance" ],
+        "description" : "Terminates a rent on an House appliance",
+        "parameters" : [ {
+          "name" : "appliance-id",
+          "in" : "path",
+          "description" : "external id of appliance",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        }, {
+          "name" : "rent-id",
+          "in" : "path",
+          "description" : "external id of rent",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Appliance"
+                }
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Successful deletion of rent on the house appliance"
+          },
+          "401" : {
+            "description" : "Unauthorized. Please check your credentials"
+          },
+          "403" : {
+            "description" : "Forbidden. Sorry, you can not access this resource."
+          }
+        }
+      }
+    },
+    "/v1/appliances/types" : {
+      "get" : {
+        "tags" : [ "Home Appliance" ],
+        "description" : "Returns a list of all appliance types",
+        "responses" : {
+          "200" : {
+            "description" : "List of appliance types",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/Appliance_type"
+                  }
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Bad Request. Please check the parameters"
+          },
+          "401" : {
+            "description" : "Unauthorized. Please check your credentials"
+          },
+          "403" : {
+            "description" : "Forbidden. Sorry, you can not access this resource."
+          }
+        }
+      }
+    },
+    "/v1/bulletinboard" : {
+      "get" : {
+        "tags" : [ "Bulletinboard" ],
+        "description" : "Returns a list of announcements as per filter",
+        "parameters" : [ {
+          "name" : "pageNumber",
+          "in" : "query",
+          "description" : "Page number",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "maximum" : 10,
+            "minimum" : 1,
+            "type" : "integer",
+            "example" : 2
+          }
+        }, {
+          "name" : "model-name",
+          "in" : "query",
+          "description" : "Model Name",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string",
+            "example" : "abcd"
+          }
+        }, {
+          "name" : "type",
+          "in" : "query",
+          "description" : "Type of appliance",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string",
+            "example" : "something"
+          }
+        }, {
+          "name" : "status",
+          "in" : "query",
+          "description" : "Status of appliance",
+          "required" : false,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string",
+            "example" : "broken"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful pull of home appliance information",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/Announcement"
+                  }
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Bad Request. Please check the parameters"
+          },
+          "401" : {
+            "description" : "Unauthorized. Please check your credentials"
+          },
+          "403" : {
+            "description" : "Forbidden. Sorry, you can not access this resource."
+          }
+        },
+        "security" : [ {
+          "oAuth2Password" : [ ]
+        } ]
+      },
+      "post" : {
+        "tags" : [ "Bulletinboard" ],
+        "description" : "Adds new announcement",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/components/schemas/Announcement"
+                }
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "201" : {
+            "description" : "Successfully created a new announcement"
+          },
+          "400" : {
+            "description" : "Bad Request. Please check the parameters"
+          },
+          "401" : {
+            "description" : "Unauthorized. Please check your credentials"
+          },
+          "403" : {
+            "description" : "Forbidden. Sorry, you can not access this resource."
+          }
+        },
+        "security" : [ {
+          "oAuth2Password" : [ ]
+        } ]
+      }
+    },
+    "/v1/bulletinboard/{announcement-id}" : {
+      "get" : {
+        "tags" : [ "Bulletinboard" ],
+        "description" : "Gets an announcement by its id",
+        "parameters" : [ {
+          "name" : "announcement-id",
+          "in" : "path",
+          "description" : "External id of announcement",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer",
+            "example" : 5
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful pull of home appliance information",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Announcement"
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Bad Request. Please check the parameters"
+          },
+          "401" : {
+            "description" : "Unauthorized. Please check your credentials"
+          },
+          "403" : {
+            "description" : "Forbidden. Sorry, you can not access this resource."
+          }
+        },
+        "security" : [ {
+          "oAuth2Password" : [ ]
+        } ]
+      }
+    },
+    "/v1/bulletinboard/{announcement-id}/reply" : {
+      "get" : {
+        "tags" : [ "Bulletinboard" ],
+        "description" : "Gets all replies for a specific announcement",
+        "parameters" : [ {
+          "name" : "announcement-id",
+          "in" : "path",
+          "description" : "External id of announcement",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer",
+            "example" : 5
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful pull of all replies",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/Reply"
+                  }
+                }
+              }
+            }
+          },
+          "400" : {
+            "description" : "Bad Request. Please check the parameters"
+          },
+          "401" : {
+            "description" : "Unauthorized. Please check your credentials"
+          },
+          "403" : {
+            "description" : "Forbidden. Sorry, you can not access this resource."
+          }
+        },
+        "security" : [ {
+          "oAuth2Password" : [ ]
+        } ]
+      },
+      "post" : {
+        "tags" : [ "Bulletinboard" ],
+        "description" : "Adds new reply",
+        "parameters" : [ {
+          "name" : "announcement-id",
+          "in" : "path",
+          "description" : "External id of announcement",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "integer",
+            "example" : 5
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/Reply"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Successfully added a new reply"
+          },
+          "400" : {
+            "description" : "Bad Request. Please check the parameters"
+          },
+          "401" : {
+            "description" : "Unauthorized. Please check your credentials"
+          },
+          "403" : {
+            "description" : "Forbidden. Sorry, you can not access this resource."
+          }
+        },
+        "security" : [ {
+          "oAuth2Password" : [ ]
+        } ]
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "Role" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer"
+          },
+          "name" : {
+            "type" : "string"
+          }
+        }
+      },
+      "User" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer"
+          },
+          "first_name" : {
+            "type" : "string"
+          },
+          "last_name" : {
+            "type" : "string"
+          },
+          "username" : {
+            "type" : "string",
+            "format" : "email"
+          },
+          "Role" : {
+            "$ref" : "#/components/schemas/Role"
+          }
+        }
+      },
+      "Student" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer"
+          },
+          "User" : {
+            "$ref" : "#/components/schemas/User"
+          },
+          "room_number" : {
+            "type" : "integer"
+          },
+          "semester" : {
+            "type" : "string"
+          },
+          "join_date" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }
+      },
+      "Appliance_type" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer"
+          },
+          "name" : {
+            "type" : "string"
+          }
+        }
+      },
+      "Appliance" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer"
+          },
+          "serial_number" : {
+            "type" : "integer"
+          },
+          "model_name" : {
+            "type" : "string"
+          },
+          "Appliance_type" : {
+            "$ref" : "#/components/schemas/Appliance_type"
+          },
+          "state" : {
+            "type" : "string",
+            "format" : "enum - AVAILABLE - BROKEN"
+          },
+          "price_per_day" : {
+            "type" : "number",
+            "format" : "float"
+          },
+          "max_time" : {
+            "type" : "integer"
+          },
+          "available_appliances" : {
+            "type" : "integer"
+          },
+          "creation_date" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "deleted_on" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }
+      },
+      "Announcement_type" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer"
+          },
+          "name" : {
+            "type" : "string"
+          }
+        }
+      },
+      "Announcement" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer"
+          },
+          "external_id" : {
+            "type" : "integer"
+          },
+          "user" : {
+            "$ref" : "#/components/schemas/User"
+          },
+          "announcement_type" : {
+            "$ref" : "#/components/schemas/Announcement_type"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "priority" : {
+            "type" : "string",
+            "format" : "enum - LOW - MEDIUM - HIGH"
+          },
+          "creation_date" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "appliance_serial_number" : {
+            "type" : "integer"
+          }
+        }
+      },
+      "Reply" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer"
+          },
+          "user" : {
+            "$ref" : "#/components/schemas/User"
+          },
+          "announcement" : {
+            "$ref" : "#/components/schemas/Announcement"
+          },
+          "creation_date" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "message_text" : {
+            "type" : "string"
+          }
+        }
+      },
+      "Rent" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer"
+          },
+          "serial_number" : {
+            "type" : "integer"
+          },
+          "student" : {
+            "$ref" : "#/components/schemas/Student"
+          },
+          "appliance" : {
+            "$ref" : "#/components/schemas/Appliance"
+          },
+          "creation_date" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "selected_end_date" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "actual_end_date" : {
+            "type" : "string",
+            "format" : "date-time"
+          },
+          "rent_amount" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "number_of_appliances" : {
+            "type" : "integer"
+          },
+          "status" : {
+            "type" : "string",
+            "enum" : [ "RENTED", "TERMINATED" ]
+          }
+        }
+      }
+    },
+    "responses" : {
+      "400" : {
+        "description" : "Bad Request. Please check the parameters"
+      },
+      "401" : {
+        "description" : "Unauthorized. Please check your credentials"
+      },
+      "403" : {
+        "description" : "Forbidden. Sorry, you can not access this resource."
+      }
+    },
+    "securitySchemes" : {
+      "oAuth2Password" : {
+        "type" : "oauth2",
+        "description" : "OAuth 2.0 Security Scheme",
+        "flows" : {
+          "password" : {
+            "tokenUrl" : "/oauth/token",
+            "scopes" : { }
+          }
+        }
+      }
+    },
+    "links" : {
+      "GetApplianceByApplianceId" : {
+        "operationId" : "getAppliance",
+        "parameters" : {
+          "applianceId" : "$response.body#/id"
+        },
+        "description" : "Get appliance by appliance id"
+      },
+      "GetApplianceNextPage" : {
+        "operationId" : "getAppliances",
+        "parameters" : {
+          "pageNumber" : "request.query.pageNumber"
+        },
+        "description" : "Get appliance next page"
+      },
+      "GetAppliancePreviousPage" : {
+        "operationId" : "getAppliances",
+        "parameters" : {
+          "pageNumber" : "request.query.pageNumber"
+        },
+        "description" : "Get appliances previous page"
+      },
+      "GetRentForApplianceId" : {
+        "operationId" : "getAppliance",
+        "parameters" : {
+          "applianceId" : "response.body#/id"
+        },
+        "description" : "Get appliances previous page"
+      },
+      "GetAnnouncementByApplianceId" : {
+        "operationId" : "getAnnoucement",
+        "parameters" : {
+          "applianceId" : "$response.body#/id"
+        },
+        "description" : "Get announcement by appliance id"
+      },
+      "GetAnnouncementNextPage" : {
+        "operationId" : "getAnnouncements",
+        "parameters" : {
+          "applianceId" : "request.query.pageNumber"
+        },
+        "description" : "Get announcements next page"
+      },
+      "GetAnnouncementPreviousPage" : {
+        "operationId" : "getAnnouncements",
+        "parameters" : {
+          "applianceId" : "request.query.pageNumber"
+        },
+        "description" : "Get announcements previous page"
+      }
+    }
+  }
+}

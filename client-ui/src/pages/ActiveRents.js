@@ -4,6 +4,7 @@ import 'rodal/lib/rodal.css';
 import './page.css';
 import api from "../api";
 import { format } from "date-fns";
+import get from "lodash/get";
 
 const ActiveRents = () => {
     const [rents, setRents] = useState([]);
@@ -15,7 +16,7 @@ const ActiveRents = () => {
             }
         })
             .then(({ data }) => {
-                setRents(data);
+                setRents(data['rents']);
             });
     }
 
@@ -25,6 +26,11 @@ const ActiveRents = () => {
 
     const getDate = (timestamp) =>
         format(new Date(Date.parse(timestamp)), "dd/MM/yyyy");
+
+        const getName = (rent) => {
+            const { "first_name": firstName, "last_name": lastName } = get(rent, ["student", "User"], {});
+            return firstName + " " + lastName;
+        };
 
     return (
         <div className="page page-container">
@@ -39,9 +45,9 @@ const ActiveRents = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {rents.map((rent) =>
+                    {rents.map(({rent}) =>
                         <tr>
-                            <td>Me</td>
+                            <td>{rent && getName(rent)}</td>
                             <td>{rent && rent["rent_amount"]}</td>
                             <td>{rent && getDate(rent["selected_end_date"])}</td>
                             <td>{rent && rent["number_of_appliances"]}</td>

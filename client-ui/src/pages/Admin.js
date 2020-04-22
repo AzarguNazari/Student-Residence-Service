@@ -14,6 +14,7 @@ import api from "../api";
 import NewAppliance from "../components/new_appliance";
 import RentHistory from "../components/rent_history";
 import Filters from "../components/Filters";
+import ReactPaginate from "react-paginate";
 
 const Admin = () => {
   const { setAuthTokens } = useAuth();
@@ -23,7 +24,7 @@ const Admin = () => {
   const [type, setType] = useState("");
   const [applianceTypes, setApplianceTypes] = useState([]);
   const [rentHistory, setRentHistory] = useState([]);
-  const [filter, setFilter] = useState({});
+  const [pagination, setPagination] = useState({});
 
   function logOut() {
     setAuthTokens();
@@ -40,8 +41,15 @@ const Admin = () => {
 
   const getAppliances = () => {
     api.get("http://localhost:9852/api/v1/appliances", { params: { pageNumber: 0 } })
-      .then((data) => {
-        const applianceList = get(data, ["data", "_embedded", "applianceResourceList"], []);
+      .then(({ data }) => {
+
+        const paginationObj = {
+          pageNumber: data['pageNumber'],
+          totalPages: data['totalPages'],
+          totalElements: data['totalElements']
+        }
+        setPagination(paginationObj);
+        const applianceList = get(data, ["appliances"], []);
         setAppliances(applianceList);
       });
   }
@@ -100,7 +108,7 @@ const Admin = () => {
   const showRentHistory = (serialNumber) => {
     api.get(`http://localhost:9852/api/v1/appliances/${serialNumber}/rent`)
       .then(({ data }) => {
-        setRentHistory(data);
+        setRentHistory(data['rents']);
         setType("history");
         setEditVisible(true);
       });
@@ -118,35 +126,35 @@ const Admin = () => {
     history.push("/announcements");
   };
 
-  const getAppliancesByFilter = (filter) => {
-    api.get("http://localhost:9852/api/v1/appliances", { params: filter })
-      .then((data) => {
-        const applianceList = get(data, ["data", "_embedded", "applianceResourceList"], []);
-        setAppliances(applianceList);
-      });    
-  }
-
-  const updateFilter = (key, value) => {
-    const updatedFilter = {
-      ...filter,
-      [key]: value
-    };
-
-    setFilter(updatedFilter);
-
-    getAppliancesByFilter(updatedFilter);
-  };
-
-
   const selectFilters = () => {
     setType("filters");
     setEditVisible(true);
   };
 
   const applyFilter = (filter) => {
-    api.get("http://localhost:9852/api/v1/appliances", { params: { filter } })
-      .then((data) => {
-        const applianceList = get(data, ["data", "_embedded", "applianceResourceList"], []);
+    api.get("http://localhost:9852/api/v1/appliances", { params: { ...filter } })
+      .then(({ data }) => {
+        const paginationObj = {
+          pageNumber: data['pageNumber'],
+          totalPages: data['totalPages'],
+          totalElements: data['totalElements']
+        }
+        setPagination(paginationObj);
+        const applianceList = get(data, ["appliances"], []);
+        setAppliances(applianceList);
+        setEditVisible(false);
+      });
+  }
+
+  const onPageChange = ({ selected: pageNumber }) => {
+    api.get("http://localhost:9852/api/v1/appliances", { params: { pageNumber } })
+      .then(({ data }) => {
+        const paginationObj = {
+          pageNumber: data['pageNumber'],
+          totalPages: data['totalPages'],
+          totalElements: data['totalElements']
+        }
+        const applianceList = get(data, ["appliances"], []);
         setAppliances(applianceList);
         setEditVisible(false);
       });
@@ -189,6 +197,15 @@ const Admin = () => {
             </tr>
           )}
         </tbody>
+        <ReactPaginate
+          previousLabel="<<"
+          nextLabel=">>"
+          containerClassName="pagination"
+          pageCount={pagination['totalPages']}
+          pageRangeDisplayed={2}
+          marginPagesDisplayed={1}
+          onPageChange={onPageChange}
+        />
       </table>
 
       <button className="btn btn-medium btn-medium-a" onClick={createNewAppliance}>Add New Appliance</button>

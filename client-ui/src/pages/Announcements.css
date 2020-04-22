@@ -36,3 +36,27 @@
     position: absolute;
     right: 10px;
 }
+
+.reply {
+    position: relative;
+    height: 40px;
+    border: 1px solid;
+}
+
+.reply-person {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.reply-message {
+    position: absolute;
+    top: 10px;
+    left: 100px;
+}
+
+.reply-date {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

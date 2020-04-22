@@ -32,6 +32,6 @@ public class Constants {
 		put("id","id");
 	}};
 	
-	public static final int PAGE_SIZE = 1;
+	public static final int PAGE_SIZE = 5;
 
 }

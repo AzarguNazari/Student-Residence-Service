@@ -49,4 +49,15 @@ public class CommonUtil {
 		 
         return  user;
 	}
+	
+	public static String getRoleFromToken(String jwtToken){
+		if(jwtToken!= null){
+			DecodedJWT jwt = JWT.decode(jwtToken.split("Bearer")[1].trim());
+	        Claim claim = jwt.getClaim("authorities");
+	        String[] authorities = claim.asArray(String.class);
+	        return authorities[0];
+		}
+		return null;
+		
+	}
 }

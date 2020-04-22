@@ -6,7 +6,6 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.repository.Modifying;
@@ -69,7 +68,7 @@ public class BulletinboardServiceImpl implements BulletinboardService {
 	}
 	
 	@Override
-	@Cacheable("announcementTypes")
+	
 	public List<AnnouncementType> getAllAnnouncementTypes() {
 		return announcementTypeRepository.findAll();
 	}

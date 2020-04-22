@@ -8,6 +8,8 @@ import java.util.Objects;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -19,8 +21,10 @@ import javax.validation.Valid;
 
 import org.springframework.validation.annotation.Validated;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 import io.swagger.annotations.ApiModelProperty;
 
@@ -57,9 +61,40 @@ public class Appliance  implements Serializable  {
   @JoinColumn(name="appliance_type", insertable=true, updatable=true , nullable=true)
   private ApplianceType applianceType = null;
 
+  /**
+   * Gets or Sets status
+   */
+  public enum StateEnum {
+    AVAILABLE("AVAILABLE"),
+    
+    BROKEN("BROKEN");
+
+    private String value;
+
+    StateEnum(String value) {
+      this.value = value;
+    }
+
+    @Override
+    @JsonValue
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    @JsonCreator
+    public static StateEnum fromValue(String text) {
+      for (StateEnum b : StateEnum.values()) {
+        if (String.valueOf(b.value).equals(text)) {
+          return b;
+        }
+      }
+      return null;
+    }
+  }
   @JsonProperty("state")
   @Column(name="state")
-  private String state = null;
+  @Enumerated(EnumType.ORDINAL)
+  private StateEnum state = null;
 
   @JsonProperty("price_per_day")
   @Column(name="price_per_day")
@@ -157,7 +192,7 @@ public class Appliance  implements Serializable  {
     this.applianceType = applianceType;
   }
 
-  public Appliance state(String state) {
+  public Appliance state(StateEnum state) {
     this.state = state;
     return this;
   }
@@ -168,11 +203,11 @@ public class Appliance  implements Serializable  {
   **/
   @ApiModelProperty(value = "")
   
-    public String getState() {
+    public StateEnum getState() {
     return state;
   }
 
-  public void setState(String state) {
+  public void setState(StateEnum state) {
     this.state = state;
   }
 

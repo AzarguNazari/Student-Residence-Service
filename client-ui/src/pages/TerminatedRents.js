@@ -13,7 +13,7 @@ const TerminatedRents = () => {
     const getAppliances = () => {
         api.get("http://localhost:9852/api/v1/appliances/rent", {
             params: { "status": "TERMINATED" }
-        }).then(({ data }) => setRents(data));
+        }).then(({ data }) => setRents(data['rents']));
     };
 
     useEffect(() => {
@@ -41,7 +41,7 @@ const TerminatedRents = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {rents.map((rent) =>
+                    {rents.map(({ rent }) =>
                         <tr>
                             <td>{rent && getName(rent)}</td>
                             <td>{rent && rent["rent_amount"]}</td>

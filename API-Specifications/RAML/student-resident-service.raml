@@ -1,0 +1,172 @@
+#%RAML 1.0
+title: Student Residence Service
+description: An API that allows management of rentals of home appliance and management of announcements
+version: 1.0.1
+
+types:
+  Announcement: !include DataTypes/Announcement.raml
+  AnnouncementType: !include DataTypes/AnnouncementType.raml
+  Appliance_Type: !include DataTypes/ApplianceType.raml
+  Appliance: !include DataTypes/Appliance.raml
+  Rent: !include DataTypes/Rent.raml
+  Reply: !include DataTypes/Reply.raml
+  Role: !include DataTypes/Role.raml
+  Student: !include DataTypes/Student.raml
+  User: !include DataTypes/User.raml
+
+resourceTypes:
+  collection: !include ResourceTypes/CollectionResourceType.raml
+  item: !include ResourceTypes/SingleItemResourceType.raml
+
+traits:
+  collectionResponse: !include Traits/CollectionResponse.raml
+  singleRequest: !include Traits/SingleRequestItem.raml
+  singleResponse: !include Traits/SingleResponseItem.raml
+  requestHeader: !include Traits/RequestHeaders.raml
+
+securitySchemes:
+  oauth2.0: !include Security/SecurityScheme.raml
+
+/v1:
+  /appliances:
+    type: { collection: { "type-name": Appliance } }
+    get:
+      securedBy: [ oauth2.0 ]
+      is: [ collectionResponse: { type-name: Appliance }, requestHeader]
+      queryParameters:
+        pageNumber:
+          description: Number of appliances returned
+          type:
+            maximum: 10
+            minimum: 0
+            example: 5
+            type: integer
+          required: false
+        model-name:
+          description: Model Name of the HA
+          type:
+            example: Fan
+            type: string
+          required: false
+        type:
+          description: Type of the HA
+          type:
+            example: vacuum
+            type: string
+          required: false
+        status:
+          description: Status of the HA
+          type:
+            example: not-broken
+            type: string
+          required: false
+    post:
+      is: [ singleRequest: { type-name: Appliance }, requestHeader]  
+      
+    /rent:
+      type: { collection: { "type-name": Rent } }
+      
+      get:
+        is: [ collectionResponse: { type-name: Rent }, requestHeader]
+        queryParameters:
+          limit:
+            description: Number of appliances returned
+            type:
+              maximum: 10
+              minimum: 0
+              example: 5
+              type: integer
+            required: false
+          name:
+            description: Name of the student
+            type:
+              example: abcd
+              type: string
+            required: false
+
+    '/{appliance-id}':
+      type: { item: { "type-name": Appliance } }
+      get:
+        is: [ singleResponse: { type-name: Appliance }, requestHeader]
+      put:
+        is: [ singleRequest: { type-name: Appliance }, requestHeader]
+      delete:
+        is: [ singleRequest: { type-name: Appliance }, requestHeader]
+
+      uriParameters:
+        appliance-id:
+          description: id of the house appliance
+          type:
+            example: 1
+            type: integer
+
+      /rent:
+        type: { collection: { "type-name": Rent } }
+        get:
+          is: [ collectionResponse: { type-name: Rent }, requestHeader]
+        post:
+          is: [ singleRequest: { type-name: Rent }, requestHeader]
+
+        '/{rent-id}':
+          type: { item: { "type-name": Rent } }
+          get:
+            is: [ singleResponse: { type-name: Rent }, requestHeader]
+          put:
+            is: [ singleRequest: { type-name: Rent }, requestHeader]
+          uriParameters:
+            rent-id:
+              description: id of the house appliance
+              type:
+                example: 1
+                type: integer
+
+  /bulletinboard:
+    type: { collection: { "type-name": Announcement } }
+    get:
+      is: [ collectionResponse: { type-name: Announcement }, requestHeader]
+      queryParameters:
+        pageNumber:
+          description: Number of appliances returned
+          type:
+            maximum: 10
+            minimum: 0
+            example: 5
+            type: integer
+          required: false
+        model-name:
+          description: Model Name
+          type:
+            example: abcd
+            type: string
+          required: false
+        type:
+          description: Type of appliance
+          type:
+            example: something
+            type: string
+          required: false
+        status:
+          description: Status of appliance
+          type:
+            example: broken
+            type: string
+          required: false
+    post:
+      is: [ singleRequest: { type-name: Announcement }, requestHeader]
+    '/{announcement-id}':
+      type: { item: { "type-name": Announcement } }
+      get:
+        is: [ singleResponse: { type-name: Announcement }, requestHeader]
+      uriParameters:
+        announcement-id:
+          description: External id of announcement
+          type:
+            example: 5
+            type: integer
+      /reply:
+        type: { collection: { "type-name": Reply } }
+        get:
+          is: [ collectionResponse: { type-name: Reply }, requestHeader]
+        post:
+          is: [ singleRequest: { type-name: Reply }, requestHeader]
+        

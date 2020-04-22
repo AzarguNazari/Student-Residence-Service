@@ -1,0 +1,11 @@
+#%RAML 1.0 DataType
+
+      properties:
+        id:
+          type: integer
+        user: !include User.raml
+        announcement: !include Announcement.raml
+        creation_date:
+          type: datetime
+        message_text: 
+          type: string

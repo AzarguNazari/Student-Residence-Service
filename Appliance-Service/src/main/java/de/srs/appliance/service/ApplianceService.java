@@ -3,7 +3,6 @@ package de.srs.appliance.service;
 import java.util.List;
 
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 import de.srs.appliance.model.Appliance;
 import de.srs.appliance.model.ApplianceType;
@@ -11,7 +10,7 @@ import de.srs.appliance.model.ApplianceType;
 
 public interface ApplianceService {
 	
-	public Page<Appliance> getAllAppliances(String modelName, Integer applianceTypeId, String status, Integer page);
+	public Page<Appliance> getAllAppliances(String modelName, Integer applianceTypeId, Integer state, Integer page);
 
 	public Appliance getApplianceById(int applianceId);
 	

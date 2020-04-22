@@ -28,8 +28,8 @@ const Rent = ({ appliance, createRent }) => {
             <h3>Rent appliance - {appliance['model_name']}</h3>
 
             <div className="input-container">
-                <label id="number_of_appliance">Number of appliances: </label>
                 <input type="number" onChange={(e) => changeApplianceNumber(e.target.value)} />
+                <label id="number_of_appliance">Number of appliances: </label>
                 <span>Please choose a number between 0 and {appliance["available_appliances"]}</span>
                 {errorMsg && <span>{errorMsg}</span>}
             </div>
@@ -38,7 +38,7 @@ const Rent = ({ appliance, createRent }) => {
                 <input type="date" onChange={(e) => onDateChange(e.target.value)} />                
             </div>
             <div className="input-container">
-                <button className="login" onClick={createRentAction}>Rent</button>
+                <button className="login" disabled={errorMsg !== null} onClick={createRentAction}>Rent</button>
             </div>
         </div>
     )

@@ -38,12 +38,12 @@ public class Reply  implements Serializable  {
   private Integer id = null;
 
   @JsonProperty("user")
-  @ManyToOne(fetch=FetchType.LAZY)
+  @ManyToOne(fetch=FetchType.EAGER)
   @JoinColumn(name="user_id", insertable=true, updatable=true, nullable=false)
   private User user = null;
 
   @JsonProperty("announcement")
-  @ManyToOne(fetch=FetchType.LAZY)
+  @ManyToOne(fetch=FetchType.EAGER)
   @JoinColumn(name="announcement_id", insertable=true, updatable=true, nullable=false)
   private Announcement announcement = null;
 

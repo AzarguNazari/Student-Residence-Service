@@ -39,7 +39,7 @@ public class AuthorizationFilter implements Filter  {
 		String endpoint = request.getServletPath();
 		String jwtToken = request.getHeader("Authorization");
         
-		String role = getRole(jwtToken);
+		String role = CommonUtil.getRoleFromToken(jwtToken);
         CommonUtil.getUserDetailsFromToken(jwtToken);
         Boolean hasAccess = accessControlConfig.checkAccess(role, endpoint, method);
         
@@ -50,14 +50,5 @@ public class AuthorizationFilter implements Filter  {
        
 	}
 	
-	private String getRole(String jwtToken){
-		if(jwtToken!= null){
-			DecodedJWT jwt = JWT.decode(jwtToken.split("Bearer")[1].trim());
-	        Claim claim = jwt.getClaim("authorities");
-	        String[] authorities = claim.asArray(String.class);
-	        return authorities[0];
-		}
-		return null;
-		
-	}
+	
 }

@@ -19,7 +19,6 @@ public class UserServiceImpl implements UserService {
 
 	
 	@Override
-	@Cacheable("admins")
 	public List<User> getAdmins() {
 
 		List<User> admins = new ArrayList<User>();

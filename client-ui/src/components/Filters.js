@@ -22,11 +22,11 @@ const Filters = ({ applyFilter, applianceTypes }) => {
 
             <div className="select input-container">
                 <select name="slct" id="slct" onChange={(e) => {
-                    updateFilter("type", e.target.value);
+                    updateFilter("type", parseInt(e.target.value));
                 }}>
                     <option selected disabled>Filter by Appliance Type</option>
                     {applianceTypes.map(applianceType => {
-                        return <option value={applianceType.name}>{applianceType.name}</option>;
+                        return <option value={applianceType.id}>{applianceType.name}</option>;
                     })}
                 </select>
             </div>

@@ -81,7 +81,7 @@ public class ApplianceListResourceAssembler {
 		try {
 			builder = ControllerLinkBuilder.linkTo(
 					ControllerLinkBuilder.methodOn(HomeApplianceApiController.class)
-					.v1AppliancesGet(page.nextPageable().getPageNumber(),
+					.v1AppliancesGet(page.previousPageable().getPageNumber(),
 							modelName ,
 							type != null ? Integer.parseInt(type) : null,
 							status ))

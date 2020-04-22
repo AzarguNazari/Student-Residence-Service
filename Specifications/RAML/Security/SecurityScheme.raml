@@ -1,0 +1,19 @@
+#%RAML 1.0 SecurityScheme
+
+type: OAuth 2.0
+description: Apply the OAuth 2.0 security policy to resource methods for authenticating API requests
+describedBy:
+  headers:
+      Authorization:
+        description: |
+          Used to send a valid OAuth 2 access token. Do not use with the "access_token" query. string parameter.
+        type: string
+
+  responses:
+    401:
+      description: |
+        Bad or expired token.
+    
+settings:
+  accessTokenUri: http://localhost:9852/oauth/token
+  authorizationGrants: password, refresh_token
