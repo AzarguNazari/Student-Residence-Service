@@ -1,0 +1,28 @@
+version: '2'
+
+networks:
+  commander-network:
+    driver: bridge
+
+services:
+
+  backspin_postgres:
+    container_name: backspin_postgres
+    ports:
+      - 127.0.0.1:5432:5432
+    environment:
+      POSTGRES_PASSWORD: tester
+      POSTGRES_USER: tester
+      POSTGRES_DBNAME: StudentResidenceDB
+    tty: true
+    image: postgres
+    volumes:
+      - ./db:/var/lib/postgresql/backup/
+      - /etc/localtime:/etc/localtime:ro
+    stdin_open: true
+    networks:
+      - commander-network
+
+
+volumes:
+  student_service_data:
