@@ -19,6 +19,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.Valid;
 
+import lombok.Data;
 import org.springframework.validation.annotation.Validated;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -33,6 +34,7 @@ import io.swagger.annotations.ApiModelProperty;
  */
 @Validated
 @Entity
+@Data
 @Table(name="Announcement")
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-12-13T15:21:57.525Z[GMT]")
 public class Announcement  implements Serializable  {
@@ -113,37 +115,9 @@ public class Announcement  implements Serializable  {
     return this;
   }
 
-  /**
-   * Get id
-   * @return id
-  **/
-  @ApiModelProperty(value = "")
-  
-    public Integer getId() {
-    return id;
-  }
-
-  public void setId(Integer id) {
-    this.id = id;
-  }
-
   public Announcement externalId(Integer externalId) {
     this.externalId = externalId;
     return this;
-  }
-
-  /**
-   * Get externalId
-   * @return externalId
-  **/
-  @ApiModelProperty(value = "")
-  
-    public Integer getExternalId() {
-    return externalId;
-  }
-
-  public void setExternalId(Integer externalId) {
-    this.externalId = externalId;
   }
 
   public Announcement user(User user) {
@@ -151,39 +125,9 @@ public class Announcement  implements Serializable  {
     return this;
   }
 
-  /**
-   * Get user
-   * @return user
-  **/
-  @ApiModelProperty(value = "")
-  
-    @Valid
-    public User getUser() {
-    return user;
-  }
-
-  public void setUser(User user) {
-    this.user = user;
-  }
-
   public Announcement announcementType(AnnouncementType announcementType) {
     this.announcementType = announcementType;
     return this;
-  }
-
-  /**
-   * Get announcementType
-   * @return announcementType
-  **/
-  @ApiModelProperty(value = "")
-  
-    @Valid
-    public AnnouncementType getAnnouncementType() {
-    return announcementType;
-  }
-
-  public void setAnnouncementType(AnnouncementType announcementType) {
-    this.announcementType = announcementType;
   }
 
   public Announcement description(String description) {
@@ -191,37 +135,9 @@ public class Announcement  implements Serializable  {
     return this;
   }
 
-  /**
-   * Get description
-   * @return description
-  **/
-  @ApiModelProperty(value = "")
-  
-    public String getDescription() {
-    return description;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
   public Announcement priority(PriorityEnum priority) {
     this.priority = priority;
     return this;
-  }
-
-  /**
-   * Get priority
-   * @return priority
-  **/
-  @ApiModelProperty(value = "")
-  
-    public PriorityEnum getPriority() {
-    return priority;
-  }
-
-  public void setPriority(PriorityEnum priority) {
-    this.priority = priority;
   }
 
   public Announcement creationDate(Date creationDate) {
@@ -229,81 +145,9 @@ public class Announcement  implements Serializable  {
     return this;
   }
 
-  /**
-   * Get creationDate
-   * @return creationDate
-  **/
-  @ApiModelProperty(value = "")
-  
-    @Valid
-    public Date getCreationDate() {
-    return creationDate;
-  }
-
-  public void setCreationDate(Date creationDate) {
-    this.creationDate = creationDate;
-  }
-
   public Announcement appliance(Integer applianceSerialNumber) {
     this.applianceSerialNumber = applianceSerialNumber;
     return this;
-  }
-
-  /**
-   * Get appliance
-   * @return appliance
-  **/
-  @ApiModelProperty(value = "")
-  
-    @Valid
-    public Integer getApplianceSerialNumber() {
-    return applianceSerialNumber;
-  }
-
-  public void setAppliance(Integer applianceSerialNumber) {
-    this.applianceSerialNumber = applianceSerialNumber;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    Announcement announcement = (Announcement) o;
-    return Objects.equals(this.id, announcement.id) &&
-        Objects.equals(this.externalId, announcement.externalId) &&
-        Objects.equals(this.user, announcement.user) &&
-        Objects.equals(this.announcementType, announcement.announcementType) &&
-        Objects.equals(this.description, announcement.description) &&
-        Objects.equals(this.priority, announcement.priority) &&
-        Objects.equals(this.creationDate, announcement.creationDate) &&
-        Objects.equals(this.applianceSerialNumber, announcement.applianceSerialNumber);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(id, externalId, user, announcementType, description, priority, creationDate, applianceSerialNumber);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class Announcement {\n");
-    
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    externalId: ").append(toIndentedString(externalId)).append("\n");
-    sb.append("    user: ").append(toIndentedString(user)).append("\n");
-    sb.append("    announcementType: ").append(toIndentedString(announcementType)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
-    sb.append("    creationDate: ").append(toIndentedString(creationDate)).append("\n");
-    sb.append("    appliance: ").append(toIndentedString(applianceSerialNumber)).append("\n");
-    sb.append("}");
-    return sb.toString();
   }
 
   /**
