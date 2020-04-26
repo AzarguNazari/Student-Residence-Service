@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springBoot-monitor" />
+        <module name="Api-Gateway" />
+        <module name="Appliance-Service" />
+        <module name="Bulletinboard-Service" />
+        <module name="Authorization-Server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Api-Gateway" target="1.8" />
+      <module name="Appliance-Service" target="1.8" />
+      <module name="Authorization-Server" target="1.8" />
+      <module name="Bulletinboard-Service" target="1.8" />
+      <module name="springBoot-monitor" target="1.8" />
+      <module name="Student_Residence_Service" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Api-Gateway" options="-parameters" />
+      <module name="Appliance-Service" options="-parameters" />
+      <module name="Authorization-Server" options="-parameters" />
+      <module name="Bulletinboard-Service" options="-parameters" />
+      <module name="springBoot-monitor" options="-parameters" />
+    </option>
+  </component>
+</project>

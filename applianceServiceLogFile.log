@@ -1,0 +1,871 @@
+2020-04-23 00:24:00.659  INFO 400832 --- [main] de.srs.appliance.ApplianceApplication    : Starting ApplianceApplication on hazar-precision3510 with PID 400832 (/home/hazar/github_projects/Student_Residence_Service/Appliance-Service/target/classes started by hazar in /home/hazar/github_projects/Student_Residence_Service)
+2020-04-23 00:24:00.662  INFO 400832 --- [main] de.srs.appliance.ApplianceApplication    : No active profile set, falling back to default profiles: default
+2020-04-23 00:24:01.520  INFO 400832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 00:24:01.521  INFO 400832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 00:24:01.619  INFO 400832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92ms. Found 5 repository interfaces.
+2020-04-23 00:24:01.631  INFO 400832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 00:24:01.631  INFO 400832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 00:24:01.642  INFO 400832 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceRepository.
+2020-04-23 00:24:01.643  INFO 400832 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceTypeRepository.
+2020-04-23 00:24:01.643  INFO 400832 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.RentRepository.
+2020-04-23 00:24:01.643  INFO 400832 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.StudentRepository.
+2020-04-23 00:24:01.644  INFO 400832 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.UserRepository.
+2020-04-23 00:24:01.644  INFO 400832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 repository interfaces.
+2020-04-23 00:24:01.973  INFO 400832 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1f8be8f4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 00:24:02.025  INFO 400832 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$9f0c3626] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 00:24:02.252  INFO 400832 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9850 (http)
+2020-04-23 00:24:02.271  INFO 400832 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-23 00:24:02.272  INFO 400832 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-04-23 00:24:02.366  INFO 400832 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-04-23 00:24:02.366 DEBUG 400832 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-04-23 00:24:02.366  INFO 400832 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1660 ms
+2020-04-23 00:24:02.749  INFO 400832 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-23 00:24:02.807  INFO 400832 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-23 00:24:04.009  INFO 400832 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 00:24:04.812  WARN 400832 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-23 00:24:04.862 DEBUG 400832 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2020-04-23 00:24:04.923  INFO 400832 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-04-23 00:24:04.958 DEBUG 400832 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2020-04-23 00:24:05.018  INFO 400832 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 00:24:05.039 DEBUG 400832 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-04-23 00:24:05.348 DEBUG 400832 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-04-23 00:24:05.356 DEBUG 400832 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-04-23 00:24:05.566  INFO 400832 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-23 00:24:05.582  INFO 400832 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-23 00:24:05.620  INFO 400832 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-23 00:24:05.832  INFO 400832 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9850 (http) with context path '/api'
+2020-04-23 00:24:05.834  INFO 400832 --- [main] de.srs.appliance.ApplianceApplication    : Started ApplianceApplication in 5.527 seconds (JVM running for 6.091)
+2020-04-23 00:47:31.801  INFO 400832 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-23 00:47:31.806  INFO 400832 --- [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 00:47:31.808  INFO 400832 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-23 00:47:31.812  INFO 400832 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-23 00:54:53.964  INFO 407808 --- [main] de.srs.appliance.ApplianceApplication    : Starting ApplianceApplication on hazar-precision3510 with PID 407808 (/home/hazar/github_projects/Student_Residence_Service/Appliance-Service/target/classes started by hazar in /home/hazar/github_projects/Student_Residence_Service)
+2020-04-23 00:54:53.966  INFO 407808 --- [main] de.srs.appliance.ApplianceApplication    : No active profile set, falling back to default profiles: default
+2020-04-23 00:54:54.797  INFO 407808 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 00:54:54.797  INFO 407808 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 00:54:54.898  INFO 407808 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91ms. Found 5 repository interfaces.
+2020-04-23 00:54:54.911  INFO 407808 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 00:54:54.912  INFO 407808 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 00:54:54.924  INFO 407808 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceRepository.
+2020-04-23 00:54:54.925  INFO 407808 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceTypeRepository.
+2020-04-23 00:54:54.925  INFO 407808 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.RentRepository.
+2020-04-23 00:54:54.925  INFO 407808 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.StudentRepository.
+2020-04-23 00:54:54.926  INFO 407808 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.UserRepository.
+2020-04-23 00:54:54.926  INFO 407808 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 repository interfaces.
+2020-04-23 00:54:55.245  INFO 407808 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9024c9ef] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 00:54:55.288  INFO 407808 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$fa51721] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 00:54:55.495  INFO 407808 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9850 (http)
+2020-04-23 00:54:55.513  INFO 407808 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-23 00:54:55.514  INFO 407808 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-04-23 00:54:55.613  INFO 407808 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-04-23 00:54:55.614 DEBUG 407808 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-04-23 00:54:55.614  INFO 407808 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1601 ms
+2020-04-23 00:54:56.001  INFO 407808 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-23 00:54:56.060  INFO 407808 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-23 00:54:57.238  INFO 407808 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 00:54:57.926  WARN 407808 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-23 00:54:57.974 DEBUG 407808 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2020-04-23 00:54:58.030  INFO 407808 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-04-23 00:54:58.063 DEBUG 407808 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2020-04-23 00:54:58.118  INFO 407808 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 00:54:58.138 DEBUG 407808 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-04-23 00:54:58.170 DEBUG 407808 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-04-23 00:54:58.399 DEBUG 407808 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-04-23 00:54:58.599  INFO 407808 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-23 00:54:58.616  INFO 407808 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-23 00:54:58.654  INFO 407808 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-23 00:54:58.891  INFO 407808 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9850 (http) with context path '/api'
+2020-04-23 00:54:58.893  INFO 407808 --- [main] de.srs.appliance.ApplianceApplication    : Started ApplianceApplication in 5.304 seconds (JVM running for 5.939)
+2020-04-23 01:04:39.770  INFO 407808 --- [Thread-14] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-23 01:04:39.773  INFO 407808 --- [Thread-14] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 01:04:39.775  INFO 407808 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-23 01:04:39.777  INFO 407808 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-23 01:04:42.480  INFO 409644 --- [main] de.srs.appliance.ApplianceApplication    : Starting ApplianceApplication on hazar-precision3510 with PID 409644 (/home/hazar/github_projects/Student_Residence_Service/Appliance-Service/target/classes started by hazar in /home/hazar/github_projects/Student_Residence_Service)
+2020-04-23 01:04:42.483  INFO 409644 --- [main] de.srs.appliance.ApplianceApplication    : No active profile set, falling back to default profiles: default
+2020-04-23 01:04:43.272  INFO 409644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 01:04:43.272  INFO 409644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 01:04:43.362  INFO 409644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82ms. Found 5 repository interfaces.
+2020-04-23 01:04:43.373  INFO 409644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 01:04:43.374  INFO 409644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 01:04:43.387  INFO 409644 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceRepository.
+2020-04-23 01:04:43.387  INFO 409644 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceTypeRepository.
+2020-04-23 01:04:43.388  INFO 409644 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.RentRepository.
+2020-04-23 01:04:43.388  INFO 409644 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.StudentRepository.
+2020-04-23 01:04:43.388  INFO 409644 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.UserRepository.
+2020-04-23 01:04:43.388  INFO 409644 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 repository interfaces.
+2020-04-23 01:04:43.693  INFO 409644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1a17e172] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 01:04:43.737  INFO 409644 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$99982ea4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 01:04:43.945  INFO 409644 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9850 (http)
+2020-04-23 01:04:43.966  INFO 409644 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-23 01:04:43.966  INFO 409644 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-04-23 01:04:44.064  INFO 409644 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-04-23 01:04:44.065 DEBUG 409644 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-04-23 01:04:44.065  INFO 409644 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1539 ms
+2020-04-23 01:04:44.463  INFO 409644 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-23 01:04:44.522  INFO 409644 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-23 01:04:45.593  INFO 409644 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 01:04:46.273  WARN 409644 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-23 01:04:46.325 DEBUG 409644 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2020-04-23 01:04:46.386  INFO 409644 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-04-23 01:04:46.423 DEBUG 409644 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2020-04-23 01:04:46.486  INFO 409644 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 01:04:46.504 DEBUG 409644 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-04-23 01:04:46.750 DEBUG 409644 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-04-23 01:04:46.758 DEBUG 409644 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-04-23 01:04:46.963  INFO 409644 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-23 01:04:46.978  INFO 409644 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-23 01:04:47.015  INFO 409644 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-23 01:04:47.240  INFO 409644 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9850 (http) with context path '/api'
+2020-04-23 01:04:47.242  INFO 409644 --- [main] de.srs.appliance.ApplianceApplication    : Started ApplianceApplication in 5.153 seconds (JVM running for 5.786)
+2020-04-23 01:22:30.246  INFO 409644 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-23 01:22:30.249  INFO 409644 --- [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 01:22:30.251  INFO 409644 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-23 01:22:30.253  INFO 409644 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-23 01:22:33.004  INFO 412904 --- [main] de.srs.appliance.ApplianceApplication    : Starting ApplianceApplication on hazar-precision3510 with PID 412904 (/home/hazar/github_projects/Student_Residence_Service/Appliance-Service/target/classes started by hazar in /home/hazar/github_projects/Student_Residence_Service)
+2020-04-23 01:22:33.007  INFO 412904 --- [main] de.srs.appliance.ApplianceApplication    : No active profile set, falling back to default profiles: default
+2020-04-23 01:22:33.861  INFO 412904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 01:22:33.862  INFO 412904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 01:22:33.944  INFO 412904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 5 repository interfaces.
+2020-04-23 01:22:33.956  INFO 412904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 01:22:33.957  INFO 412904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 01:22:33.968  INFO 412904 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceRepository.
+2020-04-23 01:22:33.969  INFO 412904 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceTypeRepository.
+2020-04-23 01:22:33.970  INFO 412904 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.RentRepository.
+2020-04-23 01:22:33.970  INFO 412904 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.StudentRepository.
+2020-04-23 01:22:33.970  INFO 412904 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.UserRepository.
+2020-04-23 01:22:33.970  INFO 412904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 repository interfaces.
+2020-04-23 01:22:34.360  INFO 412904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6fcc86e8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 01:22:34.405  INFO 412904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$ef4cd41a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 01:22:34.616  INFO 412904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9850 (http)
+2020-04-23 01:22:34.638  INFO 412904 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-23 01:22:34.638  INFO 412904 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-04-23 01:22:34.720  INFO 412904 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-04-23 01:22:34.721 DEBUG 412904 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-04-23 01:22:34.721  INFO 412904 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1675 ms
+2020-04-23 01:22:35.116  INFO 412904 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-23 01:22:35.172  INFO 412904 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-23 01:22:36.296  INFO 412904 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 01:22:36.980  WARN 412904 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-23 01:22:37.039 DEBUG 412904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2020-04-23 01:22:37.105  INFO 412904 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-04-23 01:22:37.152 DEBUG 412904 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2020-04-23 01:22:37.422  INFO 412904 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 01:22:37.440 DEBUG 412904 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-04-23 01:22:37.470 DEBUG 412904 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-04-23 01:22:37.478 DEBUG 412904 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-04-23 01:22:37.722  INFO 412904 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f69b83a8-91a4-4e36-bfcb-f7af2534f214
+
+2020-04-23 01:22:37.808  INFO 412904 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77350382, org.springframework.security.web.context.SecurityContextPersistenceFilter@5dfc7b3f, org.springframework.security.web.header.HeaderWriterFilter@4d86f330, org.springframework.security.web.csrf.CsrfFilter@7021bb55, org.springframework.security.web.authentication.logout.LogoutFilter@73b034ca, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6e2e11ee, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6b6bae60, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4fbdee7a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@12921ee1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7f065f9e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1cd853ee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@615bd28b, org.springframework.security.web.session.SessionManagementFilter@7ef34eb3, org.springframework.security.web.access.ExceptionTranslationFilter@40e41f88, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1235732d]
+2020-04-23 01:22:37.861  INFO 412904 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-23 01:22:37.875  INFO 412904 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-23 01:22:37.917  INFO 412904 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-23 01:22:38.144  INFO 412904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9850 (http) with context path '/api'
+2020-04-23 01:22:38.146  INFO 412904 --- [main] de.srs.appliance.ApplianceApplication    : Started ApplianceApplication in 5.501 seconds (JVM running for 6.12)
+2020-04-23 01:22:41.549  INFO 412904 --- [Thread-14] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-23 01:22:41.553  INFO 412904 --- [Thread-14] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 01:22:41.557  INFO 412904 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-23 01:22:41.559  INFO 412904 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-23 02:26:53.518  INFO 422225 --- [main] de.srs.appliance.ApplianceApplication    : Starting ApplianceApplication on hazar-precision3510 with PID 422225 (/home/hazar/github_projects/Student_Residence_Service/Appliance-Service/target/classes started by hazar in /home/hazar/github_projects/Student_Residence_Service)
+2020-04-23 02:26:53.521  INFO 422225 --- [main] de.srs.appliance.ApplianceApplication    : No active profile set, falling back to default profiles: default
+2020-04-23 02:26:54.636  INFO 422225 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 02:26:54.637  INFO 422225 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 02:26:54.719  INFO 422225 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75ms. Found 5 repository interfaces.
+2020-04-23 02:26:54.732  INFO 422225 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 02:26:54.733  INFO 422225 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 02:26:54.746  INFO 422225 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceRepository.
+2020-04-23 02:26:54.746  INFO 422225 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceTypeRepository.
+2020-04-23 02:26:54.747  INFO 422225 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.RentRepository.
+2020-04-23 02:26:54.747  INFO 422225 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.StudentRepository.
+2020-04-23 02:26:54.747  INFO 422225 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.UserRepository.
+2020-04-23 02:26:54.747  INFO 422225 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 repository interfaces.
+2020-04-23 02:26:55.162  INFO 422225 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$aed7fb71] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 02:26:55.225  INFO 422225 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$2e5848a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 02:26:55.476  INFO 422225 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9850 (http)
+2020-04-23 02:26:55.494  INFO 422225 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-23 02:26:55.494  INFO 422225 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-04-23 02:26:55.570  INFO 422225 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-04-23 02:26:55.571 DEBUG 422225 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-04-23 02:26:55.571  INFO 422225 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1985 ms
+2020-04-23 02:26:55.964  INFO 422225 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-23 02:26:56.020  INFO 422225 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-23 02:26:57.201  INFO 422225 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 02:26:57.895  WARN 422225 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-23 02:26:57.972 DEBUG 422225 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2020-04-23 02:26:58.030  INFO 422225 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-04-23 02:26:58.071 DEBUG 422225 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2020-04-23 02:26:58.297  INFO 422225 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 02:26:58.320 DEBUG 422225 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-04-23 02:26:58.350 DEBUG 422225 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-04-23 02:26:58.359 DEBUG 422225 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-04-23 02:26:58.602  INFO 422225 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 9e9e6d34-ed2c-4777-a9d3-40e799190158
+
+2020-04-23 02:26:58.685  INFO 422225 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@59e67a18, org.springframework.security.web.context.SecurityContextPersistenceFilter@22decfa2, org.springframework.security.web.header.HeaderWriterFilter@3ad80206, org.springframework.security.web.csrf.CsrfFilter@51158fb1, org.springframework.security.web.authentication.logout.LogoutFilter@6e6ec71f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@32f243f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1a13b5c1, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@37289e90, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@701996e9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2086f336, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@20331c8e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f461c9c, org.springframework.security.web.session.SessionManagementFilter@1737834, org.springframework.security.web.access.ExceptionTranslationFilter@16a78700, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@49314684]
+2020-04-23 02:26:58.736  INFO 422225 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-23 02:26:58.750  INFO 422225 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-23 02:26:58.788  INFO 422225 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-23 02:26:59.020  INFO 422225 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9850 (http) with context path '/api'
+2020-04-23 02:26:59.022  INFO 422225 --- [main] de.srs.appliance.ApplianceApplication    : Started ApplianceApplication in 5.933 seconds (JVM running for 6.561)
+2020-04-23 02:35:39.487  INFO 422225 --- [Thread-15] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-23 02:35:39.491  INFO 422225 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 02:35:39.494  INFO 422225 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-23 02:35:39.496  INFO 422225 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-23 02:35:41.844  INFO 424985 --- [main] de.srs.appliance.ApplianceApplication    : Starting ApplianceApplication on hazar-precision3510 with PID 424985 (/home/hazar/github_projects/Student_Residence_Service/Appliance-Service/target/classes started by hazar in /home/hazar/github_projects/Student_Residence_Service)
+2020-04-23 02:35:41.848  INFO 424985 --- [main] de.srs.appliance.ApplianceApplication    : No active profile set, falling back to default profiles: default
+2020-04-23 02:35:43.112  INFO 424985 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 02:35:43.113  INFO 424985 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 02:35:43.203  INFO 424985 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83ms. Found 5 repository interfaces.
+2020-04-23 02:35:43.217  INFO 424985 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 02:35:43.218  INFO 424985 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 02:35:43.230  INFO 424985 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceRepository.
+2020-04-23 02:35:43.230  INFO 424985 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceTypeRepository.
+2020-04-23 02:35:43.231  INFO 424985 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.RentRepository.
+2020-04-23 02:35:43.231  INFO 424985 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.StudentRepository.
+2020-04-23 02:35:43.231  INFO 424985 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.UserRepository.
+2020-04-23 02:35:43.231  INFO 424985 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 repository interfaces.
+2020-04-23 02:35:43.672  INFO 424985 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1c654259] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 02:35:43.722  INFO 424985 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$9be58f8b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 02:35:43.947  INFO 424985 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9850 (http)
+2020-04-23 02:35:43.967  INFO 424985 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-23 02:35:43.967  INFO 424985 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-04-23 02:35:44.047  INFO 424985 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-04-23 02:35:44.048 DEBUG 424985 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-04-23 02:35:44.048  INFO 424985 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2047 ms
+2020-04-23 02:35:44.482  INFO 424985 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-23 02:35:44.544  INFO 424985 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-23 02:35:45.777  INFO 424985 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 02:35:46.509  WARN 424985 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-23 02:35:46.563 DEBUG 424985 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2020-04-23 02:35:46.620  INFO 424985 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-04-23 02:35:46.661 DEBUG 424985 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2020-04-23 02:35:46.897  INFO 424985 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 02:35:46.913 DEBUG 424985 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-04-23 02:35:46.944 DEBUG 424985 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-04-23 02:35:46.954 DEBUG 424985 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-04-23 02:35:47.203  INFO 424985 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b64a068d-f53a-4287-84b3-a8c2a9b3767f
+
+2020-04-23 02:35:47.313  INFO 424985 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@462deb2b, org.springframework.security.web.context.SecurityContextPersistenceFilter@1509bd56, org.springframework.security.web.header.HeaderWriterFilter@79827e71, org.springframework.security.web.csrf.CsrfFilter@46059b73, org.springframework.security.web.authentication.logout.LogoutFilter@4bc49d70, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@104e6540, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2d7df55, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@381c826c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3b22bcad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@466bf366, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@39303a6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13563e64, org.springframework.security.web.session.SessionManagementFilter@7cd2d3b6, org.springframework.security.web.access.ExceptionTranslationFilter@381f05a9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e09c7a2]
+2020-04-23 02:35:47.363  INFO 424985 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-23 02:35:47.378  INFO 424985 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-23 02:35:47.420  INFO 424985 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-23 02:35:47.643  INFO 424985 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9850 (http) with context path '/api'
+2020-04-23 02:35:47.645  INFO 424985 --- [main] de.srs.appliance.ApplianceApplication    : Started ApplianceApplication in 6.618 seconds (JVM running for 7.48)
+2020-04-23 02:36:05.648  INFO 424985 --- [Thread-16] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-23 02:36:05.650  INFO 424985 --- [Thread-16] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 02:36:05.653  INFO 424985 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-23 02:36:05.656  INFO 424985 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-23 02:36:07.570  INFO 425345 --- [main] de.srs.appliance.ApplianceApplication    : Starting ApplianceApplication on hazar-precision3510 with PID 425345 (/home/hazar/github_projects/Student_Residence_Service/Appliance-Service/target/classes started by hazar in /home/hazar/github_projects/Student_Residence_Service)
+2020-04-23 02:36:07.573  INFO 425345 --- [main] de.srs.appliance.ApplianceApplication    : No active profile set, falling back to default profiles: default
+2020-04-23 02:36:08.784  INFO 425345 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 02:36:08.784  INFO 425345 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 02:36:08.907  INFO 425345 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113ms. Found 5 repository interfaces.
+2020-04-23 02:36:08.926  INFO 425345 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 02:36:08.928  INFO 425345 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 02:36:08.946  INFO 425345 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceRepository.
+2020-04-23 02:36:08.947  INFO 425345 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceTypeRepository.
+2020-04-23 02:36:08.947  INFO 425345 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.RentRepository.
+2020-04-23 02:36:08.948  INFO 425345 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.StudentRepository.
+2020-04-23 02:36:08.949  INFO 425345 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.UserRepository.
+2020-04-23 02:36:08.949  INFO 425345 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
+2020-04-23 02:36:09.612  INFO 425345 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bdb752b9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 02:36:09.671  INFO 425345 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$3d379feb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 02:36:09.913  INFO 425345 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9850 (http)
+2020-04-23 02:36:09.937  INFO 425345 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-23 02:36:09.937  INFO 425345 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-04-23 02:36:10.028  INFO 425345 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-04-23 02:36:10.029 DEBUG 425345 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-04-23 02:36:10.029  INFO 425345 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2385 ms
+2020-04-23 02:36:10.482  INFO 425345 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-23 02:36:10.544  INFO 425345 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-23 02:36:11.766  INFO 425345 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 02:36:12.459  WARN 425345 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-23 02:36:12.514 DEBUG 425345 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2020-04-23 02:36:12.575  INFO 425345 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-04-23 02:36:12.620 DEBUG 425345 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2020-04-23 02:36:12.876  INFO 425345 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 02:36:12.903 DEBUG 425345 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-04-23 02:36:12.949 DEBUG 425345 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-04-23 02:36:12.963 DEBUG 425345 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-04-23 02:36:13.339  INFO 425345 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 837485f5-321b-46dc-a0bd-c2115ea5178a
+
+2020-04-23 02:36:13.463  INFO 425345 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6cd8c373, org.springframework.security.web.context.SecurityContextPersistenceFilter@292b7a02, org.springframework.security.web.header.HeaderWriterFilter@52cda4bd, org.springframework.security.web.csrf.CsrfFilter@3c00da24, org.springframework.security.web.authentication.logout.LogoutFilter@6bb46040, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@15e881c0, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2ac7c683, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@449f9628, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1ddc5857, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25dacc5a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19565b5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37806ccb, org.springframework.security.web.session.SessionManagementFilter@5a183fa6, org.springframework.security.web.access.ExceptionTranslationFilter@1e60890c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c450960]
+2020-04-23 02:36:13.517  INFO 425345 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-23 02:36:13.531  INFO 425345 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-23 02:36:13.577  INFO 425345 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-23 02:36:13.819  INFO 425345 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9850 (http) with context path '/api'
+2020-04-23 02:36:13.822  INFO 425345 --- [main] de.srs.appliance.ApplianceApplication    : Started ApplianceApplication in 6.701 seconds (JVM running for 7.362)
+2020-04-23 02:36:36.353  INFO 425345 --- [Thread-16] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-23 02:36:36.357  INFO 425345 --- [Thread-16] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 02:36:36.360  INFO 425345 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-23 02:36:36.367  INFO 425345 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-23 17:12:39.701  INFO 505793 --- [main] de.srs.appliance.ApplianceApplication    : Starting ApplianceApplication on hazar-precision3510 with PID 505793 (/home/hazar/github_projects/Student_Residence_Service/Appliance-Service/target/classes started by hazar in /home/hazar/github_projects/Student_Residence_Service)
+2020-04-23 17:12:39.704  INFO 505793 --- [main] de.srs.appliance.ApplianceApplication    : No active profile set, falling back to default profiles: default
+2020-04-23 17:12:41.081  INFO 505793 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 17:12:41.081  INFO 505793 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 17:12:41.198  INFO 505793 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111ms. Found 5 repository interfaces.
+2020-04-23 17:12:41.209  INFO 505793 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 17:12:41.210  INFO 505793 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 17:12:41.223  INFO 505793 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceRepository.
+2020-04-23 17:12:41.223  INFO 505793 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceTypeRepository.
+2020-04-23 17:12:41.224  INFO 505793 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.RentRepository.
+2020-04-23 17:12:41.224  INFO 505793 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.StudentRepository.
+2020-04-23 17:12:41.224  INFO 505793 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.UserRepository.
+2020-04-23 17:12:41.225  INFO 505793 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 repository interfaces.
+2020-04-23 17:12:41.646  INFO 505793 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6f33a14e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 17:12:41.695  INFO 505793 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$eeb3ee80] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 17:12:41.910  INFO 505793 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9850 (http)
+2020-04-23 17:12:41.932  INFO 505793 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-23 17:12:41.933  INFO 505793 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-04-23 17:12:42.085  INFO 505793 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-04-23 17:12:42.085 DEBUG 505793 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-04-23 17:12:42.085  INFO 505793 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2328 ms
+2020-04-23 17:12:42.767  INFO 505793 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-23 17:12:42.828  INFO 505793 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-23 17:12:44.315  INFO 505793 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 17:12:45.410  WARN 505793 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-23 17:12:45.474 DEBUG 505793 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2020-04-23 17:12:45.543  INFO 505793 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-23 17:12:45.623  INFO 505793 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-04-23 17:12:45.661 DEBUG 505793 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2020-04-23 17:12:45.726  INFO 505793 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 17:12:45.748 DEBUG 505793 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-04-23 17:12:45.780 DEBUG 505793 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-04-23 17:12:45.791 DEBUG 505793 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-04-23 17:12:46.135  INFO 505793 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-23 17:12:46.150  INFO 505793 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-23 17:12:46.189  INFO 505793 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-23 17:12:46.378  INFO 505793 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2020-04-23 17:12:46.381  INFO 505793 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2020-04-23 17:12:46.382  INFO 505793 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_3
+2020-04-23 17:12:46.424  INFO 505793 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9850 (http) with context path '/api'
+2020-04-23 17:12:46.426  INFO 505793 --- [main] de.srs.appliance.ApplianceApplication    : Started ApplianceApplication in 7.16 seconds (JVM running for 7.765)
+2020-04-23 17:12:46.794  INFO 505793 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-23 17:12:46.794  INFO 505793 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-23 17:12:46.795 DEBUG 505793 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2020-04-23 17:12:46.808 DEBUG 505793 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-04-23 17:12:46.808  INFO 505793 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-04-23 17:12:46.912  INFO 505793 --- [parallel-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-04-23 17:12:46.914  INFO 505793 --- [parallel-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-04-23 17:12:57.041  WARN 505793 --- [parallel-1] o.s.b.a.r.RedisReactiveHealthIndicator   : Redis health check failed
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.43.52:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1106) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1085) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedReactiveConnection(LettuceConnectionFactory.java:876) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:377) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:91) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at reactor.core.publisher.MonoSupplier.call(MonoSupplier.java:85) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:225) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:50) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:27) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266) ~[na:1.8.0_242]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:1.8.0_242]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_242]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) ~[na:1.8.0_242]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_242]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_242]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_242]
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.43.52:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:235) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:204) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:113) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_242]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:113) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1104) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	... 15 common frames omitted
+Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: /192.168.43.52:6379
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:263) ~[netty-transport-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:127) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute$$$capture(AbstractEventExecutor.java:163) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:416) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:515) ~[netty-transport-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:918) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	... 1 common frames omitted
+
+2020-04-23 17:13:20.250  INFO 505793 --- [Thread-17] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-23 17:13:20.255  INFO 505793 --- [Thread-17] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 17:13:20.259  INFO 505793 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-23 17:13:20.262  INFO 505793 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-23 17:13:23.963  INFO 506350 --- [main] de.srs.appliance.ApplianceApplication    : Starting ApplianceApplication on hazar-precision3510 with PID 506350 (/home/hazar/github_projects/Student_Residence_Service/Appliance-Service/target/classes started by hazar in /home/hazar/github_projects/Student_Residence_Service)
+2020-04-23 17:13:23.967  INFO 506350 --- [main] de.srs.appliance.ApplianceApplication    : No active profile set, falling back to default profiles: default
+2020-04-23 17:13:25.187  INFO 506350 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 17:13:25.188  INFO 506350 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 17:13:25.273  INFO 506350 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79ms. Found 5 repository interfaces.
+2020-04-23 17:13:25.289  INFO 506350 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 17:13:25.290  INFO 506350 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 17:13:25.309  INFO 506350 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceRepository.
+2020-04-23 17:13:25.310  INFO 506350 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceTypeRepository.
+2020-04-23 17:13:25.310  INFO 506350 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.RentRepository.
+2020-04-23 17:13:25.311  INFO 506350 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.StudentRepository.
+2020-04-23 17:13:25.311  INFO 506350 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.UserRepository.
+2020-04-23 17:13:25.311  INFO 506350 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
+2020-04-23 17:13:25.839  INFO 506350 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1592d226] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 17:13:25.921  INFO 506350 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$95131f58] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 17:13:26.138  INFO 506350 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9850 (http)
+2020-04-23 17:13:26.156  INFO 506350 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-23 17:13:26.156  INFO 506350 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-04-23 17:13:26.308  INFO 506350 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-04-23 17:13:26.309 DEBUG 506350 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-04-23 17:13:26.309  INFO 506350 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2293 ms
+2020-04-23 17:13:27.054  INFO 506350 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-23 17:13:27.119  INFO 506350 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-23 17:13:28.405  INFO 506350 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 17:13:29.347  WARN 506350 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-23 17:13:29.403 DEBUG 506350 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2020-04-23 17:13:29.468  INFO 506350 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-23 17:13:29.543  INFO 506350 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-04-23 17:13:29.581 DEBUG 506350 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2020-04-23 17:13:29.641  INFO 506350 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 17:13:29.662 DEBUG 506350 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-04-23 17:13:29.694 DEBUG 506350 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-04-23 17:13:29.705 DEBUG 506350 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-04-23 17:13:30.026  INFO 506350 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-23 17:13:30.043  INFO 506350 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-23 17:13:30.088  INFO 506350 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-23 17:13:30.277  INFO 506350 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2020-04-23 17:13:30.278  INFO 506350 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2020-04-23 17:13:30.279  INFO 506350 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_3
+2020-04-23 17:13:30.320  INFO 506350 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9850 (http) with context path '/api'
+2020-04-23 17:13:30.322  INFO 506350 --- [main] de.srs.appliance.ApplianceApplication    : Started ApplianceApplication in 6.795 seconds (JVM running for 7.392)
+2020-04-23 17:13:30.671  INFO 506350 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-23 17:13:30.671  INFO 506350 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-23 17:13:30.672 DEBUG 506350 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2020-04-23 17:13:30.686 DEBUG 506350 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-04-23 17:13:30.687  INFO 506350 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-04-23 17:13:30.777  INFO 506350 --- [parallel-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-04-23 17:13:30.778  INFO 506350 --- [parallel-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-04-23 17:13:40.874  WARN 506350 --- [parallel-1] o.s.b.a.r.RedisReactiveHealthIndicator   : Redis health check failed
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.43.52:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1106) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1085) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedReactiveConnection(LettuceConnectionFactory.java:876) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:377) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:91) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at reactor.core.publisher.MonoSupplier.call(MonoSupplier.java:85) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:225) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:50) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:27) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266) ~[na:1.8.0_242]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:1.8.0_242]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_242]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) ~[na:1.8.0_242]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_242]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_242]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_242]
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.43.52:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:235) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:204) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:113) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_242]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:113) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1104) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	... 15 common frames omitted
+Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: /192.168.43.52:6379
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:263) ~[netty-transport-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:127) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute$$$capture(AbstractEventExecutor.java:163) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:416) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:515) ~[netty-transport-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:918) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	... 1 common frames omitted
+
+2020-04-23 17:19:34.948  INFO 506350 --- [Thread-16] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-23 17:19:34.955  INFO 506350 --- [Thread-16] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 17:19:34.958  INFO 506350 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-23 17:19:34.960  INFO 506350 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-23 17:21:32.487  INFO 509358 --- [main] de.srs.appliance.ApplianceApplication    : Starting ApplianceApplication on hazar-precision3510 with PID 509358 (/home/hazar/github_projects/Student_Residence_Service/Appliance-Service/target/classes started by hazar in /home/hazar/github_projects/Student_Residence_Service)
+2020-04-23 17:21:32.490  INFO 509358 --- [main] de.srs.appliance.ApplianceApplication    : No active profile set, falling back to default profiles: default
+2020-04-23 17:21:33.729  INFO 509358 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 17:21:33.729  INFO 509358 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 17:21:33.812  INFO 509358 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75ms. Found 5 repository interfaces.
+2020-04-23 17:21:33.828  INFO 509358 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 17:21:33.829  INFO 509358 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 17:21:33.843  INFO 509358 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceRepository.
+2020-04-23 17:21:33.844  INFO 509358 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceTypeRepository.
+2020-04-23 17:21:33.844  INFO 509358 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.RentRepository.
+2020-04-23 17:21:33.845  INFO 509358 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.StudentRepository.
+2020-04-23 17:21:33.845  INFO 509358 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.UserRepository.
+2020-04-23 17:21:33.845  INFO 509358 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 repository interfaces.
+2020-04-23 17:21:34.267  INFO 509358 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4a417c68] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 17:21:34.315  INFO 509358 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$c9c1c99a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 17:21:34.545  INFO 509358 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9850 (http)
+2020-04-23 17:21:34.566  INFO 509358 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-23 17:21:34.567  INFO 509358 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-04-23 17:21:34.729  INFO 509358 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-04-23 17:21:34.730 DEBUG 509358 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-04-23 17:21:34.730  INFO 509358 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2194 ms
+2020-04-23 17:21:35.469  INFO 509358 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-23 17:21:35.535  INFO 509358 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-23 17:21:36.841  INFO 509358 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 17:21:37.999  WARN 509358 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-23 17:21:38.078 DEBUG 509358 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2020-04-23 17:21:38.166  INFO 509358 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-23 17:21:38.277  INFO 509358 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-04-23 17:21:38.329 DEBUG 509358 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2020-04-23 17:21:38.423  INFO 509358 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 17:21:38.457 DEBUG 509358 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-04-23 17:21:38.507 DEBUG 509358 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-04-23 17:21:38.522 DEBUG 509358 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-04-23 17:21:38.952  INFO 509358 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-23 17:21:38.971  INFO 509358 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-23 17:21:39.033  INFO 509358 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-23 17:21:39.400  INFO 509358 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2020-04-23 17:21:39.402  INFO 509358 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2020-04-23 17:21:39.403  INFO 509358 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_3
+2020-04-23 17:21:39.480  INFO 509358 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9850 (http) with context path '/api'
+2020-04-23 17:21:39.483  INFO 509358 --- [main] de.srs.appliance.ApplianceApplication    : Started ApplianceApplication in 7.369 seconds (JVM running for 7.914)
+2020-04-23 17:21:39.758  INFO 509358 --- [RMI TCP Connection(5)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-23 17:21:39.758  INFO 509358 --- [RMI TCP Connection(5)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-23 17:21:39.760 DEBUG 509358 --- [RMI TCP Connection(5)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2020-04-23 17:21:39.775 DEBUG 509358 --- [RMI TCP Connection(5)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-04-23 17:21:39.775  INFO 509358 --- [RMI TCP Connection(5)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-04-23 17:21:39.925  INFO 509358 --- [parallel-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-04-23 17:21:39.928  INFO 509358 --- [parallel-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-04-23 17:21:50.068  WARN 509358 --- [parallel-1] o.s.b.a.r.RedisReactiveHealthIndicator   : Redis health check failed
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.43.52:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1106) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1085) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedReactiveConnection(LettuceConnectionFactory.java:876) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:377) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:91) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at reactor.core.publisher.MonoSupplier.call(MonoSupplier.java:85) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:225) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:50) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:27) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266) ~[na:1.8.0_242]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:1.8.0_242]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_242]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) ~[na:1.8.0_242]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_242]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_242]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_242]
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.43.52:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:235) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:204) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:113) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_242]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:113) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1104) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	... 15 common frames omitted
+Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: /192.168.43.52:6379
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:263) ~[netty-transport-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:127) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute$$$capture(AbstractEventExecutor.java:163) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:416) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:515) ~[netty-transport-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:918) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	... 1 common frames omitted
+
+2020-04-23 17:34:29.543  INFO 509358 --- [Thread-17] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-23 17:34:29.549  INFO 509358 --- [Thread-17] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 17:34:29.552  INFO 509358 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-23 17:34:29.554  INFO 509358 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-23 22:41:07.443  INFO 569556 --- [main] de.srs.appliance.ApplianceApplication    : Starting ApplianceApplication on hazar-precision3510 with PID 569556 (/home/hazar/github_projects/Student_Residence_Service/Appliance-Service/target/classes started by hazar in /home/hazar/github_projects/Student_Residence_Service)
+2020-04-23 22:41:07.448  INFO 569556 --- [main] de.srs.appliance.ApplianceApplication    : No active profile set, falling back to default profiles: default
+2020-04-23 22:41:08.912  INFO 569556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 22:41:08.912  INFO 569556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 22:41:09.024  INFO 569556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102ms. Found 5 repository interfaces.
+2020-04-23 22:41:09.038  INFO 569556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 22:41:09.040  INFO 569556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 22:41:09.056  INFO 569556 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceRepository.
+2020-04-23 22:41:09.057  INFO 569556 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceTypeRepository.
+2020-04-23 22:41:09.058  INFO 569556 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.RentRepository.
+2020-04-23 22:41:09.058  INFO 569556 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.StudentRepository.
+2020-04-23 22:41:09.059  INFO 569556 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.UserRepository.
+2020-04-23 22:41:09.059  INFO 569556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
+2020-04-23 22:41:09.620  INFO 569556 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$54b55b86] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 22:41:09.715  INFO 569556 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$d435a8b8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 22:41:10.025  INFO 569556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9850 (http)
+2020-04-23 22:41:10.056  INFO 569556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-23 22:41:10.056  INFO 569556 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-04-23 22:41:10.398  INFO 569556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-04-23 22:41:10.398 DEBUG 569556 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-04-23 22:41:10.398  INFO 569556 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2909 ms
+2020-04-23 22:41:11.445  INFO 569556 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-23 22:41:11.530  INFO 569556 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-23 22:41:13.173  INFO 569556 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 22:41:14.541  WARN 569556 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-23 22:41:14.608 DEBUG 569556 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2020-04-23 22:41:14.682  INFO 569556 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-23 22:41:14.780  INFO 569556 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-04-23 22:41:14.835 DEBUG 569556 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2020-04-23 22:41:14.910  INFO 569556 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 22:41:14.932 DEBUG 569556 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-04-23 22:41:14.969 DEBUG 569556 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-04-23 22:41:14.985 DEBUG 569556 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-04-23 22:41:15.356  INFO 569556 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-23 22:41:15.374  INFO 569556 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-23 22:41:15.421  INFO 569556 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-23 22:41:15.635  INFO 569556 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2020-04-23 22:41:15.636  INFO 569556 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2020-04-23 22:41:15.637  INFO 569556 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_3
+2020-04-23 22:41:15.684  INFO 569556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9850 (http) with context path '/api'
+2020-04-23 22:41:15.687  INFO 569556 --- [main] de.srs.appliance.ApplianceApplication    : Started ApplianceApplication in 8.606 seconds (JVM running for 9.22)
+2020-04-23 22:41:15.771  INFO 569556 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-23 22:41:15.771  INFO 569556 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-23 22:41:15.771 DEBUG 569556 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2020-04-23 22:41:15.785 DEBUG 569556 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-04-23 22:41:15.785  INFO 569556 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-04-23 22:41:15.903  INFO 569556 --- [parallel-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-04-23 22:41:15.904  INFO 569556 --- [parallel-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-04-23 22:41:26.064  WARN 569556 --- [parallel-1] o.s.b.a.r.RedisReactiveHealthIndicator   : Redis health check failed
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.43.52:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1106) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1085) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedReactiveConnection(LettuceConnectionFactory.java:876) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:377) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:91) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at reactor.core.publisher.MonoSupplier.call(MonoSupplier.java:85) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:225) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:50) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:27) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266) ~[na:1.8.0_242]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:1.8.0_242]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_242]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) ~[na:1.8.0_242]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_242]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_242]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_242]
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.43.52:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:235) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:204) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:113) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_242]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:113) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1104) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	... 15 common frames omitted
+Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: /192.168.43.52:6379
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:263) ~[netty-transport-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:127) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute$$$capture(AbstractEventExecutor.java:163) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:416) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:515) ~[netty-transport-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:918) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	... 1 common frames omitted
+
+2020-04-23 22:41:35.846  INFO 569556 --- [Thread-19] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-23 22:41:35.849  INFO 569556 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 22:41:35.852  INFO 569556 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-23 22:41:35.858  INFO 569556 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-23 22:41:39.281  INFO 570039 --- [main] de.srs.appliance.ApplianceApplication    : Starting ApplianceApplication on hazar-precision3510 with PID 570039 (/home/hazar/github_projects/Student_Residence_Service/Appliance-Service/target/classes started by hazar in /home/hazar/github_projects/Student_Residence_Service)
+2020-04-23 22:41:39.285  INFO 570039 --- [main] de.srs.appliance.ApplianceApplication    : No active profile set, falling back to default profiles: default
+2020-04-23 22:41:40.324  INFO 570039 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 22:41:40.325  INFO 570039 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 22:41:40.401  INFO 570039 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70ms. Found 5 repository interfaces.
+2020-04-23 22:41:40.412  INFO 570039 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 22:41:40.413  INFO 570039 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 22:41:40.426  INFO 570039 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceRepository.
+2020-04-23 22:41:40.426  INFO 570039 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceTypeRepository.
+2020-04-23 22:41:40.426  INFO 570039 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.RentRepository.
+2020-04-23 22:41:40.427  INFO 570039 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.StudentRepository.
+2020-04-23 22:41:40.427  INFO 570039 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.UserRepository.
+2020-04-23 22:41:40.428  INFO 570039 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 repository interfaces.
+2020-04-23 22:41:40.812  INFO 570039 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$133b1dae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 22:41:40.865  INFO 570039 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$92bb6ae0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 22:41:41.091  INFO 570039 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9850 (http)
+2020-04-23 22:41:41.110  INFO 570039 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-23 22:41:41.111  INFO 570039 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-04-23 22:41:41.241  INFO 570039 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-04-23 22:41:41.242 DEBUG 570039 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-04-23 22:41:41.242  INFO 570039 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1909 ms
+2020-04-23 22:41:41.865  INFO 570039 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-23 22:41:41.923  INFO 570039 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-23 22:41:43.044  INFO 570039 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 22:41:43.905  WARN 570039 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-23 22:41:43.958 DEBUG 570039 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2020-04-23 22:41:44.021  INFO 570039 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-23 22:41:44.096  INFO 570039 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-04-23 22:41:44.132 DEBUG 570039 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2020-04-23 22:41:44.189  INFO 570039 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 22:41:44.206 DEBUG 570039 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-04-23 22:41:44.234 DEBUG 570039 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-04-23 22:41:44.243 DEBUG 570039 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-04-23 22:41:44.532  INFO 570039 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-23 22:41:44.547  INFO 570039 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-23 22:41:44.586  INFO 570039 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-23 22:41:44.771  INFO 570039 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2020-04-23 22:41:44.772  INFO 570039 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2020-04-23 22:41:44.773  INFO 570039 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_3
+2020-04-23 22:41:44.814  INFO 570039 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9850 (http) with context path '/api'
+2020-04-23 22:41:44.816  INFO 570039 --- [main] de.srs.appliance.ApplianceApplication    : Started ApplianceApplication in 5.908 seconds (JVM running for 6.449)
+2020-04-23 22:41:45.384  INFO 570039 --- [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-23 22:41:45.384  INFO 570039 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-23 22:41:45.386 DEBUG 570039 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2020-04-23 22:41:45.401 DEBUG 570039 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-04-23 22:41:45.401  INFO 570039 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-04-23 22:41:45.482  INFO 570039 --- [parallel-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-04-23 22:41:45.483  INFO 570039 --- [parallel-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-04-23 22:41:55.570  WARN 570039 --- [parallel-1] o.s.b.a.r.RedisReactiveHealthIndicator   : Redis health check failed
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.43.52:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1106) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1085) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedReactiveConnection(LettuceConnectionFactory.java:876) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:377) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:91) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at reactor.core.publisher.MonoSupplier.call(MonoSupplier.java:85) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:225) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:50) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:27) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266) ~[na:1.8.0_242]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:1.8.0_242]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_242]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) ~[na:1.8.0_242]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_242]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_242]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_242]
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.43.52:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:235) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:204) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:113) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_242]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:113) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1104) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	... 15 common frames omitted
+Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: /192.168.43.52:6379
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:263) ~[netty-transport-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:127) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute$$$capture(AbstractEventExecutor.java:163) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:416) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:515) ~[netty-transport-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:918) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	... 1 common frames omitted
+
+2020-04-23 22:43:56.942  INFO 570039 --- [Thread-15] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-23 22:43:56.945  INFO 570039 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 22:43:56.948  INFO 570039 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-23 22:43:56.950  INFO 570039 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-04-23 22:44:38.922  INFO 571449 --- [main] de.srs.appliance.ApplianceApplication    : Starting ApplianceApplication on hazar-precision3510 with PID 571449 (/home/hazar/github_projects/Student_Residence_Service/Appliance-Service/target/classes started by hazar in /home/hazar/github_projects/Student_Residence_Service)
+2020-04-23 22:44:38.926  INFO 571449 --- [main] de.srs.appliance.ApplianceApplication    : No active profile set, falling back to default profiles: default
+2020-04-23 22:44:40.142  INFO 571449 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 22:44:40.142  INFO 571449 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 22:44:40.225  INFO 571449 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77ms. Found 5 repository interfaces.
+2020-04-23 22:44:40.237  INFO 571449 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-23 22:44:40.238  INFO 571449 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-23 22:44:40.251  INFO 571449 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceRepository.
+2020-04-23 22:44:40.251  INFO 571449 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.ApplianceTypeRepository.
+2020-04-23 22:44:40.252  INFO 571449 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.RentRepository.
+2020-04-23 22:44:40.252  INFO 571449 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.StudentRepository.
+2020-04-23 22:44:40.252  INFO 571449 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface de.srs.appliance.repository.UserRepository.
+2020-04-23 22:44:40.252  INFO 571449 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 repository interfaces.
+2020-04-23 22:44:40.677  INFO 571449 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ca29d144] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 22:44:40.740  INFO 571449 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$49aa1e76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-23 22:44:41.025  INFO 571449 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9850 (http)
+2020-04-23 22:44:41.049  INFO 571449 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-23 22:44:41.050  INFO 571449 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-04-23 22:44:41.254  INFO 571449 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-04-23 22:44:41.255 DEBUG 571449 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-04-23 22:44:41.255  INFO 571449 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2276 ms
+2020-04-23 22:44:42.155  INFO 571449 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-23 22:44:42.227  INFO 571449 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-23 22:44:43.815  INFO 571449 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 22:44:44.930  WARN 571449 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-23 22:44:44.995 DEBUG 571449 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 17 mappings in 'requestMappingHandlerMapping'
+2020-04-23 22:44:45.074  INFO 571449 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-23 22:44:45.162  INFO 571449 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-04-23 22:44:45.201 DEBUG 571449 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2020-04-23 22:44:45.273  INFO 571449 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 22:44:45.301 DEBUG 571449 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-04-23 22:44:45.341 DEBUG 571449 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-04-23 22:44:45.354 DEBUG 571449 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-04-23 22:44:45.719  INFO 571449 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-23 22:44:45.735  INFO 571449 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-23 22:44:45.779  INFO 571449 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-23 22:44:46.004  INFO 571449 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2020-04-23 22:44:46.006  INFO 571449 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2020-04-23 22:44:46.008  INFO 571449 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_3
+2020-04-23 22:44:46.059  INFO 571449 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9850 (http) with context path '/api'
+2020-04-23 22:44:46.062  INFO 571449 --- [main] de.srs.appliance.ApplianceApplication    : Started ApplianceApplication in 7.535 seconds (JVM running for 8.193)
+2020-04-23 22:44:46.435  INFO 571449 --- [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-23 22:44:46.436  INFO 571449 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-23 22:44:46.436 DEBUG 571449 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2020-04-23 22:44:46.448 DEBUG 571449 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-04-23 22:44:46.448  INFO 571449 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-04-23 22:44:46.546  INFO 571449 --- [parallel-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-04-23 22:44:46.547  INFO 571449 --- [parallel-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-04-23 22:44:56.649  WARN 571449 --- [parallel-1] o.s.b.a.r.RedisReactiveHealthIndicator   : Redis health check failed
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.43.52:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1106) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1085) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedReactiveConnection(LettuceConnectionFactory.java:876) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:377) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getReactiveConnection(LettuceConnectionFactory.java:91) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at reactor.core.publisher.MonoSupplier.call(MonoSupplier.java:85) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:225) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:50) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:27) ~[reactor-core-3.2.11.RELEASE.jar:3.2.11.RELEASE]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266) ~[na:1.8.0_242]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:1.8.0_242]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_242]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) ~[na:1.8.0_242]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_242]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_242]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_242]
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.43.52:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:235) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:204) ~[lettuce-core-5.1.8.RELEASE.jar:na]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:113) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at java.util.Optional.orElseGet(Optional.java:267) ~[na:1.8.0_242]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:113) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1104) ~[spring-data-redis-2.1.10.RELEASE.jar:2.1.10.RELEASE]
+	... 15 common frames omitted
+Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: /192.168.43.52:6379
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:263) ~[netty-transport-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.PromiseTask$RunnableAdapter.call(PromiseTask.java:38) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:127) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute$$$capture(AbstractEventExecutor.java:163) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:416) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:515) ~[netty-transport-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:918) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.38.Final.jar:4.1.38.Final]
+	... 1 common frames omitted
+
+2020-04-23 22:47:51.690  INFO 571449 --- [Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-23 22:47:51.694  INFO 571449 --- [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-04-23 22:47:51.696  INFO 571449 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-04-23 22:47:51.700  INFO 571449 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

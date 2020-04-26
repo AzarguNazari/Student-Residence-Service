@@ -10,7 +10,7 @@ All the project is based on Spring boot 2.1.7. Since Java 8 is the stable versio
 To run the project, you need to import it as MAVEN project in your IDE (Intellij or Eclipse) 
  - [Java 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
  - Intellij | Eclipse
- - PostgresSQL
+ - PostgresSQL (run docker image and create a database by name of StudentResidenceDB)
 
 # Architecture  used in the project 
  - Microservices

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Api-Gateway/Api-Gateway.iml" filepath="$PROJECT_DIR$/Api-Gateway/Api-Gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Appliance-Service/Appliance-Service.iml" filepath="$PROJECT_DIR$/Appliance-Service/Appliance-Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Authorization-Server/Authorization-Server.iml" filepath="$PROJECT_DIR$/Authorization-Server/Authorization-Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bulletinboard-Service/Bulletinboard-Service.iml" filepath="$PROJECT_DIR$/Bulletinboard-Service/Bulletinboard-Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Student_Residence_Service.iml" filepath="$PROJECT_DIR$/.idea/Student_Residence_Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBoot-monitor/springBoot-monitor.iml" filepath="$PROJECT_DIR$/springBoot-monitor/springBoot-monitor.iml" />
+    </modules>
+  </component>
+</project>
