@@ -1,10 +1,10 @@
 package de.srs.bulletinboard.resource;
 
-import org.springframework.hateoas.ResourceSupport;
+import org.springframework.hateoas.EntityModel;
 
 import de.srs.bulletinboard.model.Announcement;
 
-public class AnnouncementResource extends ResourceSupport {
+public class AnnouncementResource extends EntityModel {
 
 	private Announcement announcement;
 	

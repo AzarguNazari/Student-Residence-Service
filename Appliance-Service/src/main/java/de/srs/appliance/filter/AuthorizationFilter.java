@@ -38,7 +38,12 @@ public class AuthorizationFilter implements Filter  {
 		String method = request.getMethod();
 		String endpoint = request.getServletPath();
 		String jwtToken = request.getHeader("Authorization");
-        
+
+		if(jwtToken == null || jwtToken.length() == 0){
+			response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+			return;
+		}
+
 		String role = CommonUtil.getRoleFromToken(jwtToken);
         CommonUtil.getUserDetailsFromToken(jwtToken);
         Boolean hasAccess = accessControlConfig.checkAccess(role, endpoint, method);

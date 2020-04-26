@@ -1,11 +1,11 @@
 package de.srs.appliance.resource;
 
-import org.springframework.hateoas.ResourceSupport;
+import org.springframework.hateoas.EntityModel;
 
 import de.srs.appliance.model.Appliance;
 
 
-public class ApplianceResource extends ResourceSupport{
+public class ApplianceResource extends EntityModel{
 	
 	private Appliance appliance;
 	

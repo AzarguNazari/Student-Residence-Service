@@ -2,9 +2,9 @@ package de.srs.appliance.resource;
 
 import java.util.List;
 
-import org.springframework.hateoas.ResourceSupport;
+import org.springframework.hateoas.EntityModel;
 
-public class RentListResource extends ResourceSupport {
+public class RentListResource extends EntityModel {
 
 	private List<RentResource> rents;
 	

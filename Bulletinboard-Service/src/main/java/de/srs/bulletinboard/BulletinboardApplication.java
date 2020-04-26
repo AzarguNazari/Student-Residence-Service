@@ -5,7 +5,12 @@ import org.springframework.boot.ExitCodeGenerator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.hateoas.client.LinkDiscoverer;
+import org.springframework.http.MediaType;
+import org.springframework.plugin.core.OrderAwarePluginRegistry;
+import org.springframework.plugin.core.PluginRegistry;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -34,5 +39,11 @@ public class BulletinboardApplication implements CommandLineRunner {
             return 10;
         }
 
+    }
+
+    @Bean
+    public PluginRegistry<LinkDiscoverer, MediaType> discoverers(
+            OrderAwarePluginRegistry<LinkDiscoverer, MediaType> relProviderPluginRegistry) {
+        return relProviderPluginRegistry;
     }
 }

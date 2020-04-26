@@ -1,8 +1,8 @@
 package de.srs.bulletinboard.util.resource;
 
-import org.springframework.hateoas.ResourceSupport;
+import org.springframework.hateoas.EntityModel;
 
-public abstract class AbstractListResource extends ResourceSupport{
+public abstract class AbstractListResource extends EntityModel{
 
 	private Integer pageNumber;
 
