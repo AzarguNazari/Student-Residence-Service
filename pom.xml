@@ -8,7 +8,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>spring-boot-admin</module>
+        <module>springBoot-monitor</module>
         <module>Api-Gateway</module>
         <module>Appliance-Service</module>
         <module>Authorization-Server</module>
