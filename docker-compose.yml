@@ -4,7 +4,3 @@ services:
     build: ./client-ui
     ports:
      - "8080:80"
-  redis:
-    image: redis
-    expose:
-      - 6379
