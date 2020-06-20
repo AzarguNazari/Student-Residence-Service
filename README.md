@@ -12,6 +12,8 @@ To run the project, you need to import it as MAVEN project in your IDE (Intellij
  - Intellij | Eclipse
  - PostgresSQL (run docker image and create a database by name of StudentResidenceDB)
 
+Command to make all submodules ready to run : `mvn clean package` and then run each services individually
+
 # Architecture  used in the project 
  - Microservices
 
