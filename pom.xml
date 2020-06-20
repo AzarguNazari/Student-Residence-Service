@@ -85,6 +85,11 @@
                 <artifactId>spring-boot-admin-client</artifactId>
                 <version>${spring-boot-admin-client}</version>
             </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-server</artifactId>
+                <version>${spring-boot-admin-client}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
