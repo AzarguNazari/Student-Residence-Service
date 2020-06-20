@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a75af456-6b47-4296-954c-1a5cae96639d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api-Gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Api-Gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api-Gateway/src/main/java/gateway/config/OAuth2ResourceServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api-Gateway/src/main/java/gateway/config/OAuth2ResourceServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api-Gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Api-Gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Appliance-Service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Authorization-Server/src/main/java/srs/AuthServer/security/config/WebSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authorization-Server/src/main/java/srs/AuthServer/security/config/WebSecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Authorization-Server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Authorization-Server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Bulletinboard-Service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springBoot-monitor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springBoot-monitor/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springBoot-monitor/src/main/java/sba/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBoot-monitor/src/main/java/sba/SpringBootAdminApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springBoot-monitor/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springBoot-monitor/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1dX2rzkBKrNOB7k8TipXKEMHmsM" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="gateway" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Api Gateway Service">
+    <configuration name="Api Gateway Service" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="gateway.ApiGatewayApplication" />
+      <module name="Api-Gateway" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Appliances Service" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="srs.appliance.ApplianceApplication" />
+      <module name="Appliance-Service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Authorization Service" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="srs.AuthServer.AuthorizationServerApplication" />
+      <module name="Authorization-Server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Bulletinboard Service" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="srs.bulletinboard.BulletinboardApplication" />
+      <module name="Bulletinboard-Service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SBA Service" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="sba.SpringBootAdminApplication" />
+      <module name="springBoot-monitor" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Images of Services" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="mvn" />
+                <option value="spring-boot:build-image" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Appliances Service" />
+      <item itemvalue="Application.Api Gateway Service" />
+      <item itemvalue="Application.Authorization Service" />
+      <item itemvalue="Application.SBA Service" />
+      <item itemvalue="Application.Bulletinboard Service" />
+      <item itemvalue="Maven.Images of Services" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a75af456-6b47-4296-954c-1a5cae96639d" name="Default Changelist" comment="" />
+      <created>1592557319140</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592557319140</updated>
+    </task>
+    <task id="LOCAL-00001" summary="refactore">
+      <created>1592559404400</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592559404400</updated>
+    </task>
+    <task id="LOCAL-00002" summary="refactor">
+      <created>1592559653542</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1592559653542</updated>
+    </task>
+    <task id="LOCAL-00003" summary="REFACTOR">
+      <created>1592639076740</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1592639076740</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactore" />
+    <MESSAGE value="refactor" />
+    <MESSAGE value="REFACTOR" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFACTOR" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="424" y="249" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592642312946">
+      <screen x="0" y="39" width="1920" height="1041" />
+    </state>
+    <state x="424" y="249" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592642312946" />
+    <state x="2344" y="218" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592578700392" />
+    <state x="697" y="377" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1592642206469">
+      <screen x="0" y="39" width="1920" height="1041" />
+    </state>
+    <state x="697" y="377" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592642206469" />
+    <state x="2396" y="487" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1592558085794">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2396" y="487" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592558085794" />
+    <state x="2642" y="420" width="476" height="289" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1592557759847">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2642" y="420" width="476" height="289" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592557759847" />
+    <state x="2642" y="441" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1592558088263">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2642" y="441" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592558088263" />
+    <state x="201" y="170" key="CommitChangelistDialog2" timestamp="1592643428366">
+      <screen x="0" y="39" width="1920" height="1041" />
+    </state>
+    <state x="201" y="170" key="CommitChangelistDialog2/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643428366" />
+    <state x="2121" y="136" key="CommitChangelistDialog2/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592559653384" />
+    <state x="2667" y="318" key="FileChooserDialogImpl" timestamp="1592578688697">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2667" y="318" key="FileChooserDialogImpl/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592578688697" />
+    <state width="1874" height="763" key="GridCell.Tab.0.bottom" timestamp="1592643372054">
+      <screen x="0" y="39" width="1920" height="1041" />
+    </state>
+    <state width="1874" height="763" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
+    <state width="1874" height="252" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592578845219" />
+    <state width="1874" height="763" key="GridCell.Tab.0.center" timestamp="1592643372054">
+      <screen x="0" y="39" width="1920" height="1041" />
+    </state>
+    <state width="1874" height="763" key="GridCell.Tab.0.center/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
+    <state width="1874" height="252" key="GridCell.Tab.0.center/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592578845219" />
+    <state width="1874" height="763" key="GridCell.Tab.0.left" timestamp="1592643372053">
+      <screen x="0" y="39" width="1920" height="1041" />
+    </state>
+    <state width="1874" height="763" key="GridCell.Tab.0.left/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372053" />
+    <state width="1874" height="252" key="GridCell.Tab.0.left/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592578845219" />
+    <state width="1874" height="763" key="GridCell.Tab.0.right" timestamp="1592643372054">
+      <screen x="0" y="39" width="1920" height="1041" />
+    </state>
+    <state width="1874" height="763" key="GridCell.Tab.0.right/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
+    <state width="1874" height="252" key="GridCell.Tab.0.right/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592578845219" />
+    <state width="1874" height="763" key="GridCell.Tab.1.bottom" timestamp="1592643372054">
+      <screen x="0" y="39" width="1920" height="1041" />
+    </state>
+    <state width="1874" height="763" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
+    <state width="1874" height="338" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592563101825" />
+    <state width="1874" height="763" key="GridCell.Tab.1.center" timestamp="1592643372054">
+      <screen x="0" y="39" width="1920" height="1041" />
+    </state>
+    <state width="1874" height="763" key="GridCell.Tab.1.center/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
+    <state width="1874" height="338" key="GridCell.Tab.1.center/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592563101825" />
+    <state width="1874" height="763" key="GridCell.Tab.1.left" timestamp="1592643372054">
+      <screen x="0" y="39" width="1920" height="1041" />
+    </state>
+    <state width="1874" height="763" key="GridCell.Tab.1.left/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
+    <state width="1874" height="338" key="GridCell.Tab.1.left/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592563101825" />
+    <state width="1874" height="763" key="GridCell.Tab.1.right" timestamp="1592643372054">
+      <screen x="0" y="39" width="1920" height="1041" />
+    </state>
+    <state width="1874" height="763" key="GridCell.Tab.1.right/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
+    <state width="1874" height="338" key="GridCell.Tab.1.right/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592563101825" />
+    <state x="2480" y="296" key="Vcs.Push.Dialog.v2" timestamp="1592559656128">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2480" y="296" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592559656128" />
+    <state x="642" y="298" width="635" height="522" key="find.popup" timestamp="1592641522902">
+      <screen x="0" y="39" width="1920" height="1041" />
+    </state>
+    <state x="642" y="298" width="635" height="522" key="find.popup/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592641522902" />
+    <state x="2348" y="263" key="new project wizard" timestamp="1592582929211">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2348" y="263" key="new project wizard/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592582929211" />
+  </component>
+</project>
