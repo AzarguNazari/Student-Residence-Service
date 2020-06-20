@@ -31,6 +31,8 @@ config/scripts/buildSrc/out/
 #######
 target/
 
+.idea/workspace.xml
+
 ###############
 ##  js build
 ################
