@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a75af456-6b47-4296-954c-1a5cae96639d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a75af456-6b47-4296-954c-1a5cae96639d" name="Default Changelist" comment="refactor">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Api-Gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/src/main/java/gateway/config/OAuth2ResourceServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api-Gateway/src/main/java/gateway/config/OAuth2ResourceServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Api-Gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Appliance-Service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/src/main/java/srs/AuthServer/security/config/WebSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authorization-Server/src/main/java/srs/AuthServer/security/config/WebSecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Authorization-Server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Bulletinboard-Service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBoot-monitor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springBoot-monitor/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBoot-monitor/src/main/java/sba/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBoot-monitor/src/main/java/sba/SpringBootAdminApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBoot-monitor/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springBoot-monitor/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,14 +153,60 @@
       <option name="project" value="LOCAL" />
       <updated>1592639076740</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add spring boot admin connection and enable ansi">
+      <created>1592643401855</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1592643401855</updated>
+    </task>
+    <task id="LOCAL-00005" summary="docker compose refactor">
+      <created>1592643413909</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1592643413909</updated>
+    </task>
+    <task id="LOCAL-00006" summary="refactor">
+      <created>1592643424805</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1592643424805</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add intellij workspace configuration">
+      <created>1592643437579</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1592643437579</updated>
+    </task>
+    <task id="LOCAL-00008" summary="refactor">
+      <created>1592643449977</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1592643449977</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add guide for configuration of project">
+      <created>1592643625240</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1592643625240</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactore" />
-    <MESSAGE value="refactor" />
     <MESSAGE value="REFACTOR" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTOR" />
+    <MESSAGE value="add spring boot admin connection and enable ansi" />
+    <MESSAGE value="docker compose refactor" />
+    <MESSAGE value="add intellij workspace configuration" />
+    <MESSAGE value="refactor" />
+    <MESSAGE value="add guide for configuration of project" />
+    <option name="LAST_COMMIT_MESSAGE" value="add guide for configuration of project" />
   </component>
   <component name="WindowStateProjectService">
     <state x="424" y="249" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592642312946">
@@ -196,10 +230,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2642" y="441" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592558088263" />
-    <state x="201" y="170" key="CommitChangelistDialog2" timestamp="1592643428366">
+    <state x="201" y="170" key="CommitChangelistDialog2" timestamp="1592643674148">
       <screen x="0" y="39" width="1920" height="1041" />
     </state>
-    <state x="201" y="170" key="CommitChangelistDialog2/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643428366" />
+    <state x="201" y="170" key="CommitChangelistDialog2/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643674148" />
     <state x="2121" y="136" key="CommitChangelistDialog2/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592559653384" />
     <state x="2667" y="318" key="FileChooserDialogImpl" timestamp="1592578688697">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -245,9 +279,10 @@
     </state>
     <state width="1874" height="763" key="GridCell.Tab.1.right/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
     <state width="1874" height="338" key="GridCell.Tab.1.right/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592563101825" />
-    <state x="2480" y="296" key="Vcs.Push.Dialog.v2" timestamp="1592559656128">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="560" y="324" key="Vcs.Push.Dialog.v2" timestamp="1592643628230">
+      <screen x="0" y="39" width="1920" height="1041" />
     </state>
+    <state x="560" y="324" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643628230" />
     <state x="2480" y="296" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592559656128" />
     <state x="642" y="298" width="635" height="522" key="find.popup" timestamp="1592641522902">
       <screen x="0" y="39" width="1920" height="1041" />
