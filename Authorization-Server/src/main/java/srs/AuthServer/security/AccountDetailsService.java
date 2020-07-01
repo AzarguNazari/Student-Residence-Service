@@ -25,15 +25,12 @@ public class AccountDetailsService implements UserDetailsService{
 	@Autowired
 	private UserDetailsRepository userDetailsRepository;
 	
-	@Autowired
-	private PasswordEncoder passwordEncoder;
-	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-		User user = userDetailsRepository.findByUsername(username).get();
+		User user = userDetailsRepository.findByUsername(username).orElse(null);
 		
-		if(user==null){
+		if(user == null){
 			throw new UsernameNotFoundException("user "+username+" not found");
 		}
 		List<GrantedAuthority> authorities = new ArrayList<>();
@@ -42,5 +39,4 @@ public class AccountDetailsService implements UserDetailsService{
 		org.springframework.security.core.userdetails.User userDetails =  new AuthUser(user.getUsername(), user.getPassword(), true, true, true, true, authorities, user.getId(), user.getFirstName(), user.getLastName(), user.getStudent() != null ? user.getStudent(): null);
 		return userDetails;
 	}
-	
 }

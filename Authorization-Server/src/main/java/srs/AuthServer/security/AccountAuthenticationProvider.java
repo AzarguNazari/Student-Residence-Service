@@ -14,20 +14,17 @@ public class AccountAuthenticationProvider extends AbstractUserDetailsAuthentica
 
 	@Autowired
 	private AccountDetailsService accountDetailsService;
-	
 	@Autowired
 	private PasswordEncoder passwordEncoder;
+
 	@Override
-	protected void additionalAuthenticationChecks(UserDetails userDetails, UsernamePasswordAuthenticationToken token)
-			throws AuthenticationException {
-		
+	protected void additionalAuthenticationChecks(UserDetails userDetails, UsernamePasswordAuthenticationToken token) throws AuthenticationException {
 		if(token.getCredentials() == null || userDetails.getPassword() == null){
 			throw new BadCredentialsException("Credentials cannot be null");
 		}
 		if(!passwordEncoder.matches((String) token.getCredentials(), userDetails.getPassword())){
 			throw new BadCredentialsException("Invalid Credentials");
 		}
-		
 	}
 
 	@Override
@@ -35,5 +32,4 @@ public class AccountAuthenticationProvider extends AbstractUserDetailsAuthentica
 			throws AuthenticationException {
 		return accountDetailsService.loadUserByUsername(username);
 	}
-
 }
