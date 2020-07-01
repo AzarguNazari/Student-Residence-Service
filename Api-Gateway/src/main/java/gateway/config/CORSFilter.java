@@ -1,23 +1,17 @@
 package gateway.config;
 
-import java.io.IOException;
-
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+import javax.servlet.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
 /**
  * This class is to filter every income request and add additional headers such as cross-origin, allowed-methods and allowed headers.
  * This will prevent the additional parameters attached to request which gateway makes it secure
- *
  */
 @Component
 @Order(Ordered.HIGHEST_PRECEDENCE)

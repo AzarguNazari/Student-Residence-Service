@@ -1,21 +1,12 @@
 package srs.AuthServer.model;
 
-import java.io.Serializable;
-import java.util.Date;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import org.springframework.validation.annotation.Validated;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Student
@@ -51,29 +42,4 @@ public class Student implements Serializable {
     @JsonProperty("join_date")
     @Column(name = "join_date")
     private Date joinDate = null;
-
-    public Student user(User user) {
-        this.user = user;
-        return this;
-    }
-
-    public Student id(Integer id) {
-        this.id = id;
-        return this;
-    }
-
-    public Student roomNumber(Integer roomNumber) {
-        this.roomNumber = roomNumber;
-        return this;
-    }
-
-    public Student semester(String semester) {
-        this.semester = semester;
-        return this;
-    }
-
-    public Student joinDate(Date joinDate) {
-        this.joinDate = joinDate;
-        return this;
-    }
 }

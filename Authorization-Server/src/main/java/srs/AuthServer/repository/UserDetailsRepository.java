@@ -9,6 +9,5 @@ import srs.AuthServer.model.User;
 
 @Repository
 public interface UserDetailsRepository extends CrudRepository<User, Long> {
-
 	Optional<User> findByUsername(String username);
 }
