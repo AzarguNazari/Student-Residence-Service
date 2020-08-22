@@ -1,6 +1,0 @@
-version: "3"
-services:
-  client-ui:
-    build: ./client-ui
-    ports:
-     - "8080:80"

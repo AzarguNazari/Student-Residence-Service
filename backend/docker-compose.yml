@@ -1,0 +1,59 @@
+version: '3.5'
+
+services:
+
+  postgres:
+    container_name: postgres_container
+    image: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - ./db/scripts/init.sql/:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    networks:
+      - backend
+
+  rabbit:
+    image: "rabbitmq:3-management"
+    container_name: "rabbit"
+    environment:
+      spring.rabbitmq.host: rabbit
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    labels:
+      NAME: "rabbitmq"
+    volumes:
+      - rabbitmq:/etc/rabbitmq
+    networks:
+      - backend
+
+#  backend:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    environment:
+#      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/favendo_test_demo
+#      spring.rabbitmq.host: rabbit
+#    ports:
+#      - "8081:8081"
+#    volumes:
+#      - backend
+#    stdin_open: true
+#    networks:
+#      - backend
+#    depends_on:
+#      - rabbit
+#      - postgres
+
+volumes:
+  backend:
+  postgres:
+  rabbitmq:
+
+networks:
+  backend:
+    name: student-service
