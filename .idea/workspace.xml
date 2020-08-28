@@ -2,388 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a75af456-6b47-4296-954c-1a5cae96639d" name="Default Changelist" comment="refactor">
-      <change afterPath="$PROJECT_DIR$/backend/Api-Gateway/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Appliance-Service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Authorization-Server/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/db/scripts/init.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/springBoot-monitor/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/PrivateRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/AnnouncementFilters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Filters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/FormStyle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/NewAppliance.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Rent.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/RentHistory.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Reply.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/appliance.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/new_announcement.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/new_appliance.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/rent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/rent_history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/reply.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/update_rent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/context/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/context/history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/fonts/IbarraRealNova-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/local-storage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/ActiveRents.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Admin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Announcements.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Announcements.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Home.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Student.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Student.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/StudentRental.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/TerminatedRents.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/TerminatedRents.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/serviceWorker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_11_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_11_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_11_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_11_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_11_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_afterburner_2_11_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_11_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_15_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_archaius_archaius_core_0_7_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_core_1_5_18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_javanica_1_5_18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_metrics_event_stream_1_5_18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_serialization_1_5_18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_commons_util_0_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_statistics_0_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_2_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_core_2_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_httpclient_2_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_loadbalancer_2_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_transport_2_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_servo_servo_core_0_12_21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_zuul_zuul_core_1_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_contribs_jersey_apache_client4_1_19_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_19_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_19_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__de_codecentric_spring_boot_admin_client_2_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__de_codecentric_spring_boot_admin_starter_client_2_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_49_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_49_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_49_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_49_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_49_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_49_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_49_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_49_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_49_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_49_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_49_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_49_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_0_9_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_3_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_1_3_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_reactive_streams_1_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_0_4_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_contexts_0_4_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_servo_0_4_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_jsr311_api_1_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_13_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_35.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_35.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_15_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jolokia_jolokia_core_1_6_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_hateoas_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_reactor_netty_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_webflux_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_2_2_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_2_2_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_archaius_2_2_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_hystrix_2_2_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_ribbon_2_2_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_zuul_2_2_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_2_2_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_archaius_2_2_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_hystrix_2_2_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_ribbon_2_2_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_zuul_2_2_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_3_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_oauth_boot_spring_security_oauth2_autoconfigure_2_1_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_3_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_3_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_3_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_rsa_1_0_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_3_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_3_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_2_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_2_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_2_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webflux_5_2_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_200.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/src/main/java/gateway/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/src/main/java/gateway/ApiGatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/src/main/java/gateway/config/CORSFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/src/main/java/gateway/config/CORSFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/src/main/java/gateway/config/OAuth2ResourceServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/src/main/java/gateway/config/OAuth2ResourceServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/src/main/resources/publicKey.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/src/main/resources/publicKey.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/src/test/java/gateway/ApiGatewayApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/src/test/java/gateway/ApiGatewayApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/.swagger-codegen-ignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/.swagger-codegen-ignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/.swagger-codegen/VERSION" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/.swagger-codegen/VERSION" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/applianceServiceLogFile.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/applianceServiceLogFile.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/ApplianceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/ApplianceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/RFC3339DateFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/RFC3339DateFormat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/access/AccessControlConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/access/AccessControlConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/access/Permissions.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/access/Permissions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/api/ApiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/api/ApiException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/api/ApiResponseMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/api/ApiResponseMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/api/HomeApplianceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/api/HomeApplianceApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/api/HomeApplianceApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/api/HomeApplianceApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/api/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/api/NotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/api/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/api/UserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/api/UserApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/api/UserApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/config/ApplicationContextProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/config/ApplicationContextProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/config/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/config/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/filter/AuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/filter/AuthorizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/model/Appliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/model/Appliance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/model/ApplianceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/model/ApplianceType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/model/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/model/Pair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/model/Rent.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/model/Rent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/repository/ApplianceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/repository/ApplianceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/repository/ApplianceTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/repository/ApplianceTypeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/repository/CustomApplianceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/repository/CustomApplianceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/repository/CustomApplianceRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/repository/CustomApplianceRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/repository/CustomRentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/repository/CustomRentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/repository/CustomRentRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/repository/CustomRentRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/repository/RentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/repository/RentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/repository/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/resource/ApplianceListResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/resource/ApplianceListResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/resource/ApplianceResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/resource/ApplianceResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/resource/RentListResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/resource/RentListResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/resource/RentResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/resource/RentResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/resource/assembler/ApplianceListResourceAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/resource/assembler/ApplianceListResourceAssembler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/resource/assembler/ApplianceResourceAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/resource/assembler/ApplianceResourceAssembler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/resource/assembler/RentListResourceAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/resource/assembler/RentListResourceAssembler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/resource/assembler/RentResourceAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/resource/assembler/RentResourceAssembler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/service/ApplianceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/service/ApplianceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/service/ApplianceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/service/ApplianceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/service/RentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/service/RentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/service/RentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/service/RentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/util/CommonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/util/CommonUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/util/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/util/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/java/srs/appliance/util/resource/AbstractListResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/util/resource/AbstractListResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance-Service/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/src/main/java/srs/AuthServer/AuthorizationServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/AuthorizationServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/src/main/java/srs/AuthServer/model/AuthUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/model/AuthUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/src/main/java/srs/AuthServer/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/src/main/java/srs/AuthServer/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/src/main/java/srs/AuthServer/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/src/main/java/srs/AuthServer/repository/UserDetailsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/repository/UserDetailsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/src/main/java/srs/AuthServer/security/AccountAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/security/AccountAuthenticationProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/src/main/java/srs/AuthServer/security/AccountDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/security/AccountDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/src/main/java/srs/AuthServer/security/config/JwtTokenEnhancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/security/config/JwtTokenEnhancer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/src/main/java/srs/AuthServer/security/config/Oauth2AuthorizationServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/security/config/Oauth2AuthorizationServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/src/main/java/srs/AuthServer/security/config/WebSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/security/config/WebSecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/src/main/resources/mytest.jks" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/resources/mytest.jks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authorization-Server/src/test/java/srs/AuthServer/AuthorizationServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/test/java/srs/AuthServer/AuthorizationServerApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/BulletinboardApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/BulletinboardApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/RFC3339DateFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/RFC3339DateFormat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/access/AccessControlConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/access/AccessControlConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/access/Permissions.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/access/Permissions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/ApiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/ApiException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/ApiResponseMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/ApiResponseMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/BulletinboardApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/BulletinboardApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/BulletinboardApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/BulletinboardApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/NotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/UserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/UserApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/UserApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/config/ApplicationContextProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/config/ApplicationContextProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/config/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/config/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/filter/AuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/filter/AuthorizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/Announcement.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/Announcement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/AnnouncementType.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/AnnouncementType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/Pair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/Reply.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/Reply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/repository/AnnouncementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/repository/AnnouncementRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/repository/AnnouncementTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/repository/AnnouncementTypeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/repository/CustomAnnouncementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/repository/CustomAnnouncementRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/repository/CustomAnnouncementRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/repository/CustomAnnouncementRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/repository/ReplyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/repository/ReplyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/resource/AnnouncementListResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/resource/AnnouncementListResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/resource/AnnouncementResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/resource/AnnouncementResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/resource/assembler/AnnouncementListResourceAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/resource/assembler/AnnouncementListResourceAssembler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/resource/assembler/AnnouncementResourceAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/resource/assembler/AnnouncementResourceAssembler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/service/BulletinboardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/service/BulletinboardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/service/BulletinboardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/service/BulletinboardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/util/CommonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/util/CommonUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/util/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/util/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/java/srs/bulletinboard/util/resource/AbstractListResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/util/resource/AbstractListResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bulletinboard-Service/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/PrivateRoute.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/components/AnnouncementFilters.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/components/Filters.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/components/FormStyle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/components/NewAppliance.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/components/Rent.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/components/RentHistory.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/components/Reply.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/components/appliance.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/components/new_announcement.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/components/new_appliance.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/components/rent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/components/rent_history.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/components/reply.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/components/update_rent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/context/auth.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/context/history.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/fonts/IbarraRealNova-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/local-storage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/pages/ActiveRents.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/pages/Admin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/pages/Admin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/pages/Announcements.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/pages/Announcements.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/pages/Home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/pages/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/pages/Student.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/pages/Student.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/pages/StudentRental.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/pages/TerminatedRents.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/pages/TerminatedRents.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/pages/page.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-ui/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Student Residence.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Student Residence.postman_collection.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Api-Gateway/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Api-Gateway/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Api-Gateway/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Api-Gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/.swagger-codegen-ignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/.swagger-codegen/VERSION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/applianceServiceLogFile.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/springBoot-monitor/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/springBoot-monitor/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/springBoot-monitor/mvnw.cmd" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBoot-monitor/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springBoot-monitor/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBoot-monitor/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springBoot-monitor/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBoot-monitor/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springBoot-monitor/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBoot-monitor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springBoot-monitor/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBoot-monitor/src/main/java/sba/SpringBootAdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springBoot-monitor/src/main/java/sba/SpringBootAdminApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBoot-monitor/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springBoot-monitor/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -412,6 +59,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -426,6 +74,11 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests" />
+      <recent name="$PROJECT_DIR$/backend" />
+      <recent name="$PROJECT_DIR$/frontend" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
       <recent name="gateway" />
@@ -437,12 +90,8 @@
       <recent name="$PROJECT_DIR$/backend/Authorization-Server" />
       <recent name="$PROJECT_DIR$/backend/Bulletinboard-Service" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/backend" />
-      <recent name="$PROJECT_DIR$/frontend" />
-    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BulletinboardApplication">
+  <component name="RunManager" selected="Application.Api Gateway Service">
     <configuration name="Api Gateway Service" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="gateway.ApiGatewayApplication" />
       <module name="Api-Gateway" />
@@ -546,11 +195,6 @@
       <item itemvalue="Application.SBA Service" />
       <item itemvalue="Application.Bulletinboard Service" />
       <item itemvalue="Maven.Images of Services" />
-      <item itemvalue="Spring Boot.SpringBootAdminApplication" />
-      <item itemvalue="Spring Boot.BulletinboardApplication" />
-      <item itemvalue="Spring Boot.AuthorizationServerApplication" />
-      <item itemvalue="Spring Boot.ApiGatewayApplication" />
-      <item itemvalue="Spring Boot.ApplianceApplication" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -679,54 +323,62 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2667" y="318" key="FileChooserDialogImpl/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592578688697" />
-    <state width="1838" height="305" key="GridCell.Tab.0.bottom" timestamp="1598135332112">
-      <screen x="0" y="0" width="3840" height="1044" />
+    <state width="1838" height="479" key="GridCell.Tab.0.bottom" timestamp="1598654862138">
+      <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.0.bottom/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332112" />
     <state width="1874" height="763" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
     <state width="1874" height="252" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592578845219" />
-    <state width="1838" height="305" key="GridCell.Tab.0.center" timestamp="1598135332112">
-      <screen x="0" y="0" width="3840" height="1044" />
+    <state width="1838" height="479" key="GridCell.Tab.0.bottom/36.0.1884.1044@36.0.1884.1044" timestamp="1598654862138" />
+    <state width="1838" height="479" key="GridCell.Tab.0.center" timestamp="1598654862137">
+      <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.0.center/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332112" />
     <state width="1874" height="763" key="GridCell.Tab.0.center/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
     <state width="1874" height="252" key="GridCell.Tab.0.center/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592578845219" />
-    <state width="1838" height="305" key="GridCell.Tab.0.left" timestamp="1598135332111">
-      <screen x="0" y="0" width="3840" height="1044" />
+    <state width="1838" height="479" key="GridCell.Tab.0.center/36.0.1884.1044@36.0.1884.1044" timestamp="1598654862137" />
+    <state width="1838" height="479" key="GridCell.Tab.0.left" timestamp="1598654862137">
+      <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.0.left/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332111" />
     <state width="1874" height="763" key="GridCell.Tab.0.left/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372053" />
     <state width="1874" height="252" key="GridCell.Tab.0.left/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592578845219" />
-    <state width="1838" height="305" key="GridCell.Tab.0.right" timestamp="1598135332112">
-      <screen x="0" y="0" width="3840" height="1044" />
+    <state width="1838" height="479" key="GridCell.Tab.0.left/36.0.1884.1044@36.0.1884.1044" timestamp="1598654862137" />
+    <state width="1838" height="479" key="GridCell.Tab.0.right" timestamp="1598654862138">
+      <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.0.right/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332112" />
     <state width="1874" height="763" key="GridCell.Tab.0.right/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
     <state width="1874" height="252" key="GridCell.Tab.0.right/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592578845219" />
-    <state width="1838" height="305" key="GridCell.Tab.1.bottom" timestamp="1598135332113">
-      <screen x="0" y="0" width="3840" height="1044" />
+    <state width="1838" height="479" key="GridCell.Tab.0.right/36.0.1884.1044@36.0.1884.1044" timestamp="1598654862138" />
+    <state width="1838" height="182" key="GridCell.Tab.1.bottom" timestamp="1598654310988">
+      <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.1.bottom/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332113" />
     <state width="1874" height="763" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
     <state width="1874" height="338" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592563101825" />
-    <state width="1838" height="305" key="GridCell.Tab.1.center" timestamp="1598135332113">
-      <screen x="0" y="0" width="3840" height="1044" />
+    <state width="1838" height="182" key="GridCell.Tab.1.bottom/36.0.1884.1044@36.0.1884.1044" timestamp="1598654310988" />
+    <state width="1838" height="182" key="GridCell.Tab.1.center" timestamp="1598654310988">
+      <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.1.center/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332113" />
     <state width="1874" height="763" key="GridCell.Tab.1.center/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
     <state width="1874" height="338" key="GridCell.Tab.1.center/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592563101825" />
-    <state width="1838" height="305" key="GridCell.Tab.1.left" timestamp="1598135332112">
-      <screen x="0" y="0" width="3840" height="1044" />
+    <state width="1838" height="182" key="GridCell.Tab.1.center/36.0.1884.1044@36.0.1884.1044" timestamp="1598654310988" />
+    <state width="1838" height="182" key="GridCell.Tab.1.left" timestamp="1598654310988">
+      <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.1.left/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332112" />
     <state width="1874" height="763" key="GridCell.Tab.1.left/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
     <state width="1874" height="338" key="GridCell.Tab.1.left/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592563101825" />
-    <state width="1838" height="305" key="GridCell.Tab.1.right" timestamp="1598135332113">
-      <screen x="0" y="0" width="3840" height="1044" />
+    <state width="1838" height="182" key="GridCell.Tab.1.left/36.0.1884.1044@36.0.1884.1044" timestamp="1598654310988" />
+    <state width="1838" height="182" key="GridCell.Tab.1.right" timestamp="1598654310988">
+      <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.1.right/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332113" />
     <state width="1874" height="763" key="GridCell.Tab.1.right/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
     <state width="1874" height="338" key="GridCell.Tab.1.right/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592563101825" />
+    <state width="1838" height="182" key="GridCell.Tab.1.right/36.0.1884.1044@36.0.1884.1044" timestamp="1598654310988" />
     <state width="1838" height="305" key="GridCell.Tab.2.bottom" timestamp="1598135332114">
       <screen x="0" y="0" width="3840" height="1044" />
     </state>

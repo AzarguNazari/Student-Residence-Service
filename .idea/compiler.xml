@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Bulletinboard-Service" />
-        <module name="springBoot-monitor" />
         <module name="Api-Gateway" />
-        <module name="Authorization-Server" />
         <module name="Appliance-Service" />
+        <module name="springBoot-monitor" />
+        <module name="Bulletinboard-Service" />
+        <module name="Authorization-Server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,7 +20,7 @@
       <module name="backend" target="1.5" />
       <module name="Bulletinboard-Service" target="1.8" />
       <module name="springBoot-monitor" target="1.8" />
-      <module name="Student_Residence_Service" target="1.5" />
+      <module name="Student-Residence-Service" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
