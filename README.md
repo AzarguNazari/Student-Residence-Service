@@ -1,8 +1,6 @@
 # About Project
 This project is about creating a REST API for the student residence service. 
 
-[See all the description of project](https://gitlab.rz.uni-bamberg.de/dsg/projects/rest-apis/option-a2/blob/master/PROJECT_DESCRIPTION.md)
-
 # Implementation
 All the project is based on Spring boot 2.3.2. Since Java 8 is the stable version of Java, we are going to use Java 8. If you are computer are installed Java version > 8, you need to downgrade it to version 8.
 
