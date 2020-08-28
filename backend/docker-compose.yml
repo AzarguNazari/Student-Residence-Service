@@ -6,8 +6,8 @@ services:
     container_name: postgres_container
     image: postgres
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: tester
+      POSTGRES_PASSWORD: tester
     volumes:
       - ./db/scripts/init.sql/:/docker-entrypoint-initdb.d/init.sql
     ports:
@@ -16,20 +16,20 @@ services:
     networks:
       - backend
 
-  rabbit:
-    image: "rabbitmq:3-management"
-    container_name: "rabbit"
-    environment:
-      spring.rabbitmq.host: rabbit
-    ports:
-      - "15672:15672"
-      - "5672:5672"
-    labels:
-      NAME: "rabbitmq"
-    volumes:
-      - rabbitmq:/etc/rabbitmq
-    networks:
-      - backend
+#  rabbit:
+#    image: "rabbitmq:3-management"
+#    container_name: "rabbit"
+#    environment:
+#      spring.rabbitmq.host: rabbit
+#    ports:
+#      - "15672:15672"
+#      - "5672:5672"
+#    labels:
+#      NAME: "rabbitmq"
+#    volumes:
+#      - rabbitmq:/etc/rabbitmq
+#    networks:
+#      - backend
 
 #  backend:
 #    build:
