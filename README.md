@@ -4,7 +4,7 @@ This project is about creating a REST API for the student residence service.
 [See all the description of project](https://gitlab.rz.uni-bamberg.de/dsg/projects/rest-apis/option-a2/blob/master/PROJECT_DESCRIPTION.md)
 
 # Implementation
-All the project is based on Spring boot 2.1.7. Since Java 8 is the stable version of Java, we are going to use Java 8. If you are computer are installed Java version > 8, you need to downgrade it to version 8.
+All the project is based on Spring boot 2.3.2. Since Java 8 is the stable version of Java, we are going to use Java 8. If you are computer are installed Java version > 8, you need to downgrade it to version 8.
 
 # Configuration
 To run the project, you need to import it as MAVEN project in your IDE (Intellij or Eclipse) 
@@ -33,24 +33,22 @@ Note : the project is a maven build.
 
 
 # Database Setup  for the project 
--Create a data base in postgresql "StudentResidenceDB"  with role "tester" and password "tester"
+Create a data base in postgresql "StudentResidenceDB"  with role "tester" and password "tester"
 
 # Redis Server Setup
-Create a redis server for  Appliance-service and Bullentinboard-service and update in the application.properties file  in respective services
+Create a redis server for Appliance-service and Bullentinboard-service and update in the application.properties file  in respective services
 
 # Run the project
  Over Project is built based  on Microservices  Architecture , So each of the follwing is  a individual service
-    -Api-Gateway
-    -Authorization Server
-    -Appliance-Service
-    -Bullentin-Board Service
+    - Api-Gateway
+    - Authorization Server
+    - Appliance-Service
+    - Bullentin-Board Service
     
    Build the above services as maven build for all the services, it will generate executable jar files, excecute the jar files. 
     
    Note : Each of this service has to be imported as seperate Maven Project  while importing in Eclipse|Intelliij
     
-    
-
 
 # To access the rest services use the below URL
  - localhost:9852/api/v1/
