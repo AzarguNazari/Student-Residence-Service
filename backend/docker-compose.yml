@@ -16,6 +16,11 @@ services:
     networks:
       - backend
 
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+
 #  rabbit:
 #    image: "rabbitmq:3-management"
 #    container_name: "rabbit"
