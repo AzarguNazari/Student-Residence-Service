@@ -1,0 +1,67 @@
+version: '3.5'
+
+services:
+  gateway:
+    build:
+      context: ./Api-Gateway
+      dockerfile: Dockerfile
+    environment:
+      spring.boot.admin.client.url: http://monitoring-service:8888/sba
+    ports:
+      - "9852:9852"
+
+  authorization-server:
+    build:
+      context: ./Authorization-Server
+      dockerfile: Dockerfile
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/studentresidencedb
+      spring.boot.admin.client.url: http://monitoring-service:8888/sba
+    ports:
+      - "9853:9853"
+
+  appliance-service:
+    build:
+      context: ./Appliance-Service
+      dockerfile: Dockerfile
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/studentresidencedb
+      spring.boot.admin.client.url: http://monitoring-service:8888/sba
+    depends_on:
+      - gateway
+      - authorization-server
+
+  bulletinboard-service:
+    build:
+      context: ./Bulletinboard-Service
+      dockerfile: Dockerfile
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/studentresidencedb
+      spring.boot.admin.client.url: http://monitoring-service:8888/sba
+    depends_on:
+      - gateway
+      - authorization-server
+      - appliance-service
+
+  monitoring-service:
+    build:
+      context: ./springBoot-monitor
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8888"
+
+  postgres:
+    container_name: postgres_container
+    image: postgres
+    environment:
+      POSTGRES_USER: tester
+      POSTGRES_PASSWORD: tester
+    volumes:
+      - ./db/scripts/init.sql/:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
