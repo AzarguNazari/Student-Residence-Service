@@ -39,7 +39,6 @@ public class OAuth2ResourceServer extends ResourceServerConfigurerAdapter {
         return new JwtTokenStore(accessTokenConverter());
     }
 
-
     @Bean
     @Primary
     public DefaultTokenServices tokenServices() {

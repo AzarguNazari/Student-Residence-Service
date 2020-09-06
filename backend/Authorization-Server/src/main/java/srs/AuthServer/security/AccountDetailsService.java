@@ -24,18 +24,13 @@ public class AccountDetailsService implements UserDetailsService{
 
 	@Autowired
 	private UserDetailsRepository userDetailsRepository;
-	
-	@Autowired
-	private PasswordEncoder passwordEncoder;
-	
+
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-		User user = userDetailsRepository.findByUsername(username).get();
-		
-		if(user==null){
-			throw new UsernameNotFoundException("user "+username+" not found");
-		}
+		User user = userDetailsRepository.findByUsername(username)
+										 .orElseThrow(() -> new UsernameNotFoundException("user "+username+" not found"));
+
 		List<GrantedAuthority> authorities = new ArrayList<>();
 		authorities.add(new SimpleGrantedAuthority(user.getRole().getName()));
 		

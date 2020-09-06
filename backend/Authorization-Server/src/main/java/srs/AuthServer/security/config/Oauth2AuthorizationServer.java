@@ -41,18 +41,24 @@ public class Oauth2AuthorizationServer extends AuthorizationServerConfigurerAdap
 	
 	
 	@Override
-	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception{
-		
+	public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
 		TokenEnhancerChain tokenEnhancerChain = new TokenEnhancerChain();
-	    tokenEnhancerChain.setTokenEnhancers(
-	      Arrays.asList(jwtTokenEnhancer, jwtAccessTokenConverter));
-		endpoints.tokenStore(new JwtTokenStore(jwtAccessTokenConverter)).authenticationManager(authenticationManager)
-				.userDetailsService(accountDetailsService).tokenEnhancer(tokenEnhancerChain);
+	    tokenEnhancerChain.setTokenEnhancers(Arrays.asList(jwtTokenEnhancer, jwtAccessTokenConverter));
+		endpoints.tokenStore(new JwtTokenStore(jwtAccessTokenConverter))
+				 .authenticationManager(authenticationManager)
+				 .userDetailsService(accountDetailsService)
+				 .tokenEnhancer(tokenEnhancerChain);
 	}
 	
 	@Override
 	public void configure(ClientDetailsServiceConfigurer client) throws Exception{
-		client.inMemory().withClient("browser").secret(passwordEncoder.encode("browser")).authorizedGrantTypes("password","refresh_token").accessTokenValiditySeconds(300).refreshTokenValiditySeconds(6000000).scopes("all");
+		client.inMemory()
+			  .withClient("browser")
+			  .secret(passwordEncoder.encode("browser"))
+			  .authorizedGrantTypes("password", "refresh_token")
+			  .accessTokenValiditySeconds(300)
+			  .refreshTokenValiditySeconds(6000000)
+			  .scopes("all");
 	}
 	
     @Bean

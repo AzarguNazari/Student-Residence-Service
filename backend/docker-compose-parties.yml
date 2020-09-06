@@ -2,19 +2,19 @@ version: '3.5'
 
 services:
 
-  postgres:
-    container_name: postgres_container
-    image: postgres
-    environment:
-      POSTGRES_USER: tester
-      POSTGRES_PASSWORD: tester
-    volumes:
-      - ./db/scripts/init.sql/:/docker-entrypoint-initdb.d/init.sql
-    ports:
-      - "5432:5432"
-    restart: unless-stopped
-    networks:
-      - backend
+#  postgres:
+#    container_name: postgres_container
+#    image: postgres
+#    environment:
+#      POSTGRES_USER: tester
+#      POSTGRES_PASSWORD: tester
+#    volumes:
+#      - ./db/scripts/init.sql/:/docker-entrypoint-initdb.d/init.sql
+#    ports:
+#      - "5432:5432"
+#    restart: unless-stopped
+#    networks:
+#      - backend
 
   redis:
     image: "redis:alpine"
@@ -25,7 +25,8 @@ services:
 #    image: "rabbitmq:3-management"
 #    container_name: "rabbit"
 #    environment:
-#      spring.rabbitmq.host: rabbit
+#      - RABBITMQ_DEFAULT_USER=admin
+#      - RABBITMQ_DEFAULT_PASS=password
 #    ports:
 #      - "15672:15672"
 #      - "5672:5672"
