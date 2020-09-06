@@ -32,7 +32,6 @@ import srs.appliance.resource.assembler.RentListResourceAssembler;
 import srs.appliance.service.ApplianceService;
 import srs.appliance.service.RentService;
 import io.swagger.annotations.ApiParam;
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-12-13T15:21:57.525Z[GMT]")
 @Controller
 public class HomeApplianceApiController implements HomeApplianceApi {
 

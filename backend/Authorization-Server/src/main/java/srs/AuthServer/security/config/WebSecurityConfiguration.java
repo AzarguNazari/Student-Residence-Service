@@ -22,17 +22,13 @@ import srs.AuthServer.security.AccountDetailsService;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
-	
-	
 
 	@Autowired
 	private AccountDetailsService accountDetailsService;
 	
 	@Autowired
 	private AccountAuthenticationProvider accountAuthenticationProvider;
-	
-	
-	
+
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception{
 		auth.userDetailsService(accountDetailsService);
@@ -48,8 +44,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Bean
 	public JwtAccessTokenConverter jwtAccessTokenConverter(){
 		final JwtAccessTokenConverter jwtAccessTokenConverter = new JwtAccessTokenConverter();
-		KeyStoreKeyFactory keyStoreKeyFactory = 
-			      new KeyStoreKeyFactory(new ClassPathResource("mytest.jks"), "mypass".toCharArray());
+		KeyStoreKeyFactory keyStoreKeyFactory = new KeyStoreKeyFactory(new ClassPathResource("mytest.jks"), "mypass".toCharArray());
 		jwtAccessTokenConverter.setKeyPair(keyStoreKeyFactory.getKeyPair("mytest"));
 		return jwtAccessTokenConverter;
 	}

@@ -24,7 +24,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @Entity
 @Table(name="role")
 @Data
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-12-13T15:21:57.525Z[GMT]")
 public class Role  implements Serializable  {
   private static final long serialVersionUID = 1L;
 

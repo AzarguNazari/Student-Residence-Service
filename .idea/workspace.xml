@@ -1,18 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a75af456-6b47-4296-954c-1a5cae96639d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/docker-compose-application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Api-Gateway/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/filter/AuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/filter/AuthorizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Api-Gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Api-Gateway/src/main/java/gateway/config/OAuth2ResourceServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/src/main/java/gateway/config/OAuth2ResourceServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/api/ApiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/api/ApiException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/api/ApiResponseMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/api/ApiResponseMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/api/HomeApplianceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/api/HomeApplianceApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/api/HomeApplianceApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/api/HomeApplianceApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/api/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/api/NotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/api/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/api/UserApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/model/Appliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/model/Appliance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/model/ApplianceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/model/ApplianceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/model/Rent.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/model/Rent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/src/main/java/srs/appliance/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/AuthorizationServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/AuthorizationServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/model/AuthUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/model/AuthUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/security/AccountAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/security/AccountAuthenticationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/security/AccountDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/security/AccountDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/security/config/Oauth2AuthorizationServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/security/config/Oauth2AuthorizationServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/security/config/WebSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/java/srs/AuthServer/security/config/WebSecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/filter/AuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/filter/AuthorizationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/docker-compose-parties.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/BulletinboardApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/BulletinboardApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/RFC3339DateFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/RFC3339DateFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/access/AccessControlConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/access/AccessControlConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/access/Permissions.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/access/Permissions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/ApiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/api/ApiException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/ApiResponseMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/api/ApiResponseMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/BulletinboardApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/api/BulletinboardApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/BulletinboardApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/api/BulletinboardApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/api/NotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/api/UserApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/api/UserApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/api/UserApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/config/ApplicationContextProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/config/ApplicationContextProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/config/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/config/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/filter/AuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/filter/AuthorizationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/Announcement.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/model/Announcement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/AnnouncementType.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/model/AnnouncementType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/model/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/Reply.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/model/Reply.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/repository/AnnouncementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/repository/AnnouncementRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/repository/AnnouncementTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/repository/AnnouncementTypeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/repository/CustomAnnouncementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/repository/CustomAnnouncementRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/repository/CustomAnnouncementRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/repository/CustomAnnouncementRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/repository/ReplyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/repository/ReplyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/resource/AnnouncementListResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/resource/AnnouncementListResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/resource/AnnouncementResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/resource/AnnouncementResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/resource/assembler/AnnouncementListResourceAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/resource/assembler/AnnouncementListResourceAssembler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/resource/assembler/AnnouncementResourceAssembler.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/resource/assembler/AnnouncementResourceAssembler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/service/BulletinboardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/service/BulletinboardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/service/BulletinboardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/service/BulletinboardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/util/CommonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/util/CommonUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/util/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/util/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/srs/bulletinboard/util/resource/AbstractListResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/src/main/java/bulletinboard/util/resource/AbstractListResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docker-compose-parties.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/docker-compose-parties.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,10 +86,17 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="refactor_structure" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1dX2rzkBKrNOB7k8TipXKEMHmsM" />
   <component name="ProjectViewState">
@@ -46,21 +114,16 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/Appliance-Service/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.21034482" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tests" />
-      <recent name="$PROJECT_DIR$/backend" />
-      <recent name="$PROJECT_DIR$/frontend" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
       <recent name="gateway" />
@@ -72,8 +135,13 @@
       <recent name="$PROJECT_DIR$/backend/Api-Gateway" />
       <recent name="$PROJECT_DIR$/backend/Appliance-Service" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests" />
+      <recent name="$PROJECT_DIR$/backend" />
+      <recent name="$PROJECT_DIR$/frontend" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Api Gateway Service">
+  <component name="RunManager" selected="Spring Boot.BulletinboardApplication (1)">
     <configuration name="Api Gateway Service" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="gateway.ApiGatewayApplication" />
       <module name="Api-Gateway" />
@@ -105,6 +173,17 @@
     <configuration name="SBA Service" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="sba.SpringBootAdminApplication" />
       <module name="springBoot-monitor" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,6 +235,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BulletinboardApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="Bulletinboard-Service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bulletinboard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="bulletinboard.BulletinboardApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BulletinboardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Bulletinboard-Service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="srs.bulletinboard.BulletinboardApplication" />
@@ -177,8 +269,20 @@
       <item itemvalue="Application.SBA Service" />
       <item itemvalue="Application.Bulletinboard Service" />
       <item itemvalue="Maven.Images of Services" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.ApplianceApplication" />
+      <item itemvalue="Spring Boot.AuthorizationServerApplication" />
+      <item itemvalue="Spring Boot.BulletinboardApplication" />
+      <item itemvalue="Spring Boot.SpringBootAdminApplication" />
+      <item itemvalue="Spring Boot.BulletinboardApplication (1)" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.BulletinboardApplication (1)" />
+      </list>
+    </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -190,6 +294,7 @@
       <option name="presentableId" value="Default" />
       <updated>1592557319140</updated>
       <workItem from="1598133948261" duration="1644000" />
+      <workItem from="1599418204249" duration="2268000" />
     </task>
     <task id="LOCAL-00001" summary="refactore">
       <created>1592559404400</created>
@@ -275,11 +380,25 @@
       <option name="project" value="LOCAL" />
       <updated>1598656732620</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="docker-compose of all services and databases">
+      <created>1598697960474</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1598697960474</updated>
+    </task>
+    <task id="LOCAL-00014" summary="refactor">
+      <created>1598697984101</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1598697984101</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactore" />
@@ -287,12 +406,13 @@
     <MESSAGE value="add spring boot admin connection and enable ansi" />
     <MESSAGE value="docker compose refactor" />
     <MESSAGE value="add intellij workspace configuration" />
-    <MESSAGE value="refactor" />
     <MESSAGE value="add guide for configuration of project" />
     <MESSAGE value="add redis to docker-compose" />
     <MESSAGE value="refactor structure" />
     <MESSAGE value="remove readme link to external resources" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove readme link to external resources" />
+    <MESSAGE value="docker-compose of all services and databases" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2382" y="100" key="#Project_Structure" timestamp="1598134531573">
@@ -316,16 +436,17 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2642" y="420" width="476" height="289" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592557759847" />
-    <state x="2642" y="441" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1592558088263">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="744" y="426" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1599420163699">
+      <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="2642" y="441" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592558088263" />
-    <state x="233" y="131" key="CommitChangelistDialog2" timestamp="1598656732491">
+    <state x="744" y="426" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/36.0.1884.1044@36.0.1884.1044" timestamp="1599420163699" />
+    <state x="233" y="131" key="CommitChangelistDialog2" timestamp="1598697984010">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="201" y="170" key="CommitChangelistDialog2/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643674148" />
     <state x="2121" y="136" key="CommitChangelistDialog2/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592559653384" />
-    <state x="233" y="131" key="CommitChangelistDialog2/36.0.1884.1044@36.0.1884.1044" timestamp="1598656732491" />
+    <state x="233" y="131" key="CommitChangelistDialog2/36.0.1884.1044@36.0.1884.1044" timestamp="1598697984010" />
     <state x="136" y="139" width="1692" height="850" key="DiffContextDialog" timestamp="1598656101964">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
@@ -334,93 +455,105 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2667" y="318" key="FileChooserDialogImpl/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592578688697" />
-    <state width="1838" height="360" key="GridCell.Tab.0.bottom" timestamp="1598696477143">
+    <state width="1838" height="373" key="GridCell.Tab.0.bottom" timestamp="1599420276908">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.0.bottom/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332112" />
     <state width="1874" height="763" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
     <state width="1874" height="252" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592578845219" />
-    <state width="1838" height="360" key="GridCell.Tab.0.bottom/36.0.1884.1044@36.0.1884.1044" timestamp="1598696477143" />
-    <state width="1838" height="360" key="GridCell.Tab.0.center" timestamp="1598696477142">
+    <state width="1838" height="373" key="GridCell.Tab.0.bottom/36.0.1884.1044@36.0.1884.1044" timestamp="1599420276908" />
+    <state width="1838" height="373" key="GridCell.Tab.0.center" timestamp="1599420276907">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.0.center/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332112" />
     <state width="1874" height="763" key="GridCell.Tab.0.center/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
     <state width="1874" height="252" key="GridCell.Tab.0.center/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592578845219" />
-    <state width="1838" height="360" key="GridCell.Tab.0.center/36.0.1884.1044@36.0.1884.1044" timestamp="1598696477142" />
-    <state width="1838" height="360" key="GridCell.Tab.0.left" timestamp="1598696477142">
+    <state width="1838" height="373" key="GridCell.Tab.0.center/36.0.1884.1044@36.0.1884.1044" timestamp="1599420276907" />
+    <state width="1838" height="373" key="GridCell.Tab.0.left" timestamp="1599420276907">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.0.left/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332111" />
     <state width="1874" height="763" key="GridCell.Tab.0.left/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372053" />
     <state width="1874" height="252" key="GridCell.Tab.0.left/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592578845219" />
-    <state width="1838" height="360" key="GridCell.Tab.0.left/36.0.1884.1044@36.0.1884.1044" timestamp="1598696477142" />
-    <state width="1838" height="360" key="GridCell.Tab.0.right" timestamp="1598696477143">
+    <state width="1838" height="373" key="GridCell.Tab.0.left/36.0.1884.1044@36.0.1884.1044" timestamp="1599420276907" />
+    <state width="1838" height="373" key="GridCell.Tab.0.right" timestamp="1599420276908">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.0.right/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332112" />
     <state width="1874" height="763" key="GridCell.Tab.0.right/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
     <state width="1874" height="252" key="GridCell.Tab.0.right/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592578845219" />
-    <state width="1838" height="360" key="GridCell.Tab.0.right/36.0.1884.1044@36.0.1884.1044" timestamp="1598696477143" />
-    <state width="1838" height="182" key="GridCell.Tab.1.bottom" timestamp="1598654310988">
+    <state width="1838" height="373" key="GridCell.Tab.0.right/36.0.1884.1044@36.0.1884.1044" timestamp="1599420276908" />
+    <state width="1838" height="373" key="GridCell.Tab.1.bottom" timestamp="1599420276682">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.1.bottom/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332113" />
     <state width="1874" height="763" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
     <state width="1874" height="338" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592563101825" />
-    <state width="1838" height="182" key="GridCell.Tab.1.bottom/36.0.1884.1044@36.0.1884.1044" timestamp="1598654310988" />
-    <state width="1838" height="182" key="GridCell.Tab.1.center" timestamp="1598654310988">
+    <state width="1838" height="373" key="GridCell.Tab.1.bottom/36.0.1884.1044@36.0.1884.1044" timestamp="1599420276682" />
+    <state width="1838" height="373" key="GridCell.Tab.1.center" timestamp="1599420276682">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.1.center/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332113" />
     <state width="1874" height="763" key="GridCell.Tab.1.center/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
     <state width="1874" height="338" key="GridCell.Tab.1.center/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592563101825" />
-    <state width="1838" height="182" key="GridCell.Tab.1.center/36.0.1884.1044@36.0.1884.1044" timestamp="1598654310988" />
-    <state width="1838" height="182" key="GridCell.Tab.1.left" timestamp="1598654310988">
+    <state width="1838" height="373" key="GridCell.Tab.1.center/36.0.1884.1044@36.0.1884.1044" timestamp="1599420276682" />
+    <state width="1838" height="373" key="GridCell.Tab.1.left" timestamp="1599420276681">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.1.left/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332112" />
     <state width="1874" height="763" key="GridCell.Tab.1.left/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
     <state width="1874" height="338" key="GridCell.Tab.1.left/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592563101825" />
-    <state width="1838" height="182" key="GridCell.Tab.1.left/36.0.1884.1044@36.0.1884.1044" timestamp="1598654310988" />
-    <state width="1838" height="182" key="GridCell.Tab.1.right" timestamp="1598654310988">
+    <state width="1838" height="373" key="GridCell.Tab.1.left/36.0.1884.1044@36.0.1884.1044" timestamp="1599420276681" />
+    <state width="1838" height="373" key="GridCell.Tab.1.right" timestamp="1599420276682">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.1.right/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332113" />
     <state width="1874" height="763" key="GridCell.Tab.1.right/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643372054" />
     <state width="1874" height="338" key="GridCell.Tab.1.right/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592563101825" />
-    <state width="1838" height="182" key="GridCell.Tab.1.right/36.0.1884.1044@36.0.1884.1044" timestamp="1598654310988" />
-    <state width="1838" height="305" key="GridCell.Tab.2.bottom" timestamp="1598135332114">
-      <screen x="0" y="0" width="3840" height="1044" />
+    <state width="1838" height="373" key="GridCell.Tab.1.right/36.0.1884.1044@36.0.1884.1044" timestamp="1599420276682" />
+    <state width="1838" height="373" key="GridCell.Tab.2.bottom" timestamp="1599420276683">
+      <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.2.bottom/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332114" />
-    <state width="1838" height="305" key="GridCell.Tab.2.center" timestamp="1598135332114">
-      <screen x="0" y="0" width="3840" height="1044" />
+    <state width="1838" height="373" key="GridCell.Tab.2.bottom/36.0.1884.1044@36.0.1884.1044" timestamp="1599420276683" />
+    <state width="1838" height="373" key="GridCell.Tab.2.center" timestamp="1599420276683">
+      <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.2.center/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332114" />
-    <state width="1838" height="305" key="GridCell.Tab.2.left" timestamp="1598135332113">
-      <screen x="0" y="0" width="3840" height="1044" />
+    <state width="1838" height="373" key="GridCell.Tab.2.center/36.0.1884.1044@36.0.1884.1044" timestamp="1599420276683" />
+    <state width="1838" height="373" key="GridCell.Tab.2.left" timestamp="1599420276682">
+      <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.2.left/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332113" />
-    <state width="1838" height="305" key="GridCell.Tab.2.right" timestamp="1598135332114">
-      <screen x="0" y="0" width="3840" height="1044" />
+    <state width="1838" height="373" key="GridCell.Tab.2.left/36.0.1884.1044@36.0.1884.1044" timestamp="1599420276682" />
+    <state width="1838" height="373" key="GridCell.Tab.2.right" timestamp="1599420276683">
+      <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state width="1838" height="305" key="GridCell.Tab.2.right/0.0.3840.1044@0.0.3840.1044" timestamp="1598135332114" />
-    <state x="586" y="286" key="Vcs.Push.Dialog.v2" timestamp="1598656737684">
+    <state width="1838" height="373" key="GridCell.Tab.2.right/36.0.1884.1044@36.0.1884.1044" timestamp="1599420276683" />
+    <state x="462" y="100" key="SettingsEditor" timestamp="1599419207094">
+      <screen x="36" y="0" width="1884" height="1044" />
+    </state>
+    <state x="462" y="100" key="SettingsEditor/36.0.1884.1044@36.0.1884.1044" timestamp="1599419207094" />
+    <state x="586" y="286" key="Vcs.Push.Dialog.v2" timestamp="1598697986159">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="560" y="324" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592643628230" />
     <state x="2480" y="296" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592559656128" />
-    <state x="586" y="286" key="Vcs.Push.Dialog.v2/36.0.1884.1044@36.0.1884.1044" timestamp="1598656737684" />
-    <state x="666" y="260" width="675" height="524" key="find.popup" timestamp="1598656372264">
+    <state x="586" y="286" key="Vcs.Push.Dialog.v2/36.0.1884.1044@36.0.1884.1044" timestamp="1598697986159" />
+    <state x="666" y="260" width="675" height="580" key="find.popup" timestamp="1599420428491">
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="642" y="298" width="635" height="522" key="find.popup/1920.0.1920.1080/0.39.1920.1041@0.39.1920.1041" timestamp="1592641522902" />
-    <state x="666" y="260" width="675" height="524" key="find.popup/36.0.1884.1044@36.0.1884.1044" timestamp="1598656372264" />
+    <state x="666" y="260" width="675" height="580" key="find.popup/36.0.1884.1044@36.0.1884.1044" timestamp="1599420428491" />
     <state x="2540" y="73" key="new project wizard" timestamp="1598134047379">
       <screen x="0" y="0" width="3840" height="1044" />
     </state>
     <state x="2540" y="73" key="new project wizard/0.0.3840.1044@0.0.3840.1044" timestamp="1598134047379" />
     <state x="2348" y="263" key="new project wizard/1920.0.1920.1080/0.39.1920.1041@1920.0.1920.1080" timestamp="1592582929211" />
+    <state x="641" y="231" key="search.everywhere.popup" timestamp="1598730455369">
+      <screen x="36" y="0" width="1884" height="1044" />
+    </state>
+    <state x="641" y="231" key="search.everywhere.popup/36.0.1884.1044@36.0.1884.1044" timestamp="1598730455369" />
   </component>
 </project>

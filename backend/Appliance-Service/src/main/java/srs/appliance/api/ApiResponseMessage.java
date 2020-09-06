@@ -2,7 +2,6 @@ package srs.appliance.api;
 
 import javax.xml.bind.annotation.XmlTransient;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-12-13T15:21:57.525Z[GMT]")
 @javax.xml.bind.annotation.XmlRootElement
 public class ApiResponseMessage {
     public static final int ERROR = 1;

@@ -23,6 +23,7 @@ import javax.persistence.Table;
 @Setter
 @Getter
 public class Role implements Serializable {
+
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -34,14 +35,4 @@ public class Role implements Serializable {
 
     @OneToMany(mappedBy = "role", cascade = {CascadeType.ALL})
     private List<User> users;
-
-    public Role id(Integer id) {
-        this.id = id;
-        return this;
-    }
-
-    public Role name(String name) {
-        this.name = name;
-        return this;
-    }
 }

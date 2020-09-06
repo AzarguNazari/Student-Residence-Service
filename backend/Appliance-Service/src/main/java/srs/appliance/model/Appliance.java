@@ -32,7 +32,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 @Entity
 @Table(name = "appliance")
 @Data
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-12-13T15:21:57.525Z[GMT]")
 public class Appliance implements Serializable {
     private static final long serialVersionUID = 1L;
 
