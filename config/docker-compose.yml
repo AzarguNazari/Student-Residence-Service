@@ -1,34 +1,30 @@
-version: '2'
-
-networks:
-  commander-network:
-    driver: bridge
+version: '3.5'
 
 services:
 
-  backspin_postgres:
-    container_name: student_residenc_postgres
-    ports:
-      - 127.0.0.1:5432:5432
-    environment:
-      POSTGRES_PASSWORD: tester
-      POSTGRES_USER: tester
-      POSTGRES_DBNAME: StudentResidenceDB
-    tty: true
+  postgres:
+    container_name: postgres_container
     image: postgres
+    environment:
+      POSTGRES_USER: tester
+      POSTGRES_PASSWORD: tester
     volumes:
-      - ./db:/var/lib/postgresql/backup/
-      - /etc/localtime:/etc/localtime:ro
-    stdin_open: true
+      - ./db/scripts/init.sql/:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
     networks:
-      - commander-network
+      - backend
 
   redis:
-    image: redis:3.2
-    expose:
-      - 6379
-    networks:
-      - commander-network
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
 
 volumes:
-  student_service_data:
+  backend:
+  postgres:
+
+networks:
+  backend:
+    name: student-service

@@ -6,7 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/backend/Appliance-Service/Appliance-Service.iml" filepath="$PROJECT_DIR$/backend/Appliance-Service/Appliance-Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/Authorization-Server/Authorization-Server.iml" filepath="$PROJECT_DIR$/backend/Authorization-Server/Authorization-Server.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/Bulletinboard-Service/Bulletinboard-Service.iml" filepath="$PROJECT_DIR$/backend/Bulletinboard-Service/Bulletinboard-Service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Student-Residence-Service.iml" filepath="$PROJECT_DIR$/Student-Residence-Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SRS.iml" filepath="$PROJECT_DIR$/SRS.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/backend.iml" filepath="$PROJECT_DIR$/backend/backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/springBoot-monitor/springBoot-monitor.iml" filepath="$PROJECT_DIR$/backend/springBoot-monitor/springBoot-monitor.iml" />
     </modules>
