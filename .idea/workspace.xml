@@ -44,30 +44,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a75af456-6b47-4296-954c-1a5cae96639d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/Api-Gateway/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Api-Gateway/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Api-Gateway/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Api-Gateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Api-Gateway/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Api-Gateway/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_hateoas_spring_hateoas_1_1_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Api-Gateway/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Api-Gateway/Dockerfile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/Api-Gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Api-Gateway/src/main/java/gateway/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/src/main/java/com/srs/ApiGatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Api-Gateway/src/main/java/gateway/config/CORSFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/src/main/java/com/srs/config/CORSFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Api-Gateway/src/main/java/gateway/config/OAuth2ResourceServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/src/main/java/com/srs/config/OAuth2ResourceServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Api-Gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Api-Gateway/src/main/java/com/srs/config/CORSFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/src/main/java/com/srs/config/CORSFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/db/scripts/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/config/db/scripts/init.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docker-compose-application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/docker-compose-application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/springBoot-monitor/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/springBoot-monitor/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/PrivateRoute.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AnnouncementFilters.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Filters.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/FormStyle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/NewAppliance.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Rent.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/RentHistory.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Reply.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/appliance.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/new_announcement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/new_appliance.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/rent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/rent_history.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/reply.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/update_rent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/context/auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/context/history.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/fonts/IbarraRealNova-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/local-storage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ActiveRents.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Announcements.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Announcements.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Student.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Student.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/StudentRental.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/TerminatedRents.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/TerminatedRents.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/serviceWorker.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +147,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Appliance-Service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spring-security-practice" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -140,17 +179,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Appliances Service">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Api Gateway Service" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="SRS.gateway.apiGateway.ApiGatewayApplication" />
       <module name="apiGateway" />
@@ -208,6 +236,19 @@
     <configuration name="SBA Service" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="sba.SpringBootAdminApplication" />
       <module name="springBoot-monitor" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -341,6 +382,12 @@
       <item itemvalue="Application.Bulletinboard Service" />
       <item itemvalue="Application.ApiGatewayApplication" />
       <item itemvalue="Maven.Images of Services" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.ApplianceApplication" />
+      <item itemvalue="Spring Boot.AuthorizationServerApplication" />
+      <item itemvalue="Spring Boot.BulletinboardApplication" />
+      <item itemvalue="Spring Boot.SpringBootAdminApplication" />
+      <item itemvalue="Spring Boot.BulletinboardApplication (1)" />
     </list>
     <recent_temporary>
       <list>
@@ -362,6 +409,7 @@
       <updated>1592557319140</updated>
       <workItem from="1598133948261" duration="1644000" />
       <workItem from="1599418204249" duration="2268000" />
+      <workItem from="1605815335930" duration="1817000" />
     </task>
     <task id="LOCAL-00001" summary="refactore">
       <created>1592559404400</created>
@@ -519,10 +567,10 @@
       <screen x="36" y="0" width="1884" height="1044" />
     </state>
     <state x="136" y="139" width="1692" height="850" key="DiffContextDialog/36.0.1884.1044@36.0.1884.1044" timestamp="1598656101964" />
-    <state x="744" y="274" key="FileChooserDialogImpl" timestamp="1603533180482">
+    <state x="744" y="274" key="FileChooserDialogImpl" timestamp="1605817997014">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>
-    <state x="744" y="274" key="FileChooserDialogImpl/0.0.1920.1035@0.0.1920.1035" timestamp="1603533180482" />
+    <state x="744" y="274" key="FileChooserDialogImpl/0.0.1920.1035@0.0.1920.1035" timestamp="1605817997014" />
     <state width="1874" height="405" key="GridCell.Tab.0.bottom" timestamp="1603534738936">
       <screen x="0" y="0" width="1920" height="1035" />
     </state>

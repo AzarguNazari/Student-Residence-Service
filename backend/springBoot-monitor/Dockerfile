@@ -1,7 +1,12 @@
 FROM adoptopenjdk/openjdk11:x86_64-ubuntu-jdk-11.0.1.13-slim as build
-RUN apt-get update
-RUN apt-get install -y maven
-WORKDIR /code
-ADD pom.xml /code/pom.xml
-ADD src /code/src
-CMD ["mvn", "spring-boot:run"]
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
+
+#FROM adoptopenjdk/openjdk11:x86_64-ubuntu-jdk-11.0.1.13-slim as build
+#RUN apt-get update
+#RUN apt-get install -y maven
+#WORKDIR /code
+#ADD pom.xml /code/pom.xml
+#ADD src /code/src
+#CMD ["mvn", "spring-boot:run"]

@@ -19,6 +19,8 @@ services:
       spring.boot.admin.client.url: http://monitoring-service:8888/sba
     ports:
       - "9853:9853"
+    depends_on:
+      - postgres
 
   appliance-service:
     build:
@@ -30,6 +32,7 @@ services:
     depends_on:
       - gateway
       - authorization-server
+      - postgres
 
   bulletinboard-service:
     build:
@@ -42,6 +45,7 @@ services:
       - gateway
       - authorization-server
       - appliance-service
+      - postgres
 
   monitoring-service:
     build:
@@ -65,3 +69,14 @@ services:
     image: "redis:alpine"
     ports:
       - "6379:6379"
+      
+  front-end:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - /usr/src/app/node_modules
+      - .:/usr/src/app
+    stdin_open: true
