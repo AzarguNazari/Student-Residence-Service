@@ -14,14 +14,14 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Api-Gateway" target="14" />
+      <module name="Api-Gateway" target="1.8" />
       <module name="apiGateway" target="15" />
       <module name="Appliance-Service" target="1.8" />
       <module name="Authorization-Server" target="1.8" />
       <module name="backend" target="1.5" />
       <module name="Bulletinboard-Service" target="1.8" />
       <module name="springBoot-monitor" target="1.8" />
-      <module name="SRS" target="1.5" />
+      <module name="Student-Residence-Service" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

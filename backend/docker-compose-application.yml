@@ -69,14 +69,3 @@ services:
     image: "redis:alpine"
     ports:
       - "6379:6379"
-      
-  front-end:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
-    volumes:
-      - /usr/src/app/node_modules
-      - .:/usr/src/app
-    stdin_open: true

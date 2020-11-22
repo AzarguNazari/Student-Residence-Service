@@ -11,7 +11,7 @@ body {
 
 @font-face {
   font-family: 'IbarraRealNova';
-  src: local('IbarraRealNova'), url(./fonts/IbarraRealNova-Regular.ttf) format('truetype');
+  src: local('IbarraRealNova'), url(src/fonts/IbarraRealNova-Regular.ttf) format('truetype');
 }
 
 code {
