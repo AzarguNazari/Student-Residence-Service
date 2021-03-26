@@ -16,6 +16,6 @@
         <module>Appliance-Service</module>
         <module>Authorization-Server</module>
         <module>Bulletinboard-Service</module>
-        <module>springBoot-monitor</module>
+        <module>Spring-Boot-Admin</module>
     </modules>
 </project>

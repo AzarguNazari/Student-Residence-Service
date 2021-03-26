@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>sba</groupId>
-    <artifactId>springBoot-monitor</artifactId>
-    <name>spring-boot-admin</name>
+    <artifactId>Spring-Boot-Admin</artifactId>
+    <name>Spring-Boot-Admin</name>
     <description>Monitoring the spring boot modules</description>
 
     <parent>
