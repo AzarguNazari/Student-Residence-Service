@@ -31,7 +31,7 @@ config/scripts/buildSrc/out/
 #######
 target/
 
-.idea
+.idea/*
 
 ###############
 ##  js build
