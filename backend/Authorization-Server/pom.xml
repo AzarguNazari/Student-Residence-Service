@@ -4,9 +4,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>srs.AuthServer</groupId>
-	<artifactId>Authorization-Server</artifactId>
+	<artifactId>authorization-server</artifactId>
 	<name>Authorization-Server</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Authoroization Service</description>
 	<version>1.0</version>
 
 	<parent>

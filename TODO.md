@@ -11,6 +11,7 @@
 - Docker Swarm Support
 - Logging
 - Add different environments support
+- Add release version 1.0
 
 
 # Fix & Refactor

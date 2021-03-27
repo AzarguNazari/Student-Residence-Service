@@ -10,8 +10,10 @@
     </parent>
 
     <groupId>bulletinboard</groupId>
-    <artifactId>Bulletinboard-Service</artifactId>
+    <artifactId>bulletinboard-service</artifactId>
     <name>Bulletinboard-Service</name>
+    <description>Bulletinboard Service</description>
+    <version>1.0</version>
 
     <dependencies>
         <dependency>

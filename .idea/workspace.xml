@@ -46,7 +46,14 @@
     <list default="true" id="a75af456-6b47-4296-954c-1a5cae96639d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TODO.md" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Api-Gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Api-Gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Appliance-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Appliance-Service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Authorization-Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Authorization-Server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Bulletinboard-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Bulletinboard-Service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Spring-Boot-Admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Spring-Boot-Admin/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose-application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/docker-compose-application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose-parties.yml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,11 +115,11 @@
       <recent name="$PROJECT_DIR$/backend/springBoot-monitor" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/backend/apiGateway" />
       <recent name="$PROJECT_DIR$/API-Specifications" />
       <recent name="$PROJECT_DIR$/config" />
-      <recent name="$PROJECT_DIR$/tests" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.srs" />
@@ -401,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616866422811</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="updates">
+      <created>1616866913764</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1616866913764</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,6 +446,7 @@
     <MESSAGE value="docker-compose of all services and databases" />
     <MESSAGE value="refactor" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates" />
   </component>
 </project>

@@ -1,0 +1,45 @@
+version: '3.5'
+
+services:
+  gateway:
+    image: api-gateway:1.0
+    environment:
+      spring.boot.admin.client.url: http://monitoring-service:8888/sba
+    ports:
+      - "9852:9852"
+
+  authorization-server:
+    image: authorization-server:1.0
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/studentresidencedb
+      spring.boot.admin.client.url: http://monitoring-service:8888/sba
+    ports:
+      - "9853:9853"
+    depends_on:
+      - postgres
+
+  appliance-service:
+    image: appliance-service:1.0
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/studentresidencedb
+      spring.boot.admin.client.url: http://monitoring-service:8888/sba
+    depends_on:
+      - gateway
+      - authorization-server
+      - postgres
+
+  bulletinboard-service:
+    image: bulletinboard-service:1.0
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/studentresidencedb
+      spring.boot.admin.client.url: http://monitoring-service:8888/sba
+    depends_on:
+      - gateway
+      - authorization-server
+      - appliance-service
+      - postgres
+
+  monitoring-service:
+    image: spring-boot-admin:1.0
+    ports:
+      - "8888:8888"

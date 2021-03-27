@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.srs</groupId>
-	<artifactId>Api-Gateway</artifactId>
+	<artifactId>api-gateway</artifactId>
 	<version>1.0</version>
-	<name>demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>Api-Gateway</name>
+	<description>Api Gateway Service</description>
 
 	<properties>
 		<java.version>1.8</java.version>
