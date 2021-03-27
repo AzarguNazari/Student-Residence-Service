@@ -13,7 +13,7 @@
 
 # Fix & Refactor
 - upgrade Swagger to version 3x
-- improve documentation
+- improve documentation (add image and other information)
 - upgrade to java 16
 - Add release version 1.0
 - Add different environments support
