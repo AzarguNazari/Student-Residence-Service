@@ -16,4 +16,4 @@
 
 # Fix & Refactor
 - upgrade Swagger to version 3x
-- documentation
+- improve documentation
