@@ -10,6 +10,8 @@
 # intellij idea#
 ################
 .idea/*
+.idea/compiler.xml
+.idea/workspace.xml
 !.idea/runConfigurations
 !.idea/inspectionProfiles
 !.idea/codeStyles
