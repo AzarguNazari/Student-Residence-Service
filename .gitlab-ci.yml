@@ -1,0 +1,48 @@
+stages:
+  - build
+
+build_gateway:
+  stage: build
+  image: openjdk:8-jdk-alpine
+  script:
+    - ./mvnw spring-boot:build-image -pl backend/Api-Gateway/pom.xml
+  only:
+    changes:
+      - backend/Api-Gateway/**/*
+build_appliance_service:
+  stage: build
+  image: openjdk:8-jdk-alpine
+  script:
+    - ./mvnw spring-boot:build-image -pl backend/Api-Gateway/pom.xml
+  only:
+    changes:
+      - backend/Appliance-Service/**/*
+
+build_authorization_service:
+  stage: build
+  image: openjdk:8-jdk-alpine
+  script:
+    - ./mvnw spring-boot:build-image -pl backend/Authorization-Server/pom.xml
+  only:
+    changes:
+      - backend/Authorization-Server/**/*
+
+build_bullitenboard_service:
+  stage: build
+  image: openjdk:8-jdk-alpine
+  script:
+    - ./mvnw spring-boot:build-image -pl backend/Bulletinboard-Service/pom.xml
+  only:
+    changes:
+      - backend/Bulletinboard-Service/**/*
+
+build_spring_boot_admin:
+  stage: build
+  image: openjdk:8-jdk-alpine
+  script:
+    - ./mvnw spring-boot:build-image -pl backend/Spring-Boot-Admin/pom.xml
+  only:
+    changes:
+      - backend/Spring-Boot-Admin/**/*
+
+
