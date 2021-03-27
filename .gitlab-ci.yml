@@ -1,5 +1,44 @@
 stages:
+  - test
   - build
+  - push
+  - deploy
+
+test_gateway:
+  stage: test
+  image: openjdk:8-jdk-alpine
+  script:
+    - ./mvnw test -pl backend/Api-Gateway/pom.xml
+  only:
+    changes:
+      - backend/Api-Gateway/**/*
+test_appliance_service:
+  stage: test
+  image: openjdk:8-jdk-alpine
+  script:
+    - ./mvnw test -pl backend/Api-Gateway/pom.xml
+  only:
+    changes:
+      - backend/Appliance-Service/**/*
+
+test_authorization_service:
+  stage: test
+  image: openjdk:8-jdk-alpine
+  script:
+    - ./mvnw test -pl backend/Authorization-Server/pom.xml
+  only:
+    changes:
+      - backend/Authorization-Server/**/*
+
+test_bullitenboard_service:
+  stage: test
+  image: openjdk:8-jdk-alpine
+  script:
+    - ./mvnw test -pl backend/Bulletinboard-Service/pom.xml
+  only:
+    changes:
+      - backend/Bulletinboard-Service/**/*
+
 
 build_gateway:
   stage: build
@@ -45,4 +84,10 @@ build_spring_boot_admin:
     changes:
       - backend/Spring-Boot-Admin/**/*
 
+push_stage:
+  stage: push
+  image: alpine
 
+deploy_stage:
+  stage: deploy
+  image: alpine
