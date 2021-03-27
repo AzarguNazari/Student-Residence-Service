@@ -12,6 +12,7 @@ test_gateway:
   only:
     changes:
       - backend/Api-Gateway/**/*
+
 test_appliance_service:
   stage: test
   image: openjdk:8-jdk-alpine
@@ -48,6 +49,7 @@ build_gateway:
   only:
     changes:
       - backend/Api-Gateway/**/*
+
 build_appliance_service:
   stage: build
   image: openjdk:8-jdk-alpine
