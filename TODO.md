@@ -1,21 +1,18 @@
 # New Features
 - chat system using stomp
-- dockerization
 - grade package management
 - interface new feature
-- upgrade spring boot to 2.2.6
+- upgrade spring boot to 2.4.4
 - devTools
 - actuator
-- individual database (Mongo, PostGresQl, h2)
-- Jenkins automation
+- gitlab-ci add
 - JUnit tests
 - JMeter Tests
-- Logging 
+- Docker Swarm Support
+- Logging
+- Add different environments support
 
 
 # Fix & Refactor
-- fix swagger
+- upgrade Swagger to version 3x
 - documentation
-- database connection
-- different environments
-

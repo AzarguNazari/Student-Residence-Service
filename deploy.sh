@@ -8,4 +8,3 @@
 
 docker-compose -f backend/docker-compose-application.yml up -d
 docker-compose -f frontend/docker-compose.yml up -d
-
