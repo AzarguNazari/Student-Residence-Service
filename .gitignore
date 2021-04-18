@@ -26,7 +26,6 @@ config/scripts/buildSrc/out/
 #######
 target/
 
-.idea/*
 
 ###############
 ##  js build
@@ -38,6 +37,3 @@ yarn.lock
 ## OS/File-Manager Stuff
 ###############
 .directory
-/.idea/
-/.idea/
-/.idea/
