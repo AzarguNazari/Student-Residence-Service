@@ -2,7 +2,7 @@
 This project is about creating a REST API for the student residence service. 
 
 # Configuration
-To run the project, you need to import it as MAVEN project in your IDE (Intellij or Eclipse) 
+To run the project you need: 
 - maven
 - Java 8
 - Intellij
@@ -11,10 +11,7 @@ To run the project, you need to import it as MAVEN project in your IDE (Intellij
 # Run by docker compose
 - `./deploy.sh`
 
-# To run individual service
-- `./mvnw spring-boot:run`
-
-# Architecture  used in the project 
+# Architecture used in the project 
  - Microservices
 
 # Authorisation  used in the project 

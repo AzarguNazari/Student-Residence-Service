@@ -9,14 +9,7 @@
 ################
 # intellij idea#
 ################
-.idea/*
-.idea/compiler.xml
-.idea/workspace.xml
-!.idea/runConfigurations
-!.idea/inspectionProfiles
-!.idea/codeStyles
-!.idea/scopes
-!.idea/saveactions_settings.xml
+.idea
 *.iml
 
 ##############################
@@ -45,3 +38,6 @@ yarn.lock
 ## OS/File-Manager Stuff
 ###############
 .directory
+/.idea/
+/.idea/
+/.idea/
